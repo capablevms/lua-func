@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+static const char *const HOOKKEY = "_HOOKKEY";
 
 extern void lua_sethook(lua_State *, lua_Hook, int, int);
 extern void lua_rawset(lua_State *, int);
@@ -50,6 +50,8 @@ extern const char * luaL_checklstring(lua_State *, int, size_t *);
 extern void lua_settop(lua_State *, int);
 extern int lua_type(lua_State *, int);
 extern lua_State * getthread(lua_State *, int *);
+
+extern void hookf (lua_State *L, lua_Debug *ar);
 
 static int db_sethook (lua_State *L) {
   int arg, mask, count;

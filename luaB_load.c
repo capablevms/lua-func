@@ -43,6 +43,8 @@ extern int lua_type(lua_State *, int);
 extern const char * luaL_optlstring(lua_State *, int, const char *, size_t *);
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 
+extern const char *generic_reader (lua_State *, void *, size_t *);
+
 static int luaB_load (lua_State *L) {
   int status;
   size_t l;

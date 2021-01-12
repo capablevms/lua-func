@@ -30,13 +30,14 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+static const char *const CLIBS = "_CLIBS";
 
 extern int lua_setmetatable(lua_State *, int);
 extern void lua_setfield(lua_State *, int, const char *);
 extern void lua_pushcclosure(lua_State *, lua_CFunction, int);
 extern void lua_createtable(lua_State *, int, int);
 extern int luaL_getsubtable(lua_State *, int, const char *);
+extern int gctm (lua_State *L);
 
 static void createclibstable (lua_State *L) {
   luaL_getsubtable(L, (-1000000 - 1000), CLIBS);

@@ -38,7 +38,6 @@ typedef struct UBox {
 
 extern int lua_error(lua_State *);
 extern const char * lua_pushstring(lua_State *, const char *);
-extern  allocf;
 extern void * lua_touserdata(lua_State *, int);
 extern lua_Alloc lua_getallocf(lua_State *, void **);
 

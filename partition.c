@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+typedef unsigned int IdxT;
 
 extern void set2(lua_State *, IdxT, IdxT);
 extern void set2(lua_State *, IdxT, IdxT);

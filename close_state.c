@@ -30,7 +30,15 @@
 #include "lvm.h"
 #include "lzio.h"
 
+typedef struct LX {
+  lu_byte extra_[LUA_EXTRASPACE];
+  lua_State l;
+} LX;
 
+typedef struct LG {
+  LX l;
+  global_State g;
+} LG;
 
 extern void freestack(lua_State *);
 extern void luaM_free_(lua_State *, void *, size_t);

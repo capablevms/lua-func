@@ -30,7 +30,10 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+struct CallS {  /* data to 'f_call' */
+  StkId func;
+  int nresults;
+};
 
 extern void luaD_callnoyield(lua_State *, StkId, int);
 

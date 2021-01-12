@@ -30,7 +30,10 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+struct str_Writer {
+  int init;
+  luaL_Buffer B;
+};
 
 extern void luaL_addlstring(luaL_Buffer *, const char *, size_t);
 extern void luaL_buffinit(lua_State *, luaL_Buffer *);

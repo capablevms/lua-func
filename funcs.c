@@ -30,19 +30,3 @@
 #include "lvm.h"
 #include "lzio.h"
 
-extern int iter_codes(lua_State *);
-extern int utflen(lua_State *);
-extern int utfchar(lua_State *);
-extern int codepoint(lua_State *);
-extern int byteoffset(lua_State *);
-
-static const luaL_Reg funcs[] = {
-  {"offset", byteoffset},
-  {"codepoint", codepoint},
-  {"char", utfchar},
-  {"len", utflen},
-  {"codes", iter_codes},
-
-  {"charpattern", ((void*)0)},
-  {((void*)0), ((void*)0)}
-};

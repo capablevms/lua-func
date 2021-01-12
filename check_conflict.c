@@ -30,7 +30,10 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+struct LHS_assign {
+  struct LHS_assign *prev;
+  expdesc v;  /* variable (global, local, upvalue, or indexed) */
+};
 
 extern void luaK_reserveregs(FuncState *, int);
 extern int luaK_codeABCk(FuncState *, OpCode, int, int, int, int);

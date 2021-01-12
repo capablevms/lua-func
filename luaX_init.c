@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const char *const luaX_tokens[];
 
 extern void luaC_fix(lua_State *, GCObject *);
 extern TString * luaS_new(lua_State *, const char *);

@@ -30,7 +30,10 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+struct str_Writer {
+  int init;
+  luaL_Buffer B;
+};
 
 extern void luaL_pushresult(luaL_Buffer *);
 extern int luaL_error(lua_State *, const char *, ...);
@@ -38,6 +41,8 @@ extern int lua_dump(lua_State *, lua_Writer, void *, int);
 extern void lua_settop(lua_State *, int);
 extern void luaL_checktype(lua_State *, int, int);
 extern int lua_toboolean(lua_State *, int);
+
+extern int writer (lua_State *, const void *, size_t, void *);
 
 static int str_dump (lua_State *L) {
   struct str_Writer state;

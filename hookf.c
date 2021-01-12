@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const char *const HOOKKEY;
 
 extern void lua_callk(lua_State *, int, int, lua_KContext, lua_KFunction);
 extern void lua_pushnil(lua_State *);

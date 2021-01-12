@@ -30,11 +30,17 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+struct CallS {  /* data to 'f_call' */
+  StkId func;
+  int nresults;
+};
 
 extern void luaD_call(lua_State *, StkId, int);
 extern int luaD_pcall(lua_State *, Pfunc, void *, ptrdiff_t, ptrdiff_t);
 extern StkId index2stack(lua_State *, int);
+
+extern void f_call (lua_State *L, void *ud);
+
 
 extern int lua_pcallk (lua_State *L, int nargs, int nresults, int errfunc,
                         lua_KContext ctx, lua_KFunction k) {

@@ -55,6 +55,8 @@ extern const char * lua_pushfstring(lua_State *, const char *, ...);
 extern const char * lua_pushstring(lua_State *, const char *);
 extern int lua_gettop(lua_State *);
 
+extern const char *getF (lua_State *, void *, size_t *);
+
 extern int luaL_loadfilex (lua_State *L, const char *filename,
                                              const char *mode) {
   LoadF lf;

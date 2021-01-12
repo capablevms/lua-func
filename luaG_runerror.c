@@ -35,9 +35,7 @@
 extern void luaG_errormsg(lua_State *);
 extern const char * luaG_addinfo(lua_State *, const char *, TString *, int);
 extern int getcurrentline(CallInfo *);
-extern void __builtin_va_end(struct __va_list_tag *);
-extern const char * luaO_pushvfstring(lua_State *, const char *, struct __va_list_tag *);
-extern void __builtin_va_start(struct __va_list_tag *, ...);
+extern const char * luaO_pushvfstring(lua_State *, const char *, va_list);
 extern void luaC_step(lua_State *);
 
 void __attribute__((noreturn)) luaG_runerror (lua_State *L, const char *fmt, ...) {

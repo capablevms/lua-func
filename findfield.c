@@ -37,7 +37,6 @@ extern void lua_concat(lua_State *, int);
 extern void lua_settop(lua_State *, int);
 extern void lua_copy(lua_State *, int, int);
 extern const char * lua_pushstring(lua_State *, const char *);
-extern int findfield(lua_State *, int, int);
 extern void lua_settop(lua_State *, int);
 extern int lua_rawequal(lua_State *, int, int);
 extern int lua_type(lua_State *, int);

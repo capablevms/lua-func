@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const Node dummynode_;
 
 extern void * luaM_malloc_(lua_State *, size_t, int);
 extern void luaG_runerror(lua_State *, const char *, ...);

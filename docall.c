@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+static lua_State *globalL = ((void*)0);
 
 extern void lua_settop(lua_State *, int);
 extern void lua_rotate(lua_State *, int, int);
@@ -40,6 +40,9 @@ extern __sighandler_t signal(int, __sighandler_t);
 extern void lua_rotate(lua_State *, int, int);
 extern void lua_pushcclosure(lua_State *, lua_CFunction, int);
 extern int lua_gettop(lua_State *);
+
+extern int msghandler (lua_State *);
+extern void laction (int i);
 
 static int docall (lua_State *L, int narg, int nres) {
   int status;

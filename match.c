@@ -44,19 +44,15 @@ typedef struct MatchState {
 } MatchState;
 
 
-extern const char * min_expand(MatchState *, const char *, const char *, const char *);
 extern const char * max_expand(MatchState *, const char *, const char *, const char *);
-extern const char * match(MatchState *, const char *, const char *);
+static const char * min_expand (MatchState *, const char *, const char *, const char *);
 extern int singlematch(MatchState *, const char *, const char *, const char *);
 extern const char * classend(MatchState *, const char *);
 extern const char * match_capture(MatchState *, const char *, int);
 extern int matchbracketclass(int, const char *, const char *);
-extern int matchbracketclass(int, const char *, const char *);
-extern const char * classend(MatchState *, const char *);
 extern int luaL_error(lua_State *, const char *, ...);
 extern const char * matchbalance(MatchState *, const char *, const char *);
 extern const char * end_capture(MatchState *, const char *, const char *);
-extern const char * start_capture(MatchState *, const char *, const char *, int);
 extern const char * start_capture(MatchState *, const char *, const char *, int);
 extern int luaL_error(lua_State *, const char *, ...);
 

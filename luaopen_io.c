@@ -32,6 +32,32 @@
 
 typedef luaL_Stream LStream;
 
+extern int io_write(lua_State *);
+extern int io_type(lua_State *);
+extern int io_tmpfile(lua_State *);
+extern int io_read(lua_State *);
+extern int io_popen(lua_State *);
+extern int io_output(lua_State *);
+extern int io_open(lua_State *);
+extern int io_lines(lua_State *);
+extern int io_input(lua_State *);
+extern int io_flush(lua_State *);
+extern int io_close(lua_State *);
+
+static const luaL_Reg iolib[] = {
+  {"close", io_close},
+  {"flush", io_flush},
+  {"input", io_input},
+  {"lines", io_lines},
+  {"open", io_open},
+  {"output", io_output},
+  {"popen", io_popen},
+  {"read", io_read},
+  {"tmpfile", io_tmpfile},
+  {"type", io_type},
+  {"write", io_write},
+  {((void*)0), ((void*)0)}
+};
 
 extern void createstdfile(lua_State *, FILE *, const char *, const char *);
 extern void createstdfile(lua_State *, FILE *, const char *, const char *);

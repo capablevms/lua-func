@@ -2,6 +2,7 @@
 #include <time.h>
 #include <setjmp.h>
 #include <ctype.h>
+#include <locale.h>
 
 #include "lapi.h"
 #include "lauxlib.h"

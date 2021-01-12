@@ -30,17 +30,17 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const struct {
+  lu_byte left;
+  lu_byte right;
+} priority[];
 
 extern void luaK_posfix(FuncState *, BinOpr, expdesc *, expdesc *, int);
-extern BinOpr subexpr(LexState *, expdesc *, int);
 extern void luaK_infix(FuncState *, BinOpr, expdesc *);
 extern void luaX_next(LexState *);
 extern BinOpr getbinopr(int);
 extern void simpleexp(LexState *, expdesc *);
 extern void luaK_prefix(FuncState *, UnOpr, expdesc *, int);
-extern BinOpr subexpr(LexState *, expdesc *, int);
-extern void luaX_next(LexState *);
 extern UnOpr getunopr(int);
 extern void luaE_incCstack(lua_State *);
 

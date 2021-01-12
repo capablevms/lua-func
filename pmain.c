@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const char *progname;
 
 extern void lua_pushboolean(lua_State *, int);
 extern int dofile(lua_State *, const char *);

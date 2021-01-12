@@ -2,6 +2,7 @@
 #include <time.h>
 #include <setjmp.h>
 #include <ctype.h>
+#include <stdio.h>
 
 #include "lapi.h"
 #include "lauxlib.h"
@@ -30,14 +31,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
-
-extern int fflush(FILE *);
-extern int fprintf(FILE *restrict, const char *restrict, ...);
-extern int fflush(FILE *);
-extern int fprintf(FILE *restrict, const char *restrict, ...);
-
-static void l_message (const char *pname, const char *msg) {
+extern void l_message (const char *pname, const char *msg) {
   if (pname) (fprintf(stderr, ("%s: "), (pname)), fflush(stderr));
   (fprintf(stderr, ("%s\n"), (msg)), fflush(stderr));
 }

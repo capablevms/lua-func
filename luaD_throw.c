@@ -30,10 +30,13 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+struct lua_longjmp {
+  struct lua_longjmp *previous;
+  jmp_buf b;
+  volatile int status;  /* error code */
+};
 
 extern void abort();
-extern  panic;
 extern void luaD_seterrorobj(lua_State *, int, StkId);
 extern void luaD_throw(lua_State *, int);
 extern int luaF_close(lua_State *, StkId, int);

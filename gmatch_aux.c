@@ -30,12 +30,6 @@
 #include "lvm.h"
 #include "lzio.h"
 
-typedef struct GMatchState {
-  const char *src;
-  const char *p;
-  const char *lastmatch;
-  MatchState ms;
-} GMatchState;
 typedef struct MatchState {
   const char *src_init;
   const char *src_end;
@@ -49,6 +43,12 @@ typedef struct MatchState {
   } capture[32];
 } MatchState;
 
+typedef struct GMatchState {
+  const char *src;
+  const char *p;
+  const char *lastmatch;
+  MatchState ms;
+} GMatchState;
 
 extern int push_captures(MatchState *, const char *, const char *);
 extern const char * match(MatchState *, const char *, const char *);

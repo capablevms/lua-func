@@ -39,6 +39,7 @@ extern void lua_pushinteger(lua_State *, lua_Integer);
 extern void lua_pushvalue(lua_State *, int);
 extern int luaL_argerror(lua_State *, int, const char *);
 extern int lua_gettop(lua_State *);
+extern int io_readline (lua_State *L);
 
 static void aux_lines (lua_State *L, int toclose) {
   int n = lua_gettop(L) - 1;

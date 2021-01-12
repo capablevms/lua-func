@@ -30,7 +30,24 @@
 #include "lvm.h"
 #include "lzio.h"
 
+extern int sort(lua_State *);
+extern int tmove(lua_State *);
+extern int tremove(lua_State *);
+extern int tunpack(lua_State *);
+extern int tpack(lua_State *);
+extern int tinsert(lua_State *);
+extern int tconcat(lua_State *);
 
+static const luaL_Reg tab_funcs[] = {
+  {"concat", tconcat},
+  {"insert", tinsert},
+  {"pack", tpack},
+  {"unpack", tunpack},
+  {"remove", tremove},
+  {"move", tmove},
+  {"sort", sort},
+  {((void*)0), ((void*)0)}
+};
 
 extern void luaL_setfuncs(lua_State *, const luaL_Reg *, int);
 extern void lua_createtable(lua_State *, int, int);

@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const TValue absentkey;
 
 extern unsigned int luaH_realasize(const Table *);
 

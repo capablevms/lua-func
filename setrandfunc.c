@@ -34,6 +34,7 @@ typedef struct {
   unsigned long s[4];
 } RanState;
 
+extern const luaL_Reg randfuncs[];
 
 extern void luaL_setfuncs(lua_State *, const luaL_Reg *, int);
 extern void lua_settop(lua_State *, int);

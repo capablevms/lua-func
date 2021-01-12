@@ -30,12 +30,22 @@
 #include "lvm.h"
 #include "lzio.h"
 
+typedef struct LX {
+  lu_byte extra_[LUA_EXTRASPACE];
+  lua_State l;
+} LX;
 
+typedef struct LG {
+  LX l;
+  global_State g;
+} LG;
 
 extern void close_state(lua_State *);
 extern int luaD_rawrunprotected(lua_State *, Pfunc, void *);
 extern unsigned int luai_makeseed(lua_State *);
 extern void preinit_thread(lua_State *, global_State *);
+
+extern void f_luaopen (lua_State *, void *);
 
 extern lua_State *lua_newstate (lua_Alloc f, void *ud) {
   int i;

@@ -30,7 +30,36 @@
 #include "lvm.h"
 #include "lzio.h"
 
+extern int f_setvbuf(lua_State *);
+extern int f_close(lua_State *);
+extern int f_seek(lua_State *);
+extern int f_flush(lua_State *);
+extern int f_lines(lua_State *);
+extern int f_write(lua_State *);
+extern int f_read(lua_State *);
 
+static const luaL_Reg meth[] = {
+  {"read", f_read},
+  {"write", f_write},
+  {"lines", f_lines},
+  {"flush", f_flush},
+  {"seek", f_seek},
+  {"close", f_close},
+  {"setvbuf", f_setvbuf},
+  {((void*)0), ((void*)0)}
+};
+
+extern int f_tostring(lua_State *);
+extern int f_gc(lua_State *);
+extern int f_gc(lua_State *);
+
+static const luaL_Reg metameth[] = {
+  {"__index", ((void*)0)},
+  {"__gc", f_gc},
+  {"__close", f_gc},
+  {"__tostring", f_tostring},
+  {((void*)0), ((void*)0)}
+};
 
 extern void lua_settop(lua_State *, int);
 extern void lua_setfield(lua_State *, int, const char *);

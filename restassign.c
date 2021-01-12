@@ -30,7 +30,10 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+struct LHS_assign {
+  struct LHS_assign *prev;
+  expdesc v;  /* variable (global, local, upvalue, or indexed) */
+};
 
 extern void luaK_storevar(FuncState *, expdesc *, expdesc *);
 extern void init_exp(expdesc *, expkind, int);
@@ -39,7 +42,6 @@ extern void luaK_setoneret(FuncState *, expdesc *);
 extern void adjust_assign(LexState *, int, int, expdesc *);
 extern int explist(LexState *, expdesc *);
 extern void checknext(LexState *, int);
-extern void restassign(LexState *, struct LHS_assign *, int);
 extern void luaE_incCstack(lua_State *);
 extern void check_conflict(LexState *, struct LHS_assign *, expdesc *);
 extern void suffixedexp(LexState *, expdesc *);

@@ -36,6 +36,27 @@ typedef struct Header {
   int maxalign;
 } Header;
 
+typedef enum KOption {
+  Kint,
+  Kuint,
+  Kfloat,
+  Kchar,
+  Kstring,
+  Kzstr,
+  Kpadding,
+  Kpaddalign,
+  Knop
+} KOption;
+
+static const union {
+  int dummy;
+  char little;
+} nativeendian = {1};
+
+struct cD {
+  char c;
+  union { double d; void *p; lua_Integer i; lua_Number n; } u;
+};
 
 extern int luaL_error(lua_State *, const char *, ...);
 extern int getnumlimit(Header *, const char **, int);

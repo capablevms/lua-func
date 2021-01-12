@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+typedef unsigned int IdxT;
 
 extern void auxsort(lua_State *, IdxT, IdxT, unsigned int);
 extern void lua_settop(lua_State *, int);

@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const TValue absentkey;
 
 
 const TValue *luaH_getshortstr (Table *t, TString *key) {

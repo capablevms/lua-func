@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+typedef unsigned int IdxT;
 
 extern void lua_seti(lua_State *, int, lua_Integer);
 extern void lua_seti(lua_State *, int, lua_Integer);

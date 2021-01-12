@@ -43,7 +43,6 @@ typedef struct BlockCnt {
 
 extern void init_exp(expdesc *, expkind, int);
 extern int newupvalue(FuncState *, TString *, expdesc *);
-extern void singlevaraux(FuncState *, TString *, expdesc *, int);
 extern int searchupvalue(FuncState *, TString *);
 extern void markupval(FuncState *, int);
 extern int searchvar(FuncState *, TString *, expdesc *);

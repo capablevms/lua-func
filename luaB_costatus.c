@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const char *const statname[];
 
 extern const char * lua_pushstring(lua_State *, const char *);
 extern int auxstatus(lua_State *, lua_State *);

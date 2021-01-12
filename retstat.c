@@ -30,7 +30,15 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+typedef struct BlockCnt {
+  struct BlockCnt *previous;
+  int firstlabel;
+  int firstgoto;
+  lu_byte nactvar;
+  lu_byte upval;
+  lu_byte isloop;
+  lu_byte insidetbc;
+} BlockCnt;
 
 extern int testnext(LexState *, int);
 extern void luaK_ret(FuncState *, int, int);

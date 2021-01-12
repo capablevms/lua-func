@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+static const char *const CLIBS = "_CLIBS";
 
 extern void lua_settop(lua_State *, int);
 extern void * lua_touserdata(lua_State *, int);

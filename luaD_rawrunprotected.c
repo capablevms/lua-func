@@ -30,7 +30,11 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+struct lua_longjmp {
+  struct lua_longjmp *previous;
+  jmp_buf b;
+  volatile int status;  /* error code */
+};
 
 extern int _setjmp(struct __jmp_buf_tag *);
 

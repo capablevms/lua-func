@@ -35,6 +35,8 @@ typedef luaL_Stream LStream;
 
 extern LStream * newprefile(lua_State *);
 
+extern int io_fclose (lua_State *);
+
 static LStream *newfile (lua_State *L) {
   LStream *p = newprefile(L);
   p->f = ((void*)0);

@@ -1,6 +1,7 @@
 
 #include <time.h>
 #include <setjmp.h>
+#include <locale.h>
 #include <ctype.h>
 
 #include "lapi.h"

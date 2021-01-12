@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const TValue absentkey;
 
 extern int equalkey(const TValue *, const Node *, int);
 extern Node * mainpositionTV(const Table *, const TValue *);

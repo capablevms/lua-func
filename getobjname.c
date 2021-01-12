@@ -40,7 +40,6 @@ extern const char * gxf(const Proto *, int, Instruction, int);
 extern void rname(const Proto *, int, int, const char **);
 extern const char * gxf(const Proto *, int, Instruction, int);
 extern void kname(const Proto *, int, const char **);
-extern const char * getobjname(const Proto *, int, int, const char **);
 extern int findsetreg(const Proto *, int, int);
 extern const char * luaF_getlocalname(const Proto *, int, int);
 

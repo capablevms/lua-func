@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const char *const luaX_tokens [];
 
 extern const char * luaO_pushfstring(lua_State *, const char *, ...);
 extern const char * luaO_pushfstring(lua_State *, const char *, ...);

@@ -30,7 +30,10 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+static const union {
+  int dummy;
+  char little;  /* true iff machine is little endian */
+} nativeendian = {1};
 
 extern void * memcpy(void *restrict, const void *restrict, size_t);
 

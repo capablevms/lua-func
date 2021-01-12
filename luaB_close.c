@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const char *const statname[];
 
 extern int luaL_error(lua_State *, const char *, ...);
 extern void lua_xmove(lua_State *, lua_State *, int);

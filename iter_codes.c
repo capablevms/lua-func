@@ -38,6 +38,9 @@ extern void lua_pushcclosure(lua_State *, lua_CFunction, int);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 extern int lua_toboolean(lua_State *, int);
 
+extern int iter_auxlax (lua_State *);
+extern int iter_auxstrict (lua_State *);
+
 static int iter_codes (lua_State *L) {
   int lax = lua_toboolean(L, 2);
   (luaL_checklstring(L, (1), ((void*)0)));

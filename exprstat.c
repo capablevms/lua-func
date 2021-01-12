@@ -30,7 +30,10 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+struct LHS_assign {
+  struct LHS_assign *prev;
+  expdesc v;  /* variable (global, local, upvalue, or indexed) */
+};
 
 extern void luaX_syntaxerror(LexState *, const char *);
 extern void restassign(LexState *, struct LHS_assign *, int);

@@ -33,13 +33,13 @@
 
 
 extern void luaD_seterrorobj(lua_State *, int, StkId);
-extern long __builtin_expect(long, long);
 extern int luaD_rawrunprotected(lua_State *, Pfunc, void *);
 extern int recover(lua_State *, int);
 extern int luaD_rawrunprotected(lua_State *, Pfunc, void *);
 extern int resume_error(lua_State *, const char *, int);
-extern int resume_error(lua_State *, const char *, int);
-extern int resume_error(lua_State *, const char *, int);
+
+extern void resume (lua_State *, void *);
+extern void unroll (lua_State *, void *);
 
 extern int lua_resume (lua_State *L, lua_State *from, int nargs,
                                       int *nresults) {

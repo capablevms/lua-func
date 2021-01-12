@@ -33,9 +33,6 @@
 
 
 extern void luaC_step(lua_State *);
-extern void __builtin_va_end(struct __va_list_tag *);
-extern const char * luaO_pushvfstring(lua_State *, const char *, struct __va_list_tag *);
-extern void __builtin_va_start(struct __va_list_tag *, ...);
 
 extern const char *lua_pushfstring (lua_State *L, const char *fmt, ...) {
   const char *ret;

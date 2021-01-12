@@ -30,10 +30,6 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
-
-extern  wf;
-
 void luaE_warning (lua_State *L, const char *msg, int tocont) {
   lua_WarnFunction wf = (L->l_G)->warnf;
   if (wf != ((void*)0))

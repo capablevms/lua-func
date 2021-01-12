@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const char *progname;
 
 extern void lua_settop(lua_State *, int);
 extern void l_message(const char *, const char *);

@@ -35,6 +35,7 @@ typedef struct UBox {
   size_t bsize;
 } UBox;
 
+extern const luaL_Reg boxmt[];
 
 extern int lua_setmetatable(lua_State *, int);
 extern void luaL_setfuncs(lua_State *, const luaL_Reg *, int);

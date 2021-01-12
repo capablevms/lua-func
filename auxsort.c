@@ -30,31 +30,18 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+typedef unsigned int IdxT;
 
 extern unsigned int l_randomizePivot();
-extern void auxsort(lua_State *, IdxT, IdxT, unsigned int);
-extern void auxsort(lua_State *, IdxT, IdxT, unsigned int);
 extern IdxT partition(lua_State *, IdxT, IdxT);
 extern void set2(lua_State *, IdxT, IdxT);
 extern int lua_geti(lua_State *, int, lua_Integer);
 extern void lua_pushvalue(lua_State *, int);
-extern int lua_geti(lua_State *, int, lua_Integer);
 extern void lua_settop(lua_State *, int);
 extern void set2(lua_State *, IdxT, IdxT);
 extern int sort_comp(lua_State *, int, int);
-extern int lua_geti(lua_State *, int, lua_Integer);
 extern void lua_settop(lua_State *, int);
-extern void set2(lua_State *, IdxT, IdxT);
-extern int sort_comp(lua_State *, int, int);
-extern int lua_geti(lua_State *, int, lua_Integer);
-extern int lua_geti(lua_State *, int, lua_Integer);
 extern IdxT choosePivot(IdxT, IdxT, unsigned int);
-extern void lua_settop(lua_State *, int);
-extern void set2(lua_State *, IdxT, IdxT);
-extern int sort_comp(lua_State *, int, int);
-extern int lua_geti(lua_State *, int, lua_Integer);
-extern int lua_geti(lua_State *, int, lua_Integer);
 
 static void auxsort (lua_State *L, IdxT lo, IdxT up,
                                    unsigned int rnd) {

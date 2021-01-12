@@ -42,6 +42,8 @@ extern void lua_pushcclosure(lua_State *, lua_CFunction, int);
 extern void l_message(const char *, const char *);
 extern lua_State * luaL_newstate();
 
+extern int pmain (lua_State *);
+
 int main (int argc, char **argv) {
   int status, result;
   lua_State *L = luaL_newstate();

@@ -38,6 +38,10 @@ extern void * lua_newuserdatauv(lua_State *, size_t, int);
 extern lua_CFunction lua_atpanic(lua_State *, lua_CFunction);
 extern lua_State * lua_newstate(lua_Alloc, void *);
 
+extern void *l_alloc (void *, void *, size_t, size_t);
+extern int panic (lua_State *L);
+extern void warnf (void *, const char *, int);
+
 extern lua_State *luaL_newstate (void) {
   lua_State *L = lua_newstate(l_alloc, ((void*)0));
   if (L) {

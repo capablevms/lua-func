@@ -32,7 +32,6 @@
 
 
 
-extern void __builtin_va_end(struct __va_list_tag *);
 extern void luaC_changemode(lua_State *, int);
 extern void luaC_changemode(lua_State *, int);
 extern void luaC_step(lua_State *);
@@ -41,7 +40,6 @@ extern void luaC_step(lua_State *);
 extern void luaE_setdebt(global_State *, l_mem);
 extern void luaC_fullgc(lua_State *, int);
 extern void luaE_setdebt(global_State *, l_mem);
-extern void __builtin_va_start(struct __va_list_tag *, ...);
 
 extern int lua_gc (lua_State *L, int what, ...) {
   va_list argp;

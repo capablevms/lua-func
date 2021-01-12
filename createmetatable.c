@@ -30,7 +30,27 @@
 #include "lvm.h"
 #include "lzio.h"
 
+extern int arith_unm(lua_State *);
+extern int arith_idiv(lua_State *);
+extern int arith_div(lua_State *);
+extern int arith_pow(lua_State *);
+extern int arith_mod(lua_State *);
+extern int arith_mul(lua_State *);
+extern int arith_sub(lua_State *);
+extern int arith_add(lua_State *);
 
+static const luaL_Reg stringmetamethods[] = {
+  {"__add", arith_add},
+  {"__sub", arith_sub},
+  {"__mul", arith_mul},
+  {"__mod", arith_mod},
+  {"__pow", arith_pow},
+  {"__div", arith_div},
+  {"__idiv", arith_idiv},
+  {"__unm", arith_unm},
+  {"__index", ((void*)0)},
+  {((void*)0), ((void*)0)}
+};
 
 extern void lua_settop(lua_State *, int);
 extern void lua_setfield(lua_State *, int, const char *);

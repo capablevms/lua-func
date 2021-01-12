@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const TValue absentkey;
 
 extern const TValue * getgeneric(Table *, const TValue *, int);
 extern const TValue * luaH_getint(Table *, lua_Integer);

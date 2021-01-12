@@ -30,7 +30,10 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+typedef struct LX {
+  lu_byte extra_[LUA_EXTRASPACE];
+  lua_State l;
+} LX;
 
 extern void stack_init(lua_State *, lua_State *);
 extern void * memcpy(void *restrict, const void *restrict, size_t);

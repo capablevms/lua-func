@@ -30,7 +30,15 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+typedef struct BlockCnt {
+  struct BlockCnt *previous;  /* chain */
+  int firstlabel;  /* index of first label in this block */
+  int firstgoto;  /* index of first pending goto in this block */
+  lu_byte nactvar;  /* # active locals outside the block */
+  lu_byte upval;  /* true if some variable in the block is an upvalue */
+  lu_byte isloop;  /* true if 'block' is a loop */
+  lu_byte insidetbc;  /* true if inside the scope of a to-be-closed var. */
+} BlockCnt;
 
 extern int luaK_codeABCk(FuncState *, OpCode, int, int, int, int);
 extern int luaY_nvarstack(FuncState *);

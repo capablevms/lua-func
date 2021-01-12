@@ -34,10 +34,8 @@
 
 extern int lua_error(lua_State *);
 extern void lua_concat(lua_State *, int);
-extern void __builtin_va_end(struct __va_list_tag *);
-extern const char * lua_pushvfstring(lua_State *, const char *, struct __va_list_tag *);
+extern const char * lua_pushvfstring(lua_State *, const char *, va_list);
 extern void luaL_where(lua_State *, int);
-extern void __builtin_va_start(struct __va_list_tag *, ...);
 
 extern int luaL_error (lua_State *L, const char *fmt, ...) {
   va_list argp;

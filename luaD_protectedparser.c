@@ -30,13 +30,21 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+struct SParser {  /* data to 'f_parser' */
+  ZIO *z;
+  Mbuffer buff;  /* dynamic structure used by the scanner */
+  Dyndata dyd;  /* dynamic structures used by the parser */
+  const char *mode;
+  const char *name;
+};
 
 extern void luaM_free_(lua_State *, void *, size_t);
 extern void luaM_free_(lua_State *, void *, size_t);
 extern void luaM_free_(lua_State *, void *, size_t);
 extern void * luaM_saferealloc_(lua_State *, void *, size_t, size_t);
 extern int luaD_pcall(lua_State *, Pfunc, void *, ptrdiff_t, ptrdiff_t);
+
+static void f_parser (lua_State *, void *);
 
 int luaD_protectedparser (lua_State *L, ZIO *z, const char *name,
                                         const char *mode) {

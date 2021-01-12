@@ -2,6 +2,7 @@
 #include <time.h>
 #include <setjmp.h>
 #include <ctype.h>
+#include <locale.h>
 
 #include "lapi.h"
 #include "lauxlib.h"
@@ -34,11 +35,6 @@
 
 extern int snprintf(char *restrict, size_t, const char *restrict, ...);
 extern void * memchr(const void *, int, size_t);
-extern struct lconv * localeconv();
-extern void * memchr(const void *, int, size_t);
-extern int snprintf(char *restrict, size_t, const char *restrict, ...);
-extern double __builtin_huge_val();
-extern double __builtin_huge_val();
 
 static int quotefloat (lua_State *L, char *buff, lua_Number n) {
   const char *s;

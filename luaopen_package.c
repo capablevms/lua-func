@@ -30,7 +30,21 @@
 #include "lvm.h"
 #include "lzio.h"
 
+extern int ll_searchpath(lua_State *);
+extern int ll_loadlib(lua_State *);
+extern const luaL_Reg ll_funcs;
 
+static const luaL_Reg pk_funcs[] = {
+  {"loadlib", ll_loadlib},
+  {"searchpath", ll_searchpath},
+
+  {"preload", ((void*)0)},
+  {"cpath", ((void*)0)},
+  {"path", ((void*)0)},
+  {"searchers", ((void*)0)},
+  {"loaded", ((void*)0)},
+  {((void*)0), ((void*)0)}
+};
 
 extern void lua_settop(lua_State *, int);
 extern void luaL_setfuncs(lua_State *, const luaL_Reg *, int);
@@ -69,7 +83,7 @@ extern int luaopen_package (lua_State *L) {
   lua_setfield(L, -2, "preload");
   ((void)lua_rawgeti(L, (-1000000 - 1000), 2));
   lua_pushvalue(L, -2);
-  luaL_setfuncs(L, ll_funcs, 1);
+  luaL_setfuncs(L, &ll_funcs, 1);
   lua_settop(L, -(1)-1);
   return 1;
 }

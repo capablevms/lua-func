@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const char *progname;
 
 extern int fflush(FILE *);
 extern unsigned long fwrite(const void *restrict, size_t, size_t, FILE *restrict);

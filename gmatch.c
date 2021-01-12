@@ -30,12 +30,6 @@
 #include "lvm.h"
 #include "lzio.h"
 
-typedef struct GMatchState {
-  const char *src;
-  const char *p;
-  const char *lastmatch;
-  MatchState ms;
-} GMatchState;
 typedef struct MatchState {
   const char *src_init;
   const char *src_end;
@@ -49,6 +43,12 @@ typedef struct MatchState {
   } capture[32];
 } MatchState;
 
+typedef struct GMatchState {
+  const char *src;
+  const char *p;
+  const char *lastmatch;
+  MatchState ms;
+} GMatchState;
 
 extern void lua_pushcclosure(lua_State *, lua_CFunction, int);
 extern void prepstate(MatchState *, lua_State *, const char *, size_t, const char *, size_t);
@@ -58,6 +58,8 @@ extern size_t posrelatI(lua_Integer, size_t);
 extern lua_Integer luaL_optinteger(lua_State *, int, lua_Integer);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
+
+extern int gmatch_aux (lua_State *);
 
 static int gmatch (lua_State *L) {
   size_t ls, lp;

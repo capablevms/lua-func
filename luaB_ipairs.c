@@ -37,6 +37,8 @@ extern void lua_pushvalue(lua_State *, int);
 extern void lua_pushcclosure(lua_State *, lua_CFunction, int);
 extern void luaL_checkany(lua_State *, int);
 
+extern int ipairsaux (lua_State *);
+
 static int luaB_ipairs (lua_State *L) {
   luaL_checkany(L, 1);
   lua_pushcclosure(L, (ipairsaux), 0);

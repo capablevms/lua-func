@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const luaL_Reg loadedlibs[];
 
 extern void lua_settop(lua_State *, int);
 extern void luaL_requiref(lua_State *, const char *, lua_CFunction, int);

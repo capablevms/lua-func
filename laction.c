@@ -30,7 +30,8 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern lua_State *globalL;
+extern void lstop (lua_State *L, lua_Debug *ar);
 
 extern void lua_sethook(lua_State *, lua_Hook, int, int);
 extern __sighandler_t signal(int, __sighandler_t);

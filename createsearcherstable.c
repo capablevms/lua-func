@@ -38,6 +38,11 @@ extern void lua_pushcclosure(lua_State *, lua_CFunction, int);
 extern void lua_pushvalue(lua_State *, int);
 extern void lua_createtable(lua_State *, int, int);
 
+extern int searcher_preload (lua_State *L);
+extern int searcher_Lua (lua_State *L);
+extern int searcher_C (lua_State *L);
+extern int searcher_Croot (lua_State *L);
+
 static void createsearcherstable (lua_State *L) {
   static const lua_CFunction searchers[] =
     {searcher_preload, searcher_Lua, searcher_C, searcher_Croot, ((void*)0)};

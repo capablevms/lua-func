@@ -30,7 +30,15 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+typedef struct BlockCnt {
+  struct BlockCnt *previous;
+  int firstlabel;
+  int firstgoto;
+  lu_byte nactvar;
+  lu_byte upval;
+  lu_byte isloop;
+  lu_byte insidetbc;
+} BlockCnt;
 
 extern void solvegoto(LexState *, int, Labeldesc *);
 

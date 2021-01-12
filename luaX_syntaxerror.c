@@ -32,7 +32,7 @@
 
 
 
-extern void lexerror(LexState *, const char *, int);
+extern void __attribute__((noreturn)) lexerror(LexState *, const char *, int);
 
 void __attribute__((noreturn)) luaX_syntaxerror (LexState *ls, const char *msg) {
   lexerror(ls, msg, ls->t.token);

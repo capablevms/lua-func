@@ -38,6 +38,8 @@ extern int luaD_pcall(lua_State *, Pfunc, void *, ptrdiff_t, ptrdiff_t);
 extern const TValue * luaT_gettmbyobj(lua_State *, const TValue *, TMS);
 extern GCObject * udata2finalize(global_State *);
 
+extern void dothecall (lua_State *L, void *ud);
+
 static void GCTM (lua_State *L) {
   global_State *g = (L->l_G);
   const TValue *tm;

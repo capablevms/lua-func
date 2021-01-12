@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+extern const luaL_Reg base_funcs[];
 
 extern void lua_setfield(lua_State *, int, const char *);
 extern const char * lua_pushstring(lua_State *, const char *);

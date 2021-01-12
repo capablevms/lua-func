@@ -30,8 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-extern  udatatypename;
-extern  udatatypename;
+static const char udatatypename[] = "userdata";
 
 const char *const luaT_typenames_[((9 +1) + 2)] = {
   "no value",

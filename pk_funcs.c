@@ -30,17 +30,3 @@
 #include "lvm.h"
 #include "lzio.h"
 
-extern int ll_searchpath(lua_State *);
-extern int ll_loadlib(lua_State *);
-
-static const luaL_Reg pk_funcs[] = {
-  {"loadlib", ll_loadlib},
-  {"searchpath", ll_searchpath},
-
-  {"preload", ((void*)0)},
-  {"cpath", ((void*)0)},
-  {"path", ((void*)0)},
-  {"searchers", ((void*)0)},
-  {"loaded", ((void*)0)},
-  {((void*)0), ((void*)0)}
-};

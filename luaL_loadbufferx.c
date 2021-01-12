@@ -38,6 +38,8 @@ typedef struct LoadS {
 
 extern int lua_load(lua_State *, lua_Reader, void *, const char *, const char *);
 
+extern const char *getS (lua_State *, void *, size_t *);
+
 extern int luaL_loadbufferx (lua_State *L, const char *buff, size_t size,
                                  const char *name, const char *mode) {
   LoadS ls;
