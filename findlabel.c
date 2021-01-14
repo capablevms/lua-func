@@ -33,7 +33,7 @@
 
 
 
-static Labeldesc *findlabel (LexState *ls, TString *name) {
+extern Labeldesc *findlabel (LexState *ls, TString *name) {
   int i;
   Dyndata *dyd = ls->dyd;
 

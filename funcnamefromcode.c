@@ -35,7 +35,7 @@
 extern const char * getobjname(const Proto *, int, int, const char **);
 extern int currentpc(CallInfo *);
 
-static const char *funcnamefromcode (lua_State *L, CallInfo *ci,
+extern const char *funcnamefromcode (lua_State *L, CallInfo *ci,
                                      const char **name) {
   TMS tm = (TMS)0;
   const Proto *p = (((&((((union GCUnion *)(((((&((ci)->func)->val))->value_).gc))))->cl.l))))->p;

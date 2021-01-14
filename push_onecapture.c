@@ -47,7 +47,7 @@ typedef struct MatchState {
 extern const char * lua_pushlstring(lua_State *, const char *, size_t);
 extern size_t get_onecapture(MatchState *, int, const char *, const char *, const char **);
 
-static void push_onecapture (MatchState *ms, int i, const char *s,
+extern void push_onecapture (MatchState *ms, int i, const char *s,
                                                     const char *e) {
   const char *cap;
   ptrdiff_t l = get_onecapture(ms, i, s, e, &cap);

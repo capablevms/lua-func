@@ -38,7 +38,7 @@ extern int isSCint(expdesc *);
 extern void swapexps(expdesc *, expdesc *);
 extern int tonumeral(const expdesc *, TValue *);
 
-static void codecommutative (FuncState *fs, BinOpr op,
+extern void codecommutative (FuncState *fs, BinOpr op,
                              expdesc *e1, expdesc *e2, int line) {
   int flip = 0;
   if (tonumeral(e1, ((void*)0))) {

@@ -34,7 +34,7 @@
 
 extern int addk(FuncState *, TValue *, TValue *);
 
-static int boolT (FuncState *fs) {
+extern int boolT (FuncState *fs) {
   TValue o;
   ((&o)->tt_=(((1) | ((1) << 4))));
   return addk(fs, &o, &o);

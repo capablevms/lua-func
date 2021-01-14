@@ -41,7 +41,7 @@ static const union {
   char little;
 } nativeendian = {1};
 
-static void initheader (lua_State *L, Header *h) {
+extern void initheader (lua_State *L, Header *h) {
   h->L = L;
   h->islittle = nativeendian.little;
   h->maxalign = 1;

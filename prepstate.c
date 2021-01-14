@@ -45,7 +45,7 @@ typedef struct MatchState {
 
 
 
-static void prepstate (MatchState *ms, lua_State *L,
+extern void prepstate (MatchState *ms, lua_State *L,
                        const char *s, size_t ls, const char *p, size_t lp) {
   ms->L = L;
   ms->matchdepth = 200;

@@ -47,7 +47,7 @@ typedef struct MatchState {
 extern int memcmp(const void *, const void *, size_t);
 extern int check_capture(MatchState *, int);
 
-static const char *match_capture (MatchState *ms, const char *s, int l) {
+extern const char *match_capture (MatchState *ms, const char *s, int l) {
   size_t len;
   l = check_capture(ms, l);
   len = ms->capture[l].len;

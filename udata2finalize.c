@@ -33,7 +33,7 @@
 
 
 
-static GCObject *udata2finalize (global_State *g) {
+extern GCObject *udata2finalize (global_State *g) {
   GCObject *o = g->tobefnz;
   ((void)0);
   g->tobefnz = o->next;

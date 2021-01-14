@@ -35,7 +35,7 @@
 extern void linkgclist_(GCObject *, GCObject **, GCObject **);
 extern void freeobj(lua_State *, GCObject *);
 
-static void sweep2old (lua_State *L, GCObject **p) {
+extern void sweep2old (lua_State *L, GCObject **p) {
   GCObject *curr;
   global_State *g = (L->l_G);
   while ((curr = *p) != ((void*)0)) {

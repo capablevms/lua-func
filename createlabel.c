@@ -46,7 +46,7 @@ extern int solvegotos(LexState *, Labeldesc *);
 extern int newlabelentry(LexState *, Labellist *, TString *, int, int);
 extern int luaK_getlabel(FuncState *);
 
-static int createlabel (LexState *ls, TString *name, int line,
+extern int createlabel (LexState *ls, TString *name, int line,
                         int last) {
   FuncState *fs = ls->fs;
   Labellist *ll = &ls->dyd->label;

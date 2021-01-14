@@ -34,7 +34,7 @@
 
 extern const char * upvalname(const Proto *, int);
 
-static const char *getupvalname (CallInfo *ci, const TValue *o,
+extern const char *getupvalname (CallInfo *ci, const TValue *o,
                                  const char **name) {
   LClosure *c = (((&((((union GCUnion *)(((((&((ci)->func)->val))->value_).gc))))->cl.l))));
   int i;

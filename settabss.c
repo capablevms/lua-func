@@ -35,7 +35,7 @@
 extern void lua_setfield(lua_State *, int, const char *);
 extern const char * lua_pushstring(lua_State *, const char *);
 
-static void settabss (lua_State *L, const char *k, const char *v) {
+extern void settabss (lua_State *L, const char *k, const char *v) {
   lua_pushstring(L, v);
   lua_setfield(L, -2, k);
 }

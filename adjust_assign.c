@@ -37,7 +37,7 @@ extern void luaK_nil(FuncState *, int, int);
 extern void luaK_exp2nextreg(FuncState *, expdesc *);
 extern void luaK_setreturns(FuncState *, expdesc *, int);
 
-static void adjust_assign (LexState *ls, int nvars, int nexps, expdesc *e) {
+extern void adjust_assign (LexState *ls, int nvars, int nexps, expdesc *e) {
   FuncState *fs = ls->fs;
   int needed = nvars - nexps;
   if (((e->k) == VCALL || (e->k) == VVARARG)) {

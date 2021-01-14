@@ -34,7 +34,7 @@
 
 extern void reallymarkobject(global_State *, GCObject *);
 
-static int remarkupvals (global_State *g) {
+extern int remarkupvals (global_State *g) {
   lua_State *thread;
   lua_State **p = &g->twups;
   int work = 0;

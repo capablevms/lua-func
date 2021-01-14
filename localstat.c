@@ -47,7 +47,7 @@ extern int getlocalattribute(LexState *);
 extern int new_localvar(LexState *, TString *);
 extern TString * str_checkname(LexState *);
 
-static void localstat (LexState *ls) {
+extern void localstat (LexState *ls) {
 
   FuncState *fs = ls->fs;
   int toclose = -1;

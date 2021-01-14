@@ -37,6 +37,6 @@ extern int luaL_fileresult(lua_State *, int, const char *);
 extern int fflush(FILE *);
 extern FILE * tofile(lua_State *);
 
-static int f_flush (lua_State *L) {
+extern int f_flush (lua_State *L) {
   return luaL_fileresult(L, fflush(tofile(L)) == 0, ((void*)0));
 }

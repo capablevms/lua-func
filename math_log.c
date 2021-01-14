@@ -42,7 +42,7 @@ extern double log(double);
 extern int lua_type(lua_State *, int);
 extern lua_Number luaL_checknumber(lua_State *, int);
 
-static int math_log (lua_State *L) {
+extern int math_log (lua_State *L) {
   lua_Number x = luaL_checknumber(L, 1);
   lua_Number res;
   if ((lua_type(L, (2)) <= 0))

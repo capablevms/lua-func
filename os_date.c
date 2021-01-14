@@ -49,7 +49,7 @@ extern time_t time(time_t *);
 extern int lua_type(lua_State *, int);
 extern const char * luaL_optlstring(lua_State *, int, const char *, size_t *);
 
-static int os_date (lua_State *L) {
+extern int os_date (lua_State *L) {
   size_t slen;
   const char *s = luaL_optlstring(L, 1, "%c", &slen);
   time_t t = ((lua_type(L, ((2))) <= 0) ? (time(((void*)0))) : l_checktime(L,(2)));

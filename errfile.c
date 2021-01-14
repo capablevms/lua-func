@@ -39,7 +39,7 @@ extern const char * lua_tolstring(lua_State *, int, size_t *);
 extern char * strerror(int);
 extern int * __errno_location();
 
-static int errfile (lua_State *L, const char *what, int fnameindex) {
+extern int errfile (lua_State *L, const char *what, int fnameindex) {
   const char *serr = strerror((*__errno_location ()));
   const char *filename = lua_tolstring(L, (fnameindex), ((void*)0)) + 1;
   lua_pushfstring(L, "cannot %s %s: %s", what, filename, serr);

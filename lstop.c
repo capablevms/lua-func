@@ -35,7 +35,7 @@
 extern int luaL_error(lua_State *, const char *, ...);
 extern void lua_sethook(lua_State *, lua_Hook, int, int);
 
-static void lstop (lua_State *L, lua_Debug *ar) {
+extern void lstop (lua_State *L, lua_Debug *ar) {
   (void)ar;
   lua_sethook(L, ((void*)0), 0, 0);
   luaL_error(L, "interrupted!");

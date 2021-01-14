@@ -45,7 +45,7 @@ extern void leaveblock(FuncState *);
 extern void statlist(LexState *);
 extern void enterblock(FuncState *, BlockCnt *, lu_byte);
 
-static void block (LexState *ls) {
+extern void block (LexState *ls) {
 
   FuncState *fs = ls->fs;
   BlockCnt bl;

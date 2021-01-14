@@ -41,7 +41,7 @@ extern void callclose(lua_State *, void *);
 extern int prepclosingmethod(lua_State *, TValue *, TValue *);
 extern long __builtin_expect(long, long);
 
-static int callclosemth (lua_State *L, StkId level, int status) {
+extern int callclosemth (lua_State *L, StkId level, int status) {
   TValue *uv = (&(level)->val);
   if ((__builtin_expect(((status == 0) != 0), 1))) {
     if (prepclosingmethod(L, uv, &(L->l_G)->nilvalue))

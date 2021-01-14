@@ -31,7 +31,7 @@
 #include "lzio.h"
 
 
-static const struct {
+const struct {
   lu_byte left;
   lu_byte right;
 } priority[] = {

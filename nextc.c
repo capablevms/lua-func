@@ -40,7 +40,7 @@ typedef struct {
 
 extern int getc(FILE *);
 
-static int nextc (RN *rn) {
+extern int nextc (RN *rn) {
   if (rn->n >= 200) {
     rn->buff[0] = '\0';
     return 0;

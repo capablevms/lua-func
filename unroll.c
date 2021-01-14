@@ -37,7 +37,7 @@ extern void luaV_finishOp(lua_State *);
 extern void finishCcall(lua_State *, int);
 extern void finishCcall(lua_State *, int);
 
-static void unroll (lua_State *L, void *ud) {
+extern void unroll (lua_State *L, void *ud) {
   CallInfo *ci;
   if (ud != ((void*)0))
     finishCcall(L, *(int *)ud);

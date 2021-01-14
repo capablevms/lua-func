@@ -35,7 +35,7 @@
 extern int lua_getstack(lua_State *, int, lua_Debug *);
 extern int lua_getstack(lua_State *, int, lua_Debug *);
 
-static int lastlevel (lua_State *L) {
+extern int lastlevel (lua_State *L) {
   lua_Debug ar;
   int li = 1, le = 1;
 

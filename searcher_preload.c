@@ -38,7 +38,7 @@ extern int lua_getfield(lua_State *, int, const char *);
 extern int lua_getfield(lua_State *, int, const char *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int searcher_preload (lua_State *L) {
+extern int searcher_preload (lua_State *L) {
   const char *name = (luaL_checklstring(L, (1), ((void*)0)));
   lua_getfield(L, (-1000000 - 1000), "_PRELOAD");
   if (lua_getfield(L, -1, name) == 0) {

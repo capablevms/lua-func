@@ -47,7 +47,7 @@ extern void adjustlocalvars(LexState *, int);
 extern int new_localvar(LexState *, TString *);
 extern TString * str_checkname(LexState *);
 
-static void localfunc (LexState *ls) {
+extern void localfunc (LexState *ls) {
   expdesc b;
   FuncState *fs = ls->fs;
   int fvar = fs->nactvar;

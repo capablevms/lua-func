@@ -47,7 +47,7 @@ typedef struct MatchState {
 extern void push_onecapture(MatchState *, int, const char *, const char *);
 extern void luaL_checkstack(lua_State *, int, const char *);
 
-static int push_captures (MatchState *ms, const char *s, const char *e) {
+extern int push_captures (MatchState *ms, const char *s, const char *e) {
   int i;
   int nlevels = (ms->level == 0 && s) ? 1 : ms->level;
   luaL_checkstack(ms->L, nlevels, "too many captures");

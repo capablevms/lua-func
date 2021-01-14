@@ -37,7 +37,7 @@ extern int lua_next(lua_State *, int);
 extern void lua_settop(lua_State *, int);
 extern void luaL_checktype(lua_State *, int, int);
 
-static int luaB_next (lua_State *L) {
+extern int luaB_next (lua_State *L) {
   luaL_checktype(L, 1, 5);
   lua_settop(L, 2);
   if (lua_next(L, 1))

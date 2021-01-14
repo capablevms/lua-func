@@ -40,7 +40,7 @@ extern int traverseudata(global_State *, Udata *);
 extern lu_mem traversetable(global_State *, Table *);
 extern GCObject ** getgclist(GCObject *);
 
-static lu_mem propagatemark (global_State *g) {
+extern lu_mem propagatemark (global_State *g) {
   GCObject *o = g->gray;
   ((((o)->marked) |= ((1<<(5)))));
   g->gray = *getgclist(o);

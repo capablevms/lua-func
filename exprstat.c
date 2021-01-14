@@ -39,7 +39,7 @@ extern void luaX_syntaxerror(LexState *, const char *);
 extern void restassign(LexState *, struct LHS_assign *, int);
 extern void suffixedexp(LexState *, expdesc *);
 
-static void exprstat (LexState *ls) {
+extern void exprstat (LexState *ls) {
 
   FuncState *fs = ls->fs;
   struct LHS_assign v;

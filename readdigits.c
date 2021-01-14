@@ -42,7 +42,7 @@ extern int nextc(RN *);
 extern const unsigned short ** __ctype_b_loc();
 extern const unsigned short ** __ctype_b_loc();
 
-static int readdigits (RN *rn, int hex) {
+extern int readdigits (RN *rn, int hex) {
   int count = 0;
   while ((hex ? ((*__ctype_b_loc ())[(int) ((rn->c))] & (unsigned short int) _ISxdigit) : ((*__ctype_b_loc ())[(int) ((rn->c))] & (unsigned short int) _ISdigit)) && nextc(rn))
     count++;

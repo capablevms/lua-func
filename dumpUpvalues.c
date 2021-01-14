@@ -44,7 +44,7 @@ extern void dumpByte(DumpState *, int);
 extern void dumpByte(DumpState *, int);
 extern void dumpInt(DumpState *, int);
 
-static void dumpUpvalues (DumpState *D, const Proto *f) {
+extern void dumpUpvalues (DumpState *D, const Proto *f) {
   int i, n = f->sizeupvalues;
   dumpInt(D, n);
   for (i = 0; i < n; i++) {

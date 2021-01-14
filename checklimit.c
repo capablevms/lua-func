@@ -34,6 +34,6 @@
 
 extern void errorlimit(FuncState *, int, const char *);
 
-static void checklimit (FuncState *fs, int v, int l, const char *what) {
+extern void checklimit (FuncState *fs, int v, int l, const char *what) {
   if (v > l) errorlimit(fs, l, what);
 }

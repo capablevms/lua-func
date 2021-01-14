@@ -34,7 +34,7 @@
 
 extern int addk(FuncState *, TValue *, TValue *);
 
-static int luaK_numberK (FuncState *fs, lua_Number r) {
+extern int luaK_numberK (FuncState *fs, lua_Number r) {
   TValue o;
   { TValue *io=(&o); ((io)->value_).n=(r); ((io)->tt_=(((3) | ((1) << 4)))); };
   return addk(fs, &o, &o);

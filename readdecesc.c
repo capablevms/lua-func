@@ -36,7 +36,7 @@ extern void esccheck(LexState *, int, const char *);
 extern int luaZ_fill(ZIO *);
 extern void save(LexState *, int);
 
-static int readdecesc (LexState *ls) {
+extern int readdecesc (LexState *ls) {
   int i;
   int r = 0;
   for (i = 0; i < 3 && (luai_ctype_[(ls->current)+1] & ((1 << (1)))); i++) {

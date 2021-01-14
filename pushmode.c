@@ -34,7 +34,7 @@
 
 extern const char * lua_pushstring(lua_State *, const char *);
 
-static int pushmode (lua_State *L, int oldmode) {
+extern int pushmode (lua_State *L, int oldmode) {
   lua_pushstring(L, (oldmode == 11) ? "incremental" : "generational");
   return 1;
 }

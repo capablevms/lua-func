@@ -35,7 +35,7 @@
 extern void lua_pushnumber(lua_State *, lua_Number);
 extern void lua_pushinteger(lua_State *, lua_Integer);
 
-static void pushnumint (lua_State *L, lua_Number d) {
+extern void pushnumint (lua_State *L, lua_Number d) {
   lua_Integer n;
   if (((d) >= (double)((-9223372036854775807LL -1LL)) && (d) < -(double)((-9223372036854775807LL -1LL)) && (*(&n) = (long long)(d), 1)))
     lua_pushinteger(L, n);

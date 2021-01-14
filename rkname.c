@@ -35,7 +35,7 @@
 extern void rname(const Proto *, int, int, const char **);
 extern void kname(const Proto *, int, const char **);
 
-static void rkname (const Proto *p, int pc, Instruction i, const char **name) {
+extern void rkname (const Proto *p, int pc, Instruction i, const char **name) {
   int c = ((((int)((((i)>>(((((0 + 7) + 8) + 1) + 8))) & ((~((~(Instruction)0)<<(8)))<<(0)))))));
   if (((((int)((((i)>>(((0 + 7) + 8))) & ((~((~(Instruction)0)<<(1)))<<(0))))))))
     kname(p, c, name);

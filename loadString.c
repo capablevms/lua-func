@@ -40,7 +40,7 @@ typedef struct {
 extern void error(LoadState *, const char *);
 extern TString * loadStringN(LoadState *, Proto *);
 
-static TString *loadString (LoadState *S, Proto *p) {
+extern TString *loadString (LoadState *S, Proto *p) {
   TString *st = loadStringN(S, p);
   if (st == ((void*)0))
     error(S, "bad format for constant string");

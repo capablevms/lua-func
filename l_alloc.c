@@ -35,7 +35,7 @@
 extern void * realloc(void *, size_t);
 extern void free(void *);
 
-static void *l_alloc (void *ud, void *ptr, size_t osize, size_t nsize) {
+extern void *l_alloc (void *ud, void *ptr, size_t osize, size_t nsize) {
   (void)ud; (void)osize;
   if (nsize == 0) {
     free(ptr);

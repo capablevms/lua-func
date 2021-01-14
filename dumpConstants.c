@@ -45,7 +45,7 @@ extern void dumpNumber(DumpState *, lua_Number);
 extern void dumpByte(DumpState *, int);
 extern void dumpInt(DumpState *, int);
 
-static void dumpConstants (DumpState *D, const Proto *f) {
+extern void dumpConstants (DumpState *D, const Proto *f) {
   int i;
   int n = f->sizek;
   dumpInt(D, n);

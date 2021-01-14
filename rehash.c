@@ -39,7 +39,7 @@ extern int numusehash(const Table *, unsigned int *, unsigned int *);
 extern unsigned int numusearray(const Table *, unsigned int *);
 extern unsigned int setlimittosize(Table *);
 
-static void rehash (lua_State *L, Table *t, const TValue *ek) {
+extern void rehash (lua_State *L, Table *t, const TValue *ek) {
   unsigned int asize;
   unsigned int na;
   unsigned int nums[((int)((sizeof(int) * 8 - 1))) + 1];

@@ -53,7 +53,7 @@ extern int cond(LexState *);
 extern int luaK_getlabel(FuncState *);
 extern void luaX_next(LexState *);
 
-static void whilestat (LexState *ls, int line) {
+extern void whilestat (LexState *ls, int line) {
 
   FuncState *fs = ls->fs;
   int whileinit;

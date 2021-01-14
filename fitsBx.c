@@ -33,6 +33,6 @@
 
 
 
-static int fitsBx (lua_Integer i) {
+extern int fitsBx (lua_Integer i) {
   return (-(((1<<(8 + 8 + 1))-1)>>1) <= i && i <= ((1<<(8 + 8 + 1))-1) - (((1<<(8 + 8 + 1))-1)>>1));
 }

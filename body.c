@@ -54,7 +54,7 @@ extern void checknext(LexState *, int);
 extern void open_func(LexState *, FuncState *, BlockCnt *);
 extern Proto * addprototype(LexState *);
 
-static void body (LexState *ls, expdesc *e, int ismethod, int line) {
+extern void body (LexState *ls, expdesc *e, int ismethod, int line) {
 
   FuncState new_fs;
   BlockCnt bl;

@@ -36,7 +36,7 @@ extern void tag_error(lua_State *, int, int);
 extern int luaL_argerror(lua_State *, int, const char *);
 extern int lua_isnumber(lua_State *, int);
 
-static void interror (lua_State *L, int arg) {
+extern void interror (lua_State *L, int arg) {
   if (lua_isnumber(L, arg))
     luaL_argerror(L, arg, "number has no integer representation");
   else

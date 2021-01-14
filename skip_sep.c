@@ -37,7 +37,7 @@ extern void save(LexState *, int);
 extern int luaZ_fill(ZIO *);
 extern void save(LexState *, int);
 
-static size_t skip_sep (LexState *ls) {
+extern size_t skip_sep (LexState *ls) {
   size_t count = 0;
   int s = ls->current;
   ((void)0);

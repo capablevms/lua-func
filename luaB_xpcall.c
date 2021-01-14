@@ -40,7 +40,7 @@ extern void lua_pushboolean(lua_State *, int);
 extern void luaL_checktype(lua_State *, int, int);
 extern int lua_gettop(lua_State *);
 
-static int luaB_xpcall (lua_State *L) {
+extern int luaB_xpcall (lua_State *L) {
   int status;
   int n = lua_gettop(L);
   luaL_checktype(L, 2, 6);

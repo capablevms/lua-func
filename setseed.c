@@ -36,7 +36,7 @@ extern void lua_pushinteger(lua_State *, lua_Integer);
 extern void lua_pushinteger(lua_State *, lua_Integer);
 extern unsigned long nextrand(unsigned long *);
 
-static void setseed (lua_State *L, unsigned long *state,
+extern void setseed (lua_State *L, unsigned long *state,
                      lua_Unsigned n1, lua_Unsigned n2) {
   int i;
   state[0] = ((unsigned long)(n1));

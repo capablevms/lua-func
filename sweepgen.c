@@ -34,7 +34,7 @@
 
 extern void freeobj(lua_State *, GCObject *);
 
-static GCObject **sweepgen (lua_State *L, global_State *g, GCObject **p,
+extern GCObject **sweepgen (lua_State *L, global_State *g, GCObject **p,
                             GCObject *limit, GCObject **pfirstold1) {
   static const lu_byte nextage[] = {
     1,

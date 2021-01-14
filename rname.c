@@ -34,7 +34,7 @@
 
 extern const char * getobjname(const Proto *, int, int, const char **);
 
-static void rname (const Proto *p, int pc, int c, const char **name) {
+extern void rname (const Proto *p, int pc, int c, const char **name) {
   const char *what = getobjname(p, pc, c, name);
   if (!(what && *what == 'c'))
     *name = "?";

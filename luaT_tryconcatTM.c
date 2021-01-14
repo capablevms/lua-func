@@ -35,7 +35,7 @@
 extern void luaG_concaterror(lua_State *, const TValue *, const TValue *);
 extern int callbinTM(lua_State *, const TValue *, const TValue *, StkId, TMS);
 
-void luaT_tryconcatTM (lua_State *L) {
+extern void luaT_tryconcatTM (lua_State *L) {
   StkId top = L->top;
   if (!callbinTM(L, (&(top - 2)->val), (&(top - 1)->val), top - 2, TM_CONCAT))
     luaG_concaterror(L, (&(top - 2)->val), (&(top - 1)->val));

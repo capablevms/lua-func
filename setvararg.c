@@ -34,7 +34,7 @@
 
 extern int luaK_codeABCk(FuncState *, OpCode, int, int, int, int);
 
-static void setvararg (FuncState *fs, int nparams) {
+extern void setvararg (FuncState *fs, int nparams) {
   fs->f->is_vararg = 1;
   luaK_codeABCk(fs,OP_VARARGPREP,nparams,0,0,0);
 }

@@ -38,7 +38,7 @@ extern void sweep2old(lua_State *, GCObject **);
 extern void sweep2old(lua_State *, GCObject **);
 extern void cleargraylists(global_State *);
 
-static void atomic2gen (lua_State *L, global_State *g) {
+extern void atomic2gen (lua_State *L, global_State *g) {
   cleargraylists(g);
 
   g->gcstate = 3;

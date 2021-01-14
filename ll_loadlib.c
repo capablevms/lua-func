@@ -39,7 +39,7 @@ extern int lookforfunc(lua_State *, const char *, const char *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int ll_loadlib (lua_State *L) {
+extern int ll_loadlib (lua_State *L) {
   const char *path = (luaL_checklstring(L, (1), ((void*)0)));
   const char *init = (luaL_checklstring(L, (2), ((void*)0)));
   int stat = lookforfunc(L, path, init);

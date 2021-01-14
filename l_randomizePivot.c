@@ -37,7 +37,7 @@ extern void * memcpy(void *restrict, const void *restrict, size_t);
 extern time_t time(time_t *);
 extern clock_t clock();
 
-static unsigned int l_randomizePivot (void) {
+extern unsigned int l_randomizePivot (void) {
   clock_t c = clock();
   time_t t = time(((void*)0));
   unsigned int buff[(sizeof(c) / sizeof(unsigned int)) + (sizeof(t) / sizeof(unsigned int))];

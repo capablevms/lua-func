@@ -34,7 +34,7 @@
 
 extern int luaL_error(lua_State *, const char *, ...);
 
-static lua_Integer unpackint (lua_State *L, const char *str,
+extern lua_Integer unpackint (lua_State *L, const char *str,
                               int islittle, int size, int issigned) {
   lua_Unsigned res = 0;
   int i;

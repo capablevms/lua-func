@@ -39,7 +39,7 @@ extern void luaK_reserveregs(FuncState *, int);
 extern int luaK_codeABCk(FuncState *, OpCode, int, int, int, int);
 extern int luaK_codeABCk(FuncState *, OpCode, int, int, int, int);
 
-static void check_conflict (LexState *ls, struct LHS_assign *lh, expdesc *v) {
+extern void check_conflict (LexState *ls, struct LHS_assign *lh, expdesc *v) {
   FuncState *fs = ls->fs;
   int extra = fs->freereg;
   int conflict = 0;

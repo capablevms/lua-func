@@ -36,7 +36,7 @@ extern void luaK_exp2nextreg(FuncState *, expdesc *);
 extern void init_exp(expdesc *, expkind, int);
 extern int luaK_codeABx(FuncState *, OpCode, int, unsigned int);
 
-static void codeclosure (LexState *ls, expdesc *v) {
+extern void codeclosure (LexState *ls, expdesc *v) {
   FuncState *fs = ls->fs->prev;
   init_exp(v, VRELOC, luaK_codeABx(fs, OP_CLOSURE, 0, fs->np - 1));
   luaK_exp2nextreg(fs, v);

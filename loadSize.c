@@ -39,6 +39,6 @@ typedef struct {
 
 extern size_t loadUnsigned(LoadState *, size_t);
 
-static size_t loadSize (LoadState *S) {
+extern size_t loadSize (LoadState *S) {
   return loadUnsigned(S, ~(size_t)0);
 }

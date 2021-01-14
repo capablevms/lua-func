@@ -35,7 +35,7 @@
 extern double strtod(const char *restrict, char **restrict);
 extern double strtod(const char *restrict, char **restrict);
 
-static const char *l_str2dloc (const char *s, lua_Number *result, int mode) {
+extern const char *l_str2dloc (const char *s, lua_Number *result, int mode) {
   char *endptr;
   *result = (mode == 'x') ? strtod((s), (&endptr))
                           : strtod((s), (&endptr));

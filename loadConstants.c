@@ -45,7 +45,7 @@ extern void * luaM_malloc_(lua_State *, size_t, int);
 extern void luaM_toobig(lua_State *);
 extern int loadInt(LoadState *);
 
-static void loadConstants (LoadState *S, Proto *f) {
+extern void loadConstants (LoadState *S, Proto *f) {
   int i;
   int n = loadInt(S);
   f->k = (((sizeof(n) >= sizeof(size_t) && ((size_t)(((n)))) + 1 > ((size_t)(~(size_t)0))/(sizeof(TValue))) ? luaM_toobig(S->L) : ((void)((0)))), ((TValue*)(luaM_malloc_(S->L, (n)*sizeof(TValue), 0))));

@@ -37,7 +37,7 @@ extern int validop(int, TValue *, TValue *);
 extern int tonumeral(const expdesc *, TValue *);
 extern int tonumeral(const expdesc *, TValue *);
 
-static int constfolding (FuncState *fs, int op, expdesc *e1,
+extern int constfolding (FuncState *fs, int op, expdesc *e1,
                                         const expdesc *e2) {
   TValue v1, v2, res;
   if (!tonumeral(e1, &v1) || !tonumeral(e2, &v2) || !validop(op, &v1, &v2))

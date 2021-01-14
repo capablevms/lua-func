@@ -40,7 +40,7 @@ extern const char * lua_pushlstring(lua_State *, const char *, size_t);
 extern char * strchr(const char *, int);
 extern const char * luaL_gsub(lua_State *, const char *, const char *, const char *);
 
-static int loadfunc (lua_State *L, const char *filename, const char *modname) {
+extern int loadfunc (lua_State *L, const char *filename, const char *modname) {
   const char *openfunc;
   const char *mark;
   modname = luaL_gsub(L, modname, ".", "_");

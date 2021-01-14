@@ -38,7 +38,7 @@ extern void checkrepeated(LexState *, TString *);
 extern void statement(LexState *);
 extern void checknext(LexState *, int);
 
-static void labelstat (LexState *ls, TString *name, int line) {
+extern void labelstat (LexState *ls, TString *name, int line) {
 
   checknext(ls, TK_DBCOLON);
   while (ls->t.token == ';' || ls->t.token == TK_DBCOLON)

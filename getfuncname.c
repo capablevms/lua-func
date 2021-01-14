@@ -34,7 +34,7 @@
 
 extern const char * funcnamefromcode(lua_State *, CallInfo *, const char **);
 
-static const char *getfuncname (lua_State *L, CallInfo *ci, const char **name) {
+extern const char *getfuncname (lua_State *L, CallInfo *ci, const char **name) {
   if (ci == ((void*)0))
     return ((void*)0);
   else if (ci->callstatus & (1<<7)) {

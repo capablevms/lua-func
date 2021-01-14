@@ -34,7 +34,7 @@
 
 extern void reallymarkobject(global_State *, GCObject *);
 
-static int traverseCclosure (global_State *g, CClosure *cl) {
+extern int traverseCclosure (global_State *g, CClosure *cl) {
   int i;
   for (i = 0; i < cl->nupvalues; i++)
     { ((void)g->mainthread, ((void)0)); if (((((&cl->upvalue[i])->tt_) & (1 << 6)) && ((((((&cl->upvalue[i])->value_).gc))->marked) & (((1<<(3)) | (1<<(4))))))) reallymarkobject(g,(((&cl->upvalue[i])->value_).gc)); };

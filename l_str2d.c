@@ -41,7 +41,7 @@ extern char * strchr(const char *, int);
 extern const char * l_str2dloc(const char *, lua_Number *, int);
 extern char * strpbrk(const char *, const char *);
 
-static const char *l_str2d (const char *s, lua_Number *result) {
+extern const char *l_str2d (const char *s, lua_Number *result) {
   const char *endptr;
   const char *pmode = strpbrk(s, ".xXnN");
   int mode = pmode ? ((((unsigned char)((*pmode)))) | ('A' ^ 'a')) : 0;

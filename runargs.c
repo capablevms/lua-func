@@ -36,7 +36,7 @@ extern void lua_warning(lua_State *, const char *, int);
 extern int dolibrary(lua_State *, const char *);
 extern int dostring(lua_State *, const char *, const char *);
 
-static int runargs (lua_State *L, char **argv, int n) {
+extern int runargs (lua_State *L, char **argv, int n) {
   int i;
   for (i = 1; i < n; i++) {
     int option = argv[i][1];

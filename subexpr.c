@@ -44,7 +44,7 @@ extern void luaK_prefix(FuncState *, UnOpr, expdesc *, int);
 extern UnOpr getunopr(int);
 extern void luaE_incCstack(lua_State *);
 
-static BinOpr subexpr (LexState *ls, expdesc *v, int limit) {
+extern BinOpr subexpr (LexState *ls, expdesc *v, int limit) {
   BinOpr op;
   UnOpr uop;
   luaE_incCstack(ls->L);

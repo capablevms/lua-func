@@ -50,7 +50,7 @@ extern char * getenv(const char *);
 extern char * getenv(const char *);
 extern const char * lua_pushfstring(lua_State *, const char *, ...);
 
-static void setpath (lua_State *L, const char *fieldname,
+extern void setpath (lua_State *L, const char *fieldname,
                                    const char *envname,
                                    const char *dft) {
   const char *dftmark;

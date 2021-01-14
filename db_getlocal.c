@@ -48,7 +48,7 @@ extern int lua_type(lua_State *, int);
 extern lua_Integer luaL_checkinteger(lua_State *, int);
 extern lua_State * getthread(lua_State *, int *);
 
-static int db_getlocal (lua_State *L) {
+extern int db_getlocal (lua_State *L) {
   int arg;
   lua_State *L1 = getthread(L, &arg);
   int nvar = (int)luaL_checkinteger(L, arg + 2);

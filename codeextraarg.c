@@ -34,7 +34,7 @@
 
 extern int luaK_code(FuncState *, Instruction);
 
-static int codeextraarg (FuncState *fs, int a) {
+extern int codeextraarg (FuncState *fs, int a) {
   ((void)0);
   return luaK_code(fs, ((((Instruction)(OP_EXTRAARG))<<0) | (((Instruction)(a))<<(0 + 7))));
 }

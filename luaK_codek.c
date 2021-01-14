@@ -36,7 +36,7 @@ extern int codeextraarg(FuncState *, int);
 extern int luaK_codeABx(FuncState *, OpCode, int, unsigned int);
 extern int luaK_codeABx(FuncState *, OpCode, int, unsigned int);
 
-static int luaK_codek (FuncState *fs, int reg, int k) {
+extern int luaK_codek (FuncState *fs, int reg, int k) {
   if (k <= ((1<<(8 + 8 + 1))-1))
     return luaK_codeABx(fs, OP_LOADK, reg, k);
   else {

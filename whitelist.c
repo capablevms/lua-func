@@ -33,7 +33,7 @@
 
 
 
-static void whitelist (global_State *g, GCObject *p) {
+extern void whitelist (global_State *g, GCObject *p) {
   int white = ((lu_byte)(((g)->currentwhite & ((1<<(3)) | (1<<(4))))));
   for (; p != ((void*)0); p = p->next)
     p->marked = ((lu_byte)(((p->marked & ~(((1<<(5)) | ((1<<(3)) | (1<<(4)))) | 7)) | white)));

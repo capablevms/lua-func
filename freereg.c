@@ -34,7 +34,7 @@
 
 extern int luaY_nvarstack(FuncState *);
 
-static void freereg (FuncState *fs, int reg) {
+extern void freereg (FuncState *fs, int reg) {
   if (reg >= luaY_nvarstack(fs)) {
     fs->freereg--;
     ((void)0);

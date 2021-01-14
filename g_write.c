@@ -43,7 +43,7 @@ extern int lua_isinteger(lua_State *, int);
 extern int lua_type(lua_State *, int);
 extern int lua_gettop(lua_State *);
 
-static int g_write (lua_State *L, FILE *f, int arg) {
+extern int g_write (lua_State *L, FILE *f, int arg) {
   int nargs = lua_gettop(L) - arg;
   int status = 1;
   for (; nargs--; arg++) {

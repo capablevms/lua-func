@@ -37,7 +37,7 @@ extern void luaK_exp2nextreg(FuncState *, expdesc *);
 extern int testnext(LexState *, int);
 extern void expr(LexState *, expdesc *);
 
-static int explist (LexState *ls, expdesc *v) {
+extern int explist (LexState *ls, expdesc *v) {
 
   int n = 1;
   expr(ls, v);

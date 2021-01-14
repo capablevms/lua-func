@@ -34,6 +34,6 @@
 
 extern int arith(lua_State *, int, const char *);
 
-static int arith_mod (lua_State *L) {
+extern int arith_mod (lua_State *L) {
   return arith(L, 3, "__mod");
 }

@@ -35,7 +35,7 @@
 extern int luaO_hexavalue(int);
 extern int isneg(const char **);
 
-static const char *l_str2int (const char *s, lua_Integer *result) {
+extern const char *l_str2int (const char *s, lua_Integer *result) {
   lua_Unsigned a = 0;
   int empty = 1;
   int neg;

@@ -34,7 +34,7 @@
 
 extern void luaX_next(LexState *);
 
-static int testnext (LexState *ls, int c) {
+extern int testnext (LexState *ls, int c) {
   if (ls->t.token == c) {
     luaX_next(ls);
     return 1;

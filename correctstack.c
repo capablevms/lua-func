@@ -33,7 +33,7 @@
 
 
 
-static void correctstack (lua_State *L, StkId oldstack, StkId newstack) {
+extern void correctstack (lua_State *L, StkId oldstack, StkId newstack) {
   CallInfo *ci;
   UpVal *up;
   if (oldstack == newstack)

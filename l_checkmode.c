@@ -36,7 +36,7 @@ extern unsigned long strlen(const char *);
 extern unsigned long strspn(const char *, const char *);
 extern char * strchr(const char *, int);
 
-static int l_checkmode (const char *mode) {
+extern int l_checkmode (const char *mode) {
   return (*mode != '\0' && strchr("rwa", *(mode++)) != ((void*)0) &&
          (*mode != '+' || ((void)(++mode), 1)) &&
          (strspn(mode, "b") == strlen(mode)));

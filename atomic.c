@@ -52,7 +52,7 @@ extern void markmt(global_State *);
 extern void reallymarkobject(global_State *, GCObject *);
 extern void reallymarkobject(global_State *, GCObject *);
 
-static lu_mem atomic (lua_State *L) {
+extern lu_mem atomic (lua_State *L) {
   global_State *g = (L->l_G);
   lu_mem work = 0;
   GCObject *origweak, *origall;

@@ -44,7 +44,7 @@ extern int lua_gettop(lua_State *);
 extern int msghandler (lua_State *);
 extern void laction (int i);
 
-static int docall (lua_State *L, int narg, int nres) {
+extern int docall (lua_State *L, int narg, int nres) {
   int status;
   int base = lua_gettop(L) - narg;
   lua_pushcclosure(L, (msghandler), 0);

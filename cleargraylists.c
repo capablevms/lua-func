@@ -33,7 +33,7 @@
 
 
 
-static void cleargraylists (global_State *g) {
+extern void cleargraylists (global_State *g) {
   g->gray = g->grayagain = ((void*)0);
   g->weak = g->allweak = g->ephemeron = ((void*)0);
 }

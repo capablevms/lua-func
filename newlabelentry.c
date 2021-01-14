@@ -34,7 +34,7 @@
 
 extern void * luaM_growaux_(lua_State *, void *, int, int *, int, int, const char *);
 
-static int newlabelentry (LexState *ls, Labellist *l, TString *name,
+extern int newlabelentry (LexState *ls, Labellist *l, TString *name,
                           int line, int pc) {
   int n = l->n;
   ((l->arr)=((Labeldesc *)(luaM_growaux_(ls->L,l->arr,n,&(l->size),sizeof(Labeldesc), ((((size_t)((32767))) <= ((size_t)(~(size_t)0))/sizeof(Labeldesc)) ? (32767) : ((unsigned int)(((((size_t)(~(size_t)0))/sizeof(Labeldesc)))))),"labels/gotos"))));

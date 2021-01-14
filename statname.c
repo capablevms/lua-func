@@ -31,5 +31,5 @@
 #include "lzio.h"
 
 
-static const char *const statname[] =
+const char *const statname[] =
   {"running", "dead", "suspended", "normal"};

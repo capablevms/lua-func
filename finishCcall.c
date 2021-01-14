@@ -34,7 +34,7 @@
 
 extern void luaD_poscall(lua_State *, CallInfo *, int);
 
-static void finishCcall (lua_State *L, int status) {
+extern void finishCcall (lua_State *L, int status) {
   CallInfo *ci = L->ci;
   int n;
 

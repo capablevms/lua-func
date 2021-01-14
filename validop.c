@@ -35,7 +35,7 @@
 extern int luaV_tointegerns(const TValue *, lua_Integer *, F2Imod);
 extern int luaV_tointegerns(const TValue *, lua_Integer *, F2Imod);
 
-static int validop (int op, TValue *v1, TValue *v2) {
+extern int validop (int op, TValue *v1, TValue *v2) {
   switch (op) {
     case 7: case 8: case 9:
     case 10: case 11: case 13: {

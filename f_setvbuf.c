@@ -39,7 +39,7 @@ extern lua_Integer luaL_optinteger(lua_State *, int, lua_Integer);
 extern int luaL_checkoption(lua_State *, int, const char *, const char *const *);
 extern FILE * tofile(lua_State *);
 
-static int f_setvbuf (lua_State *L) {
+extern int f_setvbuf (lua_State *L) {
   static const int mode[] = {2, 0, 1};
   static const char *const modenames[] = {"no", "full", "line", ((void*)0)};
   FILE *f = tofile(L);

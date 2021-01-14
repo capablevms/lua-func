@@ -35,7 +35,7 @@
 extern void finishbinexpval(FuncState *, expdesc *, expdesc *, OpCode, int, int, int, OpCode, TMS);
 extern int luaK_exp2anyreg(FuncState *, expdesc *);
 
-static void codebinexpval (FuncState *fs, OpCode op,
+extern void codebinexpval (FuncState *fs, OpCode op,
                            expdesc *e1, expdesc *e2, int line) {
   int v2 = luaK_exp2anyreg(fs, e2);
   ((void)0);

@@ -41,7 +41,7 @@ extern lu_mem atomic(lua_State *);
 extern void luaC_runtilstate(lua_State *, int);
 extern void enterinc(global_State *);
 
-static void stepgenfull (lua_State *L, global_State *g) {
+extern void stepgenfull (lua_State *L, global_State *g) {
   lu_mem newatomic;
   lu_mem lastatomic = g->lastatomic;
   if (g->gckind == 1)

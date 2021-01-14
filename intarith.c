@@ -37,7 +37,7 @@ extern lua_Integer luaV_shiftl(lua_Integer, lua_Integer);
 extern lua_Integer luaV_idiv(lua_State *, lua_Integer, lua_Integer);
 extern lua_Integer luaV_mod(lua_State *, lua_Integer, lua_Integer);
 
-static lua_Integer intarith (lua_State *L, int op, lua_Integer v1,
+extern lua_Integer intarith (lua_State *L, int op, lua_Integer v1,
                                                    lua_Integer v2) {
   switch (op) {
     case 0: return ((lua_Integer)(((lua_Unsigned)(v1)) + ((lua_Unsigned)(v2))));

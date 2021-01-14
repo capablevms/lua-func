@@ -48,7 +48,7 @@ extern int testnext(LexState *, int);
 extern void test_then_block(LexState *, int *);
 extern void test_then_block(LexState *, int *);
 
-static void ifstat (LexState *ls, int line) {
+extern void ifstat (LexState *ls, int line) {
 
   FuncState *fs = ls->fs;
   int escapelist = (-1);

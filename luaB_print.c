@@ -40,7 +40,7 @@ extern unsigned long fwrite(const void *restrict, size_t, size_t, FILE *restrict
 extern const char * luaL_tolstring(lua_State *, int, size_t *);
 extern int lua_gettop(lua_State *);
 
-static int luaB_print (lua_State *L) {
+extern int luaB_print (lua_State *L) {
   int n = lua_gettop(L);
   int i;
   for (i = 1; i <= n; i++) {

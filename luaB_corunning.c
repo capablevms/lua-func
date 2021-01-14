@@ -35,7 +35,7 @@
 extern void lua_pushboolean(lua_State *, int);
 extern int lua_pushthread(lua_State *);
 
-static int luaB_corunning (lua_State *L) {
+extern int luaB_corunning (lua_State *L) {
   int ismain = lua_pushthread(L);
   lua_pushboolean(L, ismain);
   return 2;

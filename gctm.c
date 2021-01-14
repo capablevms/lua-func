@@ -38,7 +38,7 @@ extern void * lua_touserdata(lua_State *, int);
 extern int lua_rawgeti(lua_State *, int, lua_Integer);
 extern lua_Integer luaL_len(lua_State *, int);
 
-static int gctm (lua_State *L) {
+extern int gctm (lua_State *L) {
   lua_Integer n = luaL_len(L, 1);
   for (; n >= 1; n--) {
     lua_rawgeti(L, 1, n);

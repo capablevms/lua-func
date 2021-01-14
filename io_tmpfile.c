@@ -37,7 +37,7 @@ extern int luaL_fileresult(lua_State *, int, const char *);
 extern FILE * tmpfile();
 extern LStream * newfile(lua_State *);
 
-static int io_tmpfile (lua_State *L) {
+extern int io_tmpfile (lua_State *L) {
   LStream *p = newfile(L);
   p->f = tmpfile();
   return (p->f == ((void*)0)) ? luaL_fileresult(L, 0, ((void*)0)) : 1;

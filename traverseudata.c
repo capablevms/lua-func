@@ -36,7 +36,7 @@ extern void genlink(global_State *, GCObject *);
 extern void reallymarkobject(global_State *, GCObject *);
 extern void reallymarkobject(global_State *, GCObject *);
 
-static int traverseudata (global_State *g, Udata *u) {
+extern int traverseudata (global_State *g, Udata *u) {
   int i;
   { if (u->metatable) { if ((((u->metatable)->marked) & (((1<<(3)) | (1<<(4)))))) reallymarkobject(g, (&(((union GCUnion *)((u->metatable)))->gc))); }; };
   for (i = 0; i < u->nuvalue; i++)

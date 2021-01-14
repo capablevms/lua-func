@@ -35,7 +35,7 @@
 extern void * luaM_saferealloc_(lua_State *, void *, size_t, size_t);
 extern void lexerror(LexState *, const char *, int);
 
-static void save (LexState *ls, int c) {
+extern void save (LexState *ls, int c) {
   Mbuffer *b = ls->buff;
   if (((b)->n) + 1 > ((b)->buffsize)) {
     size_t newsize;

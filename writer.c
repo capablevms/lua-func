@@ -38,7 +38,7 @@ struct str_Writer {
 extern void luaL_addlstring(luaL_Buffer *, const char *, size_t);
 extern void luaL_buffinit(lua_State *, luaL_Buffer *);
 
-static int writer (lua_State *L, const void *b, size_t size, void *ud) {
+extern int writer (lua_State *L, const void *b, size_t size, void *ud) {
   struct str_Writer *state = (struct str_Writer *)ud;
   if (!state->init) {
     state->init = 1;

@@ -36,7 +36,7 @@ extern void luaD_throw(lua_State *, int);
 extern const char * luaO_pushfstring(lua_State *, const char *, ...);
 extern char * strchr(const char *, int);
 
-static void checkmode (lua_State *L, const char *mode, const char *x) {
+extern void checkmode (lua_State *L, const char *mode, const char *x) {
   if (mode && strchr(mode, x[0]) == ((void*)0)) {
     luaO_pushfstring(L,
        "attempt to load a %s chunk (mode is '%s')", x, mode);

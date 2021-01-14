@@ -42,7 +42,7 @@ typedef struct ConsControl {
 extern void luaK_setlist(FuncState *, int, int, int);
 extern void luaK_exp2nextreg(FuncState *, expdesc *);
 
-static void closelistfield (FuncState *fs, ConsControl *cc) {
+extern void closelistfield (FuncState *fs, ConsControl *cc) {
   if (cc->v.k == VVOID) return;
   luaK_exp2nextreg(fs, &cc->v);
   cc->v.k = VVOID;

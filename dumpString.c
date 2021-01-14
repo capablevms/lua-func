@@ -43,7 +43,7 @@ extern void dumpBlock(DumpState *, const void *, size_t);
 extern void dumpSize(DumpState *, size_t);
 extern void dumpSize(DumpState *, size_t);
 
-static void dumpString (DumpState *D, const TString *s) {
+extern void dumpString (DumpState *D, const TString *s) {
   if (s == ((void*)0))
     dumpSize(D, 0);
   else {

@@ -37,7 +37,7 @@ extern int luaL_loadfilex(lua_State *, const char *, const char *);
 extern const char * findfile(lua_State *, const char *, const char *, const char *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int searcher_Lua (lua_State *L) {
+extern int searcher_Lua (lua_State *L) {
   const char *filename;
   const char *name = (luaL_checklstring(L, (1), ((void*)0)));
   filename = findfile(L, name, "path", "/");

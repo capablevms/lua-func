@@ -36,7 +36,7 @@ extern int registerlocalvar(LexState *, FuncState *, TString *);
 extern Vardesc * getlocalvardesc(FuncState *, int);
 extern int luaY_nvarstack(FuncState *);
 
-static void adjustlocalvars (LexState *ls, int nvars) {
+extern void adjustlocalvars (LexState *ls, int nvars) {
   FuncState *fs = ls->fs;
   int stklevel = luaY_nvarstack(fs);
   int i;

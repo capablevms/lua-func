@@ -31,4 +31,4 @@
 #include "lzio.h"
 
 
-static const TValue absentkey = {{((void*)0)}, ((0) | ((2) << 4))};
+const TValue absentkey = {{((void*)0)}, ((0) | ((2) << 4))};

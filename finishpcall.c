@@ -36,7 +36,7 @@ extern int lua_gettop(lua_State *);
 extern void lua_pushvalue(lua_State *, int);
 extern void lua_pushboolean(lua_State *, int);
 
-static int finishpcall (lua_State *L, int status, lua_KContext extra) {
+extern int finishpcall (lua_State *L, int status, lua_KContext extra) {
   if (status != 0 && status != 1) {
     lua_pushboolean(L, 0);
     lua_pushvalue(L, -2);

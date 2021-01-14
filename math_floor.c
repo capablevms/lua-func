@@ -38,7 +38,7 @@ extern lua_Number luaL_checknumber(lua_State *, int);
 extern void lua_settop(lua_State *, int);
 extern int lua_isinteger(lua_State *, int);
 
-static int math_floor (lua_State *L) {
+extern int math_floor (lua_State *L) {
   if (lua_isinteger(L, 1))
     lua_settop(L, 1);
   else {

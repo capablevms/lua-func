@@ -54,7 +54,7 @@ extern void lexerror(LexState *, const char *, int);
 extern int luaZ_fill(ZIO *);
 extern void save(LexState *, int);
 
-static void read_string (LexState *ls, int del, SemInfo *seminfo) {
+extern void read_string (LexState *ls, int del, SemInfo *seminfo) {
   (save(ls, ls->current), (ls->current = (((ls->z)->n--)>0 ? ((unsigned char)((*(ls->z)->p++))) : luaZ_fill(ls->z))));
   while (ls->current != del) {
     switch (ls->current) {

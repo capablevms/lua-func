@@ -39,7 +39,7 @@ extern const unsigned short ** __ctype_b_loc();
 extern const unsigned short ** __ctype_b_loc();
 extern unsigned long strspn(const char *, const char *);
 
-static const char *b_str2int (const char *s, int base, lua_Integer *pn) {
+extern const char *b_str2int (const char *s, int base, lua_Integer *pn) {
   lua_Unsigned n = 0;
   int neg = 0;
   s += strspn(s, " \f\n\r\t\v");

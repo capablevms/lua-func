@@ -34,7 +34,7 @@
 
 extern void luaX_syntaxerror(LexState *, const char *);
 
-static void fixjump (FuncState *fs, int pc, int dest) {
+extern void fixjump (FuncState *fs, int pc, int dest) {
   Instruction *jmp = &fs->f->code[pc];
   int offset = dest - (pc + 1);
   ((void)0);

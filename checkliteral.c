@@ -42,7 +42,7 @@ extern int memcmp(const void *, const void *, size_t);
 extern void loadBlock(LoadState *, void *, size_t);
 extern unsigned long strlen(const char *);
 
-static void checkliteral (LoadState *S, const char *s, const char *msg) {
+extern void checkliteral (LoadState *S, const char *s, const char *msg) {
   char buff[sizeof("\x1bLua") + sizeof("\x19\x93\r\n\x1a\n")];
   size_t len = strlen(s);
   loadBlock(S,buff,(len)*sizeof((buff)[0]));

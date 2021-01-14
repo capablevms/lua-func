@@ -45,7 +45,7 @@ extern LClosure * luaU_undump(lua_State *, ZIO *, const char *);
 extern void checkmode(lua_State *, const char *, const char *);
 extern int luaZ_fill(ZIO *);
 
-static void f_parser (lua_State *L, void *ud) {
+extern void f_parser (lua_State *L, void *ud) {
   LClosure *cl;
   struct SParser *p = ((struct SParser *)(ud));
   int c = (((p->z)->n--)>0 ? ((unsigned char)((*(p->z)->p++))) : luaZ_fill(p->z));

@@ -62,7 +62,7 @@ extern const char * lua_pushstring(lua_State *, const char *);
 extern void luaL_setfuncs(lua_State *, const luaL_Reg *, int);
 extern void lua_createtable(lua_State *, int, int);
 
-static void createmetatable (lua_State *L) {
+extern void createmetatable (lua_State *L) {
 
   lua_createtable(L, 0, sizeof(stringmetamethods)/sizeof((stringmetamethods)[0]) - 1);
   luaL_setfuncs(L, stringmetamethods, 0);

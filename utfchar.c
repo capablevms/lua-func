@@ -39,7 +39,7 @@ extern void luaL_buffinit(lua_State *, luaL_Buffer *);
 extern void pushutfchar(lua_State *, int);
 extern int lua_gettop(lua_State *);
 
-static int utfchar (lua_State *L) {
+extern int utfchar (lua_State *L) {
   int n = lua_gettop(L);
   if (n == 1)
     pushutfchar(L, 1);

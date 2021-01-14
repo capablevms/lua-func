@@ -45,7 +45,7 @@ extern void addquoted(luaL_Buffer *, const char *, size_t);
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 extern int lua_type(lua_State *, int);
 
-static void addliteral (lua_State *L, luaL_Buffer *b, int arg) {
+extern void addliteral (lua_State *L, luaL_Buffer *b, int arg) {
   switch (lua_type(L, arg)) {
     case 4: {
       size_t len;

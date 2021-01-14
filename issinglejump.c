@@ -41,7 +41,7 @@ extern int luaX_lookahead(LexState *);
 extern TString * luaS_newlstr(lua_State *, const char *, size_t);
 extern int testnext(LexState *, int);
 
-static int issinglejump (LexState *ls, TString **label, int *target) {
+extern int issinglejump (LexState *ls, TString **label, int *target) {
   if (testnext(ls, TK_BREAK)) {
     *label = (luaS_newlstr(ls->L, "" "break", (sizeof("break")/sizeof(char))-1));
     return 1;

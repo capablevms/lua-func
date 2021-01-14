@@ -40,7 +40,7 @@ extern void checknext(LexState *, int);
 extern TString * str_checkname(LexState *);
 extern int testnext(LexState *, int);
 
-static int getlocalattribute (LexState *ls) {
+extern int getlocalattribute (LexState *ls) {
 
   if (testnext(ls, '<')) {
     const char *attr = ((str_checkname(ls))->contents);

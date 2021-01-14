@@ -34,6 +34,6 @@
 
 extern UpVal * newupval(lua_State *, int, StkId, UpVal **);
 
-static void trynewtbcupval (lua_State *L, void *ud) {
+extern void trynewtbcupval (lua_State *L, void *ud) {
   newupval(L, 1, ((StkId)(ud)), &L->openupval);
 }

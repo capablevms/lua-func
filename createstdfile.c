@@ -40,7 +40,7 @@ extern LStream * newprefile(lua_State *);
 
 extern int io_noclose(lua_State *);
 
-static void createstdfile (lua_State *L, FILE *f, const char *k,
+extern void createstdfile (lua_State *L, FILE *f, const char *k,
                            const char *fname) {
   LStream *p = newprefile(L);
   p->f = f;

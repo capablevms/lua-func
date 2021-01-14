@@ -42,7 +42,7 @@ extern void luaL_checkany(lua_State *, int);
 
 extern int luaB_next (lua_State *);
 
-static int luaB_pairs (lua_State *L) {
+extern int luaB_pairs (lua_State *L) {
   luaL_checkany(L, 1);
   if (luaL_getmetafield(L, 1, "__pairs") == 0) {
     lua_pushcclosure(L, (luaB_next), 0);

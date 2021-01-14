@@ -33,7 +33,7 @@
 
 
 
-static void reverse (lua_State *L, StkId from, StkId to) {
+extern void reverse (lua_State *L, StkId from, StkId to) {
   for (; from < to; from++, to--) {
     TValue temp;
     { TValue *io1=(&temp); const TValue *io2=((&(from)->val)); io1->value_ = io2->value_; ((io1)->tt_=(io2->tt_)); ((void)L, ((void)0)); ((void)0); };

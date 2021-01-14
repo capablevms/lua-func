@@ -34,7 +34,7 @@
 
 extern TValue * luaH_set(lua_State *, Table *, const TValue *);
 
-static void reinsert (lua_State *L, Table *ot, Table *t) {
+extern void reinsert (lua_State *L, Table *ot, Table *t) {
   int j;
   int size = ((1<<((ot)->lsizenode)));
   for (j = 0; j < size; j++) {

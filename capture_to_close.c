@@ -46,7 +46,7 @@ typedef struct MatchState {
 
 extern int luaL_error(lua_State *, const char *, ...);
 
-static int capture_to_close (MatchState *ms) {
+extern int capture_to_close (MatchState *ms) {
   int level = ms->level;
   for (level--; level>=0; level--)
     if (ms->capture[level].len == (-1)) return level;

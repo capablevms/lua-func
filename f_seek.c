@@ -42,7 +42,7 @@ extern lua_Integer luaL_optinteger(lua_State *, int, lua_Integer);
 extern int luaL_checkoption(lua_State *, int, const char *, const char *const *);
 extern FILE * tofile(lua_State *);
 
-static int f_seek (lua_State *L) {
+extern int f_seek (lua_State *L) {
   static const int mode[] = {0, 1, 2};
   static const char *const modenames[] = {"set", "cur", "end", ((void*)0)};
   FILE *f = tofile(L);

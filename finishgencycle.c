@@ -36,7 +36,7 @@ extern void callallpendingfinalizers(lua_State *);
 extern void checkSizes(lua_State *, global_State *);
 extern void correctgraylists(global_State *);
 
-static void finishgencycle (lua_State *L, global_State *g) {
+extern void finishgencycle (lua_State *L, global_State *g) {
   correctgraylists(g);
   checkSizes(L, g);
   g->gcstate = 0;

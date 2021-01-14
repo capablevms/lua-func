@@ -40,7 +40,7 @@ extern int lua_type(lua_State *, int);
 extern int luaL_callmeta(lua_State *, int, const char *);
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 
-static int msghandler (lua_State *L) {
+extern int msghandler (lua_State *L) {
   const char *msg = lua_tolstring(L, (1), ((void*)0));
   if (msg == ((void*)0)) {
     if (luaL_callmeta(L, 1, "__tostring") &&

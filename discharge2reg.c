@@ -42,7 +42,7 @@ extern int luaK_codeABCk(FuncState *, OpCode, int, int, int, int);
 extern void luaK_nil(FuncState *, int, int);
 extern void luaK_dischargevars(FuncState *, expdesc *);
 
-static void discharge2reg (FuncState *fs, expdesc *e, int reg) {
+extern void discharge2reg (FuncState *fs, expdesc *e, int reg) {
   luaK_dischargevars(fs, e);
   switch (e->k) {
     case VNIL: {

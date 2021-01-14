@@ -33,7 +33,7 @@
 
 
 
-static CallInfo *findpcall (lua_State *L) {
+extern CallInfo *findpcall (lua_State *L) {
   CallInfo *ci;
   for (ci = L->ci; ci != ((void*)0); ci = ci->previous) {
     if (ci->callstatus & (1<<4))

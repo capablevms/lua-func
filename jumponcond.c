@@ -38,7 +38,7 @@ extern void discharge2anyreg(FuncState *, expdesc *);
 extern int condjump(FuncState *, OpCode, int, int, int, int);
 extern void removelastinstruction(FuncState *);
 
-static int jumponcond (FuncState *fs, expdesc *e, int cond) {
+extern int jumponcond (FuncState *fs, expdesc *e, int cond) {
   if (e->k == VRELOC) {
     Instruction ie = ((fs)->f->code[(e)->u.info]);
     if ((((OpCode)(((ie)>>0) & ((~((~(Instruction)0)<<(7)))<<(0))))) == OP_NOT) {

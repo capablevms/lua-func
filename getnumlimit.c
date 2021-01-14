@@ -40,7 +40,7 @@ typedef struct Header {
 extern int luaL_error(lua_State *, const char *, ...);
 extern int getnum(const char **, int);
 
-static int getnumlimit (Header *h, const char **fmt, int df) {
+extern int getnumlimit (Header *h, const char **fmt, int df) {
   int sz = getnum(fmt, df);
   if (sz > 16 || sz <= 0)
     return luaL_error(h->L, "integral size (%d) out of limits [1,%d]",

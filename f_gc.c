@@ -36,7 +36,7 @@ typedef luaL_Stream LStream;
 extern int aux_close(lua_State *);
 extern void * luaL_checkudata(lua_State *, int, const char *);
 
-static int f_gc (lua_State *L) {
+extern int f_gc (lua_State *L) {
   LStream *p = ((LStream *)luaL_checkudata(L, 1, "FILE*"));
   if (!((p)->closef == ((void*)0)) && p->f != ((void*)0))
     aux_close(L);

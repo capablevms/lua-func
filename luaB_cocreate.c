@@ -37,7 +37,7 @@ extern void lua_pushvalue(lua_State *, int);
 extern lua_State * lua_newthread(lua_State *);
 extern void luaL_checktype(lua_State *, int, int);
 
-static int luaB_cocreate (lua_State *L) {
+extern int luaB_cocreate (lua_State *L) {
   lua_State *NL;
   luaL_checktype(L, 1, 6);
   NL = lua_newthread(L);

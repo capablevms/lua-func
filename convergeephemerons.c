@@ -35,7 +35,7 @@
 extern lu_mem propagateall(global_State *);
 extern int traverseephemeron(global_State *, Table *, int);
 
-static void convergeephemerons (global_State *g) {
+extern void convergeephemerons (global_State *g) {
   int changed;
   int dir = 0;
   do {

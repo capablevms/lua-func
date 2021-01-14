@@ -35,7 +35,7 @@
 extern void * luaM_growaux_(lua_State *, void *, int, int *, int, int, const char *);
 extern void checklimit(FuncState *, int, int, const char *);
 
-static Upvaldesc *allocupvalue (FuncState *fs) {
+extern Upvaldesc *allocupvalue (FuncState *fs) {
   Proto *f = fs->f;
   int oldsize = f->sizeupvalues;
   checklimit(fs, fs->nups + 1, 255, "upvalues");

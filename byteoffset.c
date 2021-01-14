@@ -41,7 +41,7 @@ extern lua_Integer luaL_optinteger(lua_State *, int, lua_Integer);
 extern lua_Integer luaL_checkinteger(lua_State *, int);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int byteoffset (lua_State *L) {
+extern int byteoffset (lua_State *L) {
   size_t len;
   const char *s = luaL_checklstring(L, 1, &len);
   lua_Integer n = luaL_checkinteger(L, 2);

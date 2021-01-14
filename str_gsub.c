@@ -60,7 +60,7 @@ extern int lua_type(lua_State *, int);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int str_gsub (lua_State *L) {
+extern int str_gsub (lua_State *L) {
   size_t srcl, lp;
   const char *src = luaL_checklstring(L, 1, &srcl);
   const char *p = luaL_checklstring(L, 2, &lp);

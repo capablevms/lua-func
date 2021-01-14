@@ -48,7 +48,7 @@ extern void luaL_checktype(lua_State *, int, int);
 extern time_t time(time_t *);
 extern int lua_type(lua_State *, int);
 
-static int os_time (lua_State *L) {
+extern int os_time (lua_State *L) {
   time_t t;
   if ((lua_type(L, (1)) <= 0))
     t = time(((void*)0));

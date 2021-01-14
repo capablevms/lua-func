@@ -37,7 +37,7 @@ extern GCObject ** correctgraylist(GCObject **);
 extern GCObject ** correctgraylist(GCObject **);
 extern GCObject ** correctgraylist(GCObject **);
 
-static void correctgraylists (global_State *g) {
+extern void correctgraylists (global_State *g) {
   GCObject **list = correctgraylist(&g->grayagain);
   *list = g->weak; g->weak = ((void*)0);
   list = correctgraylist(list);

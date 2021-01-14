@@ -36,7 +36,7 @@ extern void lua_pushboolean(lua_State *, int);
 extern lua_Integer luaL_checkinteger(lua_State *, int);
 extern lua_Integer luaL_checkinteger(lua_State *, int);
 
-static int math_ult (lua_State *L) {
+extern int math_ult (lua_State *L) {
   lua_Integer a = luaL_checkinteger(L, 1);
   lua_Integer b = luaL_checkinteger(L, 2);
   lua_pushboolean(L, (lua_Unsigned)a < (lua_Unsigned)b);

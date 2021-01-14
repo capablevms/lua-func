@@ -37,7 +37,7 @@ extern void lua_rawseti(lua_State *, int, lua_Integer);
 extern const char * lua_pushstring(lua_State *, const char *);
 extern void lua_createtable(lua_State *, int, int);
 
-static void createargtable (lua_State *L, char **argv, int argc, int script) {
+extern void createargtable (lua_State *L, char **argv, int argc, int script) {
   int i, narg;
   if (script == argc) script = 0;
   narg = argc - (script + 1);

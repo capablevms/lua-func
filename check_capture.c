@@ -46,7 +46,7 @@ typedef struct MatchState {
 
 extern int luaL_error(lua_State *, const char *, ...);
 
-static int check_capture (MatchState *ms, int l) {
+extern int check_capture (MatchState *ms, int l) {
   l -= '1';
   if (l < 0 || l >= ms->level || ms->capture[l].len == (-1))
     return luaL_error(ms->L, "invalid capture index %%%d", l + 1);

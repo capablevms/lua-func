@@ -35,6 +35,6 @@
 extern int lua_yieldk(lua_State *, int, lua_KContext, lua_KFunction);
 extern int lua_gettop(lua_State *);
 
-static int luaB_yield (lua_State *L) {
+extern int luaB_yield (lua_State *L) {
   return lua_yieldk(L, (lua_gettop(L)), 0, ((void*)0));
 }

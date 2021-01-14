@@ -35,7 +35,7 @@
 extern int luaK_codeABCk(FuncState *, OpCode, int, int, int, int);
 extern int luaK_getlabel(FuncState *);
 
-static int code_loadbool (FuncState *fs, int A, OpCode op) {
+extern int code_loadbool (FuncState *fs, int A, OpCode op) {
   luaK_getlabel(fs);
   return luaK_codeABCk(fs,op,A,0,0,0);
 }

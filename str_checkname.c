@@ -35,7 +35,7 @@
 extern void luaX_next(LexState *);
 extern void check(LexState *, int);
 
-static TString *str_checkname (LexState *ls) {
+extern TString *str_checkname (LexState *ls) {
   TString *ts;
   check(ls, TK_NAME);
   ts = ls->t.seminfo.ts;

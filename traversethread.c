@@ -37,7 +37,7 @@ extern void reallymarkobject(global_State *, GCObject *);
 extern void reallymarkobject(global_State *, GCObject *);
 extern void linkgclist_(GCObject *, GCObject **, GCObject **);
 
-static int traversethread (global_State *g, lua_State *th) {
+extern int traversethread (global_State *g, lua_State *th) {
   UpVal *uv;
   StkId o = th->stack;
   if ((((th)->marked & 7) > 1) || g->gcstate == 0)

@@ -38,7 +38,7 @@ typedef struct {
 extern void setseed(lua_State *, unsigned long *, lua_Unsigned, lua_Unsigned);
 extern time_t time(time_t *);
 
-static void randseed (lua_State *L, RanState *state) {
+extern void randseed (lua_State *L, RanState *state) {
   lua_Unsigned seed1 = (lua_Unsigned)time(((void*)0));
   lua_Unsigned seed2 = (lua_Unsigned)(size_t)L;
   setseed(L, state->s, seed1, seed2);

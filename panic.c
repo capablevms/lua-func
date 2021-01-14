@@ -36,7 +36,7 @@ extern int fflush(FILE *);
 extern int fprintf(FILE *restrict, const char *restrict, ...);
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 
-static int panic (lua_State *L) {
+extern int panic (lua_State *L) {
   const char *msg = lua_tolstring(L, (-1), ((void*)0));
   if (msg == ((void*)0)) msg = "error object is not a string";
   (fprintf(stderr, ("PANIC: unprotected error in call to Lua API (%s)\n"), (msg)), fflush(stderr));

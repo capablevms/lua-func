@@ -36,7 +36,7 @@ extern void fieldsel(LexState *, expdesc *);
 extern void fieldsel(LexState *, expdesc *);
 extern void singlevar(LexState *, expdesc *);
 
-static int funcname (LexState *ls, expdesc *v) {
+extern int funcname (LexState *ls, expdesc *v) {
 
   int ismethod = 0;
   singlevar(ls, v);

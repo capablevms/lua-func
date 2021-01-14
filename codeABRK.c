@@ -35,7 +35,7 @@
 extern int luaK_codeABCk(FuncState *, OpCode, int, int, int, int);
 extern int luaK_exp2RK(FuncState *, expdesc *);
 
-static void codeABRK (FuncState *fs, OpCode o, int a, int b,
+extern void codeABRK (FuncState *fs, OpCode o, int a, int b,
                       expdesc *ec) {
   int k = luaK_exp2RK(fs, ec);
   luaK_codeABCk(fs, o, a, b, ec->u.info, k);

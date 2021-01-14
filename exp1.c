@@ -35,7 +35,7 @@
 extern void luaK_exp2nextreg(FuncState *, expdesc *);
 extern void expr(LexState *, expdesc *);
 
-static void exp1 (LexState *ls) {
+extern void exp1 (LexState *ls) {
   expdesc e;
   expr(ls, &e);
   luaK_exp2nextreg(ls->fs, &e);

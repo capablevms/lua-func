@@ -31,9 +31,8 @@
 #include "lzio.h"
 
 extern int boxgc(lua_State *);
-extern int boxgc(lua_State *);
 
-static const luaL_Reg boxmt[] = {
+const luaL_Reg boxmt[] = {
   {"__gc", boxgc},
   {"__close", boxgc},
   {((void*)0), ((void*)0)}

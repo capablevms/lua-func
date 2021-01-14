@@ -34,7 +34,7 @@
 
 extern char * luaL_prepbuffsize(luaL_Buffer *, size_t);
 
-static void packint (luaL_Buffer *b, lua_Unsigned n,
+extern void packint (luaL_Buffer *b, lua_Unsigned n,
                      int islittle, int size, int neg) {
   char *buff = luaL_prepbuffsize(b, size);
   int i;

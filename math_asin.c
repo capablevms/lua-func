@@ -36,7 +36,7 @@ extern void lua_pushnumber(lua_State *, lua_Number);
 extern double asin(double);
 extern lua_Number luaL_checknumber(lua_State *, int);
 
-static int math_asin (lua_State *L) {
+extern int math_asin (lua_State *L) {
   lua_pushnumber(L, asin(luaL_checknumber(L, 1)));
   return 1;
 }

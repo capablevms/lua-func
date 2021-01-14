@@ -37,7 +37,7 @@ extern const char * lua_typename(lua_State *, int);
 extern int luaL_argerror(lua_State *, int, const char *);
 extern int lua_type(lua_State *, int);
 
-static int luaB_type (lua_State *L) {
+extern int luaB_type (lua_State *L) {
   int t = lua_type(L, 1);
   ((void)((t != (-1)) || luaL_argerror(L, (1), ("value expected"))));
   lua_pushstring(L, lua_typename(L, t));

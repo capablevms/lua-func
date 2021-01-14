@@ -51,7 +51,7 @@ extern void dumpInt(DumpState *, int);
 extern void dumpBlock(DumpState *, const void *, size_t);
 extern void dumpInt(DumpState *, int);
 
-static void dumpDebug (DumpState *D, const Proto *f) {
+extern void dumpDebug (DumpState *D, const Proto *f) {
   int i, n;
   n = (D->strip) ? 0 : f->sizelineinfo;
   dumpInt(D, n);

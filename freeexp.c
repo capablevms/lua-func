@@ -34,7 +34,7 @@
 
 extern void freereg(FuncState *, int);
 
-static void freeexp (FuncState *fs, expdesc *e) {
+extern void freeexp (FuncState *fs, expdesc *e) {
   if (e->k == VNONRELOC)
     freereg(fs, e->u.info);
 }

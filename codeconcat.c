@@ -38,7 +38,7 @@ extern int luaK_codeABCk(FuncState *, OpCode, int, int, int, int);
 extern void freeexp(FuncState *, expdesc *);
 extern Instruction * previousinstruction(FuncState *);
 
-static void codeconcat (FuncState *fs, expdesc *e1, expdesc *e2, int line) {
+extern void codeconcat (FuncState *fs, expdesc *e1, expdesc *e2, int line) {
   Instruction *ie2 = previousinstruction(fs);
   if ((((OpCode)(((*ie2)>>0) & ((~((~(Instruction)0)<<(7)))<<(0))))) == OP_CONCAT) {
     int n = ((((int)((((*ie2)>>((((0 + 7) + 8) + 1))) & ((~((~(Instruction)0)<<(8)))<<(0)))))));

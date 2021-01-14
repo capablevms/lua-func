@@ -33,7 +33,7 @@
 
 
 
-static void settraps (CallInfo *ci) {
+extern void settraps (CallInfo *ci) {
   for (; ci != ((void*)0); ci = ci->previous)
     if ((!((ci)->callstatus & (1<<1))))
       ci->u.l.trap = 1;

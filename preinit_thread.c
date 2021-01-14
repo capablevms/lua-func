@@ -33,7 +33,7 @@
 
 
 
-static void preinit_thread (lua_State *L, global_State *g) {
+extern void preinit_thread (lua_State *L, global_State *g) {
   (L->l_G) = g;
   L->stack = ((void*)0);
   L->ci = ((void*)0);

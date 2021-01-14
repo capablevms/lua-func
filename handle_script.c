@@ -39,7 +39,7 @@ extern int luaL_loadfilex(lua_State *, const char *, const char *);
 extern int strcmp(const char *, const char *);
 extern int strcmp(const char *, const char *);
 
-static int handle_script (lua_State *L, char **argv) {
+extern int handle_script (lua_State *L, char **argv) {
   int status;
   const char *fname = argv[0];
   if (strcmp(fname, "-") == 0 && strcmp(argv[-1], "--") != 0)

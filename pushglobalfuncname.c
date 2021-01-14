@@ -45,7 +45,7 @@ extern int lua_getfield(lua_State *, int, const char *);
 extern int lua_getinfo(lua_State *, const char *, lua_Debug *);
 extern int lua_gettop(lua_State *);
 
-static int pushglobalfuncname (lua_State *L, lua_Debug *ar) {
+extern int pushglobalfuncname (lua_State *L, lua_Debug *ar) {
   int top = lua_gettop(L);
   lua_getinfo(L, "f", ar);
   lua_getfield(L, (-1000000 - 1000), "_LOADED");

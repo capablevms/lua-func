@@ -32,11 +32,11 @@
 
 
 
-extern void lexerror(LexState *, const char *, int);
+extern __attribute__((noreturn)) void lexerror(LexState *, const char *, int);
 extern int luaZ_fill(ZIO *);
 extern void save(LexState *, int);
 
-static void esccheck (LexState *ls, int c, const char *msg) {
+extern void esccheck (LexState *ls, int c, const char *msg) {
   if (!c) {
     if (ls->current != (-1))
       (save(ls, ls->current), (ls->current = (((ls->z)->n--)>0 ? ((unsigned char)((*(ls->z)->p++))) : luaZ_fill(ls->z))));

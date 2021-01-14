@@ -34,7 +34,7 @@
 
 extern Vardesc * getlocalvardesc(FuncState *, int);
 
-static LocVar *localdebuginfo (FuncState *fs, int vidx) {
+extern LocVar *localdebuginfo (FuncState *fs, int vidx) {
   Vardesc *vd = getlocalvardesc(fs, vidx);
   if (vd->vd.kind == 3)
     return ((void*)0);

@@ -33,7 +33,7 @@
 
 
 
-static int finishrawget (lua_State *L, const TValue *val) {
+extern int finishrawget (lua_State *L, const TValue *val) {
   if ((((((((val))->tt_)) & 0x0F)) == (0)))
     (((&(L->top)->val))->tt_=(((0) | ((0) << 4))));
   else

@@ -33,7 +33,7 @@
 
 
 
-static int isneg (const char **s) {
+extern int isneg (const char **s) {
   if (**s == '-') { (*s)++; return 1; }
   else if (**s == '+') (*s)++;
   return 0;

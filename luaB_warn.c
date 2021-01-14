@@ -40,7 +40,7 @@ extern const char * luaL_checklstring(lua_State *, int, size_t *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 extern int lua_gettop(lua_State *);
 
-static int luaB_warn (lua_State *L) {
+extern int luaB_warn (lua_State *L) {
   int n = lua_gettop(L);
   int i;
   (luaL_checklstring(L, (1), ((void*)0)));

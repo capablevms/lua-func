@@ -34,7 +34,7 @@
 
 extern void freeobj(lua_State *, GCObject *);
 
-static GCObject **sweeplist (lua_State *L, GCObject **p, int countin,
+extern GCObject **sweeplist (lua_State *L, GCObject **p, int countin,
                              int *countout) {
   global_State *g = (L->l_G);
   int ow = ((g)->currentwhite ^ ((1<<(3)) | (1<<(4))));

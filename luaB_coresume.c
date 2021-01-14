@@ -40,7 +40,7 @@ extern int auxresume(lua_State *, lua_State *, int);
 extern int lua_gettop(lua_State *);
 extern lua_State * getco(lua_State *);
 
-static int luaB_coresume (lua_State *L) {
+extern int luaB_coresume (lua_State *L) {
   lua_State *co = getco(L);
   int r;
   r = auxresume(L, co, lua_gettop(L) - 1);

@@ -39,7 +39,7 @@ extern int addreturn(lua_State *);
 extern int pushline(lua_State *, int);
 extern void lua_settop(lua_State *, int);
 
-static int loadline (lua_State *L) {
+extern int loadline (lua_State *L) {
   int status;
   lua_settop(L, 0);
   if (!pushline(L, 1))

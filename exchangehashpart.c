@@ -33,7 +33,7 @@
 
 
 
-static void exchangehashpart (Table *t1, Table *t2) {
+extern void exchangehashpart (Table *t1, Table *t2) {
   lu_byte lsizenode = t1->lsizenode;
   Node *node = t1->node;
   Node *lastfree = t1->lastfree;

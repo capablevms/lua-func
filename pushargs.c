@@ -40,7 +40,7 @@ extern lua_Integer luaL_len(lua_State *, int);
 extern int luaL_error(lua_State *, const char *, ...);
 extern int lua_getglobal(lua_State *, const char *);
 
-static int pushargs (lua_State *L) {
+extern int pushargs (lua_State *L) {
   int i, n;
   if (lua_getglobal(L, "arg") != 5)
     luaL_error(L, "'arg' is not a table");

@@ -37,7 +37,7 @@ extern int luaK_jump(FuncState *);
 extern TString * luaS_newlstr(lua_State *, const char *, size_t);
 extern void luaX_next(LexState *);
 
-static void breakstat (LexState *ls) {
+extern void breakstat (LexState *ls) {
   int line = ls->linenumber;
   luaX_next(ls);
   newgotoentry(ls, (luaS_newlstr(ls->L, "" "break", (sizeof("break")/sizeof(char))-1)), line, luaK_jump(ls->fs));

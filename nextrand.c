@@ -33,9 +33,8 @@
 
 
 extern unsigned long rotl(unsigned long, int);
-extern unsigned long rotl(unsigned long, int);
 
-static unsigned long nextrand (unsigned long *state) {
+extern unsigned long nextrand (unsigned long *state) {
   unsigned long state0 = state[0];
   unsigned long state1 = state[1];
   unsigned long state2 = state[2] ^ state0;

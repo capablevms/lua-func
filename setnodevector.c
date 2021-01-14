@@ -36,7 +36,7 @@ extern void * luaM_malloc_(lua_State *, size_t, int);
 extern void luaG_runerror(lua_State *, const char *, ...);
 extern int luaO_ceillog2(unsigned int);
 
-static void setnodevector (lua_State *L, Table *t, unsigned int size) {
+extern void setnodevector (lua_State *L, Table *t, unsigned int size) {
   if (size == 0) {
     t->node = ((Node *)((&dummynode_)));
     t->lsizenode = 0;

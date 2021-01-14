@@ -47,7 +47,7 @@ typedef struct MatchState {
 extern const char * match(MatchState *, const char *, const char *);
 extern int singlematch(MatchState *, const char *, const char *, const char *);
 
-static const char *max_expand (MatchState *ms, const char *s,
+extern const char *max_expand (MatchState *ms, const char *s,
                                  const char *p, const char *ep) {
   ptrdiff_t i = 0;
   while (singlematch(ms, s + i, p, ep))

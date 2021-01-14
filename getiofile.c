@@ -37,7 +37,7 @@ extern int luaL_error(lua_State *, const char *, ...);
 extern void * lua_touserdata(lua_State *, int);
 extern int lua_getfield(lua_State *, int, const char *);
 
-static FILE *getiofile (lua_State *L, const char *findex) {
+extern FILE *getiofile (lua_State *L, const char *findex) {
   LStream *p;
   lua_getfield(L, (-1000000 - 1000), findex);
   p = (LStream *)lua_touserdata(L, -1);

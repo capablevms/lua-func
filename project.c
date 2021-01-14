@@ -37,7 +37,7 @@ typedef struct {
 
 extern unsigned long nextrand(unsigned long *);
 
-static lua_Unsigned project (lua_Unsigned ran, lua_Unsigned n,
+extern lua_Unsigned project (lua_Unsigned ran, lua_Unsigned n,
                              RanState *state) {
   if ((n & (n + 1)) == 0)
     return ran & n;

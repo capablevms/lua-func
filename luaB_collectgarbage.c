@@ -56,7 +56,7 @@ extern int lua_gc(lua_State *, int, ...);
 extern int lua_gc(lua_State *, int, ...);
 extern int luaL_checkoption(lua_State *, int, const char *, const char *const *);
 
-static int luaB_collectgarbage (lua_State *L) {
+extern int luaB_collectgarbage (lua_State *L) {
   static const char *const opts[] = {"stop", "restart", "collect",
     "count", "step", "setpause", "setstepmul",
     "isrunning", "generational", "incremental", ((void*)0)};

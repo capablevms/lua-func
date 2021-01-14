@@ -63,7 +63,7 @@ extern void codestring(expdesc *, TString *);
 extern void init_exp(expdesc *, expkind, int);
 extern void init_exp(expdesc *, expkind, int);
 
-static void simpleexp (LexState *ls, expdesc *v) {
+extern void simpleexp (LexState *ls, expdesc *v) {
 
 
   switch (ls->t.token) {

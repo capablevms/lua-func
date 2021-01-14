@@ -44,7 +44,7 @@ extern int lua_toboolean(lua_State *, int);
 
 extern int writer (lua_State *, const void *, size_t, void *);
 
-static int str_dump (lua_State *L) {
+extern int str_dump (lua_State *L) {
   struct str_Writer state;
   int strip = lua_toboolean(L, 2);
   luaL_checktype(L, 1, 6);

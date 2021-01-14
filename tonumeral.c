@@ -33,7 +33,7 @@
 
 
 
-static int tonumeral (const expdesc *e, TValue *v) {
+extern int tonumeral (const expdesc *e, TValue *v) {
   if (((e)->t != (e)->f))
     return 0;
   switch (e->k) {

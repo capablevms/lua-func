@@ -38,7 +38,7 @@ typedef struct UBox {
 
 extern void * resizebox(lua_State *, int, size_t);
 
-static int boxgc (lua_State *L) {
+extern int boxgc (lua_State *L) {
   resizebox(L, 1, 0);
   return 0;
 }

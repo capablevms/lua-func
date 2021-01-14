@@ -35,7 +35,7 @@
 extern int luaK_jump(FuncState *);
 extern int luaK_codeABCk(FuncState *, OpCode, int, int, int, int);
 
-static int condjump (FuncState *fs, OpCode op, int A, int B, int C, int k) {
+extern int condjump (FuncState *fs, OpCode op, int A, int B, int C, int k) {
   luaK_codeABCk(fs, op, A, B, C, k);
   return luaK_jump(fs);
 }

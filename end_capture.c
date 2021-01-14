@@ -47,7 +47,7 @@ typedef struct MatchState {
 extern const char * match(MatchState *, const char *, const char *);
 extern int capture_to_close(MatchState *);
 
-static const char *end_capture (MatchState *ms, const char *s,
+extern const char *end_capture (MatchState *ms, const char *s,
                                   const char *p) {
   int l = capture_to_close(ms);
   const char *res;

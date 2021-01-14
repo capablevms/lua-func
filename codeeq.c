@@ -40,7 +40,7 @@ extern int isSCnumber(expdesc *, int *, int *);
 extern int luaK_exp2anyreg(FuncState *, expdesc *);
 extern void swapexps(expdesc *, expdesc *);
 
-static void codeeq (FuncState *fs, BinOpr opr, expdesc *e1, expdesc *e2) {
+extern void codeeq (FuncState *fs, BinOpr opr, expdesc *e1, expdesc *e2) {
   int r1, r2;
   int im;
   int isfloat = 0;

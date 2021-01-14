@@ -34,7 +34,7 @@
 
 extern int filterpc(int, int);
 
-static int findsetreg (const Proto *p, int lastpc, int reg) {
+extern int findsetreg (const Proto *p, int lastpc, int reg) {
   int pc;
   int setreg = -1;
   int jmptarget = 0;

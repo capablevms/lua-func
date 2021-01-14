@@ -39,7 +39,7 @@ extern void lua_rotate(lua_State *, int, int);
 extern void lua_pushboolean(lua_State *, int);
 extern void luaL_checkany(lua_State *, int);
 
-static int luaB_pcall (lua_State *L) {
+extern int luaB_pcall (lua_State *L) {
   int status;
   luaL_checkany(L, 1);
   lua_pushboolean(L, 1);

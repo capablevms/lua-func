@@ -34,7 +34,7 @@
 
 extern void luaD_hook(lua_State *, int, int, int, int);
 
-static StkId rethook (lua_State *L, CallInfo *ci, StkId firstres, int nres) {
+extern StkId rethook (lua_State *L, CallInfo *ci, StkId firstres, int nres) {
   ptrdiff_t oldtop = ((char *)(L->top) - (char *)L->stack);
   int delta = 0;
   if ((!((ci)->callstatus & ((1<<1) | (1<<3))))) {

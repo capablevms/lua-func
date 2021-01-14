@@ -33,7 +33,7 @@
 
 
 
-static GCObject **findlast (GCObject **p) {
+extern GCObject **findlast (GCObject **p) {
   while (*p != ((void*)0))
     p = &(*p)->next;
   return p;

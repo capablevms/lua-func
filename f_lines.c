@@ -36,7 +36,7 @@ typedef luaL_Stream LStream;
 extern void aux_lines(lua_State *, int);
 extern FILE * tofile(lua_State *);
 
-static int f_lines (lua_State *L) {
+extern int f_lines (lua_State *L) {
   tofile(L);
   aux_lines(L, 0);
   return 1;

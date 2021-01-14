@@ -41,7 +41,7 @@ extern void lua_pushnumber(lua_State *, lua_Number);
 extern void lua_settop(lua_State *, int);
 extern int lua_isinteger(lua_State *, int);
 
-static int math_modf (lua_State *L) {
+extern int math_modf (lua_State *L) {
   if (lua_isinteger(L ,1)) {
     lua_settop(L, 1);
     lua_pushnumber(L, 0);

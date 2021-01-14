@@ -49,7 +49,7 @@ extern int createlabel(LexState *, TString *, int, int);
 extern TString * luaS_newlstr(lua_State *, const char *, size_t);
 extern int stacklevel(FuncState *, int);
 
-static void leaveblock (FuncState *fs) {
+extern void leaveblock (FuncState *fs) {
   BlockCnt *bl = fs->bl;
   LexState *ls = fs->ls;
   int hasclose = 0;

@@ -46,7 +46,7 @@ extern lua_Integer u_posrelat(lua_Integer, size_t);
 extern lua_Integer luaL_optinteger(lua_State *, int, lua_Integer);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int utflen (lua_State *L) {
+extern int utflen (lua_State *L) {
   lua_Integer n = 0;
   size_t len;
   const char *s = luaL_checklstring(L, 1, &len);

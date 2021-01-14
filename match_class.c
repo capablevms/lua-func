@@ -45,7 +45,7 @@ extern const unsigned short ** __ctype_b_loc();
 extern const unsigned short ** __ctype_b_loc();
 extern int tolower(int);
 
-static int match_class (int c, int cl) {
+extern int match_class (int c, int cl) {
   int res;
   switch (tolower(cl)) {
     case 'a' : res = ((*__ctype_b_loc ())[(int) ((c))] & (unsigned short int) _ISalpha); break;

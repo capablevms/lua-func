@@ -37,7 +37,7 @@ extern int luaK_codeABCk(FuncState *, OpCode, int, int, int, int);
 extern void freeexp(FuncState *, expdesc *);
 extern int luaK_exp2anyreg(FuncState *, expdesc *);
 
-static void codeunexpval (FuncState *fs, OpCode op, expdesc *e, int line) {
+extern void codeunexpval (FuncState *fs, OpCode op, expdesc *e, int line) {
   int r = luaK_exp2anyreg(fs, e);
   freeexp(fs, e);
   e->u.info = luaK_codeABCk(fs,op,0,r,0,0);

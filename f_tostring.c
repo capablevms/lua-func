@@ -37,7 +37,7 @@ extern const char * lua_pushfstring(lua_State *, const char *, ...);
 extern const char * lua_pushstring(lua_State *, const char *);
 extern void * luaL_checkudata(lua_State *, int, const char *);
 
-static int f_tostring (lua_State *L) {
+extern int f_tostring (lua_State *L) {
   LStream *p = ((LStream *)luaL_checkudata(L, 1, "FILE*"));
   if (((p)->closef == ((void*)0)))
     lua_pushstring(L, "" "file (closed)");

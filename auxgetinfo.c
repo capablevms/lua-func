@@ -36,7 +36,7 @@ extern const char * getfuncname(lua_State *, CallInfo *, const char **);
 extern int getcurrentline(CallInfo *);
 extern void funcinfo(lua_Debug *, Closure *);
 
-static int auxgetinfo (lua_State *L, const char *what, lua_Debug *ar,
+extern int auxgetinfo (lua_State *L, const char *what, lua_Debug *ar,
                        Closure *f, CallInfo *ci) {
   int status = 1;
   for (; *what; what++) {

@@ -43,7 +43,7 @@ extern void luaM_free_(lua_State *, void *, size_t);
 extern void freeupval(lua_State *, UpVal *);
 extern void luaF_freeproto(lua_State *, Proto *);
 
-static void freeobj (lua_State *L, GCObject *o) {
+extern void freeobj (lua_State *L, GCObject *o) {
   switch (o->tt) {
     case (((9 +1)) | ((0) << 4)):
       luaF_freeproto(L, (&((((union GCUnion *)((o))))->p)));

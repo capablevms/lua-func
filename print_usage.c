@@ -41,7 +41,7 @@ extern int fprintf(FILE *restrict, const char *restrict, ...);
 extern int fflush(FILE *);
 extern int fprintf(FILE *restrict, const char *restrict, ...);
 
-static void print_usage (const char *badoption) {
+extern void print_usage (const char *badoption) {
   (fprintf(stderr, ("%s: "), (progname)), fflush(stderr));
   if (badoption[1] == 'e' || badoption[1] == 'l')
     (fprintf(stderr, ("'%s' needs argument\n"), (badoption)), fflush(stderr));

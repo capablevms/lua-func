@@ -45,7 +45,7 @@ extern void recfield(LexState *, ConsControl *);
 extern void listfield(LexState *, ConsControl *);
 extern int luaX_lookahead(LexState *);
 
-static void field (LexState *ls, ConsControl *cc) {
+extern void field (LexState *ls, ConsControl *cc) {
 
   switch(ls->t.token) {
     case TK_NAME: {

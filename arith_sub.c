@@ -34,6 +34,6 @@
 
 extern int arith(lua_State *, int, const char *);
 
-static int arith_sub (lua_State *L) {
+extern int arith_sub (lua_State *L) {
   return arith(L, 1, "__sub");
 }

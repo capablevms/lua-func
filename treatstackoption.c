@@ -36,7 +36,7 @@ extern void lua_setfield(lua_State *, int, const char *);
 extern void lua_xmove(lua_State *, lua_State *, int);
 extern void lua_rotate(lua_State *, int, int);
 
-static void treatstackoption (lua_State *L, lua_State *L1, const char *fname) {
+extern void treatstackoption (lua_State *L, lua_State *L1, const char *fname) {
   if (L == L1)
     lua_rotate(L, -2, 1);
   else

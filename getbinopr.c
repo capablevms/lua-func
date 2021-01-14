@@ -33,7 +33,7 @@
 
 
 
-static BinOpr getbinopr (int op) {
+extern BinOpr getbinopr (int op) {
   switch (op) {
     case '+': return OPR_ADD;
     case '-': return OPR_SUB;

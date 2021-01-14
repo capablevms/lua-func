@@ -41,7 +41,7 @@ typedef struct ConsControl {
 
 extern void expr(LexState *, expdesc *);
 
-static void listfield (LexState *ls, ConsControl *cc) {
+extern void listfield (LexState *ls, ConsControl *cc) {
 
   expr(ls, &cc->v);
   cc->tostore++;

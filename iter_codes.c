@@ -41,7 +41,7 @@ extern int lua_toboolean(lua_State *, int);
 extern int iter_auxlax (lua_State *);
 extern int iter_auxstrict (lua_State *);
 
-static int iter_codes (lua_State *L) {
+extern int iter_codes (lua_State *L) {
   int lax = lua_toboolean(L, 2);
   (luaL_checklstring(L, (1), ((void*)0)));
   lua_pushcclosure(L, (lax ? iter_auxlax : iter_auxstrict), 0);

@@ -36,7 +36,7 @@ extern void statement(LexState *);
 extern void statement(LexState *);
 extern int block_follow(LexState *, int);
 
-static void statlist (LexState *ls) {
+extern void statlist (LexState *ls) {
 
   while (!block_follow(ls, 1)) {
     if (ls->t.token == TK_RETURN) {

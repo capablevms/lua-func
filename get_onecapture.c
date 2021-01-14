@@ -48,7 +48,7 @@ extern void lua_pushinteger(lua_State *, lua_Integer);
 extern int luaL_error(lua_State *, const char *, ...);
 extern int luaL_error(lua_State *, const char *, ...);
 
-static size_t get_onecapture (MatchState *ms, int i, const char *s,
+extern size_t get_onecapture (MatchState *ms, int i, const char *s,
                               const char *e, const char **cap) {
   if (i >= ms->level) {
     if (i != 0)

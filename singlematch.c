@@ -47,7 +47,7 @@ typedef struct MatchState {
 extern int matchbracketclass(int, const char *, const char *);
 extern int match_class(int, int);
 
-static int singlematch (MatchState *ms, const char *s, const char *p,
+extern int singlematch (MatchState *ms, const char *s, const char *p,
                         const char *ep) {
   if (s >= ms->src_end)
     return 0;

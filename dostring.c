@@ -36,6 +36,6 @@ extern int dochunk(lua_State *, int);
 extern int luaL_loadbufferx(lua_State *, const char *, size_t, const char *, const char *);
 extern unsigned long strlen(const char *);
 
-static int dostring (lua_State *L, const char *s, const char *name) {
+extern int dostring (lua_State *L, const char *s, const char *name) {
   return dochunk(L, luaL_loadbufferx(L,s,strlen(s),name,((void*)0)));
 }

@@ -47,7 +47,7 @@ typedef struct MatchState {
 extern int singlematch(MatchState *, const char *, const char *, const char *);
 extern const char * match(MatchState *, const char *, const char *);
 
-static const char *min_expand (MatchState *ms, const char *s,
+extern const char *min_expand (MatchState *ms, const char *s,
                                  const char *p, const char *ep) {
   for (;;) {
     const char *res = match(ms, s, ep+1);

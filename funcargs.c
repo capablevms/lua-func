@@ -52,7 +52,7 @@ extern void luaK_setreturns(FuncState *, expdesc *, int);
 extern int explist(LexState *, expdesc *);
 extern void luaX_next(LexState *);
 
-static void funcargs (LexState *ls, expdesc *f, int line) {
+extern void funcargs (LexState *ls, expdesc *f, int line) {
   FuncState *fs = ls->fs;
   expdesc args;
   int base, nparams;

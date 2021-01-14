@@ -35,7 +35,7 @@
 extern void lua_setfield(lua_State *, int, const char *);
 extern void lua_pushboolean(lua_State *, int);
 
-static void settabsb (lua_State *L, const char *k, int v) {
+extern void settabsb (lua_State *L, const char *k, int v) {
   lua_pushboolean(L, v);
   lua_setfield(L, -2, k);
 }

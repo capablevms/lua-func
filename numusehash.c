@@ -34,7 +34,7 @@
 
 extern int countint(lua_Integer, unsigned int *);
 
-static int numusehash (const Table *t, unsigned int *nums, unsigned int *pna) {
+extern int numusehash (const Table *t, unsigned int *nums, unsigned int *pna) {
   int totaluse = 0;
   int ause = 0;
   int i = ((1<<((t)->lsizenode)));

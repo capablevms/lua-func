@@ -39,7 +39,7 @@ extern int getc(FILE *);
 extern char * luaL_prepbuffsize(luaL_Buffer *, size_t);
 extern void luaL_buffinit(lua_State *, luaL_Buffer *);
 
-static int read_line (lua_State *L, FILE *f, int chop) {
+extern int read_line (lua_State *L, FILE *f, int chop) {
   luaL_Buffer b;
   int c;
   luaL_buffinit(L, &b);

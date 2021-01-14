@@ -43,7 +43,7 @@ extern void lua_callk(lua_State *, int, int, lua_KContext, lua_KFunction);
 extern void lua_pushvalue(lua_State *, int);
 extern void luaL_checkstack(lua_State *, int, const char *);
 
-static const char *generic_reader (lua_State *L, void *ud, size_t *size) {
+extern const char *generic_reader (lua_State *L, void *ud, size_t *size) {
   (void)(ud);
   luaL_checkstack(L, 2, "too many nested functions");
   lua_pushvalue(L, 1);

@@ -34,6 +34,6 @@
 
 extern int g_iofile(lua_State *, const char *, const char *);
 
-static int io_input (lua_State *L) {
+extern int io_input (lua_State *L) {
   return g_iofile(L, ("_IO_" "input"), "r");
 }

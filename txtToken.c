@@ -36,7 +36,7 @@ extern const char * luaX_token2str(LexState *, int);
 extern const char * luaO_pushfstring(lua_State *, const char *, ...);
 extern void save(LexState *, int);
 
-static const char *txtToken (LexState *ls, int token) {
+extern const char *txtToken (LexState *ls, int token) {
   switch (token) {
     case TK_NAME: case TK_STRING:
     case TK_FLT: case TK_INT:

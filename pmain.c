@@ -52,7 +52,7 @@ extern int collectargs(char **, int *);
 extern void * lua_touserdata(lua_State *, int);
 extern lua_Integer lua_tointegerx(lua_State *, int, int *);
 
-static int pmain (lua_State *L) {
+extern int pmain (lua_State *L) {
   int argc = (int)lua_tointegerx(L,(1),((void*)0));
   char **argv = (char **)lua_touserdata(L, 2);
   int script;

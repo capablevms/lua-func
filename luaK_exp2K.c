@@ -39,7 +39,7 @@ extern int nilK(FuncState *);
 extern int boolF(FuncState *);
 extern int boolT(FuncState *);
 
-static int luaK_exp2K (FuncState *fs, expdesc *e) {
+extern int luaK_exp2K (FuncState *fs, expdesc *e) {
   if (!((e)->t != (e)->f)) {
     int info;
     switch (e->k) {

@@ -36,7 +36,7 @@ extern void luaT_callTMres(lua_State *, const TValue *, const TValue *, const TV
 extern const TValue * luaT_gettmbyobj(lua_State *, const TValue *, TMS);
 extern const TValue * luaT_gettmbyobj(lua_State *, const TValue *, TMS);
 
-static int callbinTM (lua_State *L, const TValue *p1, const TValue *p2,
+extern int callbinTM (lua_State *L, const TValue *p1, const TValue *p2,
                       StkId res, TMS event) {
   const TValue *tm = luaT_gettmbyobj(L, p1, event);
   if ((((((((tm))->tt_)) & 0x0F)) == (0)))

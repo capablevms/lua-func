@@ -47,7 +47,7 @@ extern void yindex(LexState *, expdesc *);
 extern void codename(LexState *, expdesc *);
 extern void checklimit(FuncState *, int, int, const char *);
 
-static void recfield (LexState *ls, ConsControl *cc) {
+extern void recfield (LexState *ls, ConsControl *cc) {
 
   FuncState *fs = ls->fs;
   int reg = ls->fs->freereg;

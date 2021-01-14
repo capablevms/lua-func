@@ -33,7 +33,7 @@
 
 
 
-static int isKstr (FuncState *fs, expdesc *e) {
+extern int isKstr (FuncState *fs, expdesc *e) {
   return (e->k == VK && !((e)->t != (e)->f) && e->u.info <= ((1<<8)-1) &&
           ((((&fs->f->k[e->u.info]))->tt_) == (((((4) | ((0) << 4))) | (1 << 6)))));
 }

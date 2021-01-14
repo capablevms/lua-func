@@ -71,7 +71,7 @@ extern void checkstack(lua_State *, lua_State *, int);
 extern const char * luaL_optlstring(lua_State *, int, const char *, size_t *);
 extern lua_State * getthread(lua_State *, int *);
 
-static int db_getinfo (lua_State *L) {
+extern int db_getinfo (lua_State *L) {
   lua_Debug ar;
   int arg;
   lua_State *L1 = getthread(L, &arg);

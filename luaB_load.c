@@ -45,7 +45,7 @@ extern const char * lua_tolstring(lua_State *, int, size_t *);
 
 extern const char *generic_reader (lua_State *, void *, size_t *);
 
-static int luaB_load (lua_State *L) {
+extern int luaB_load (lua_State *L) {
   int status;
   size_t l;
   const char *s = lua_tolstring(L, 1, &l);

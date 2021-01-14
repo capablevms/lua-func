@@ -36,7 +36,7 @@ extern void lua_pushnumber(lua_State *, lua_Number);
 extern double sqrt(double);
 extern lua_Number luaL_checknumber(lua_State *, int);
 
-static int math_sqrt (lua_State *L) {
+extern int math_sqrt (lua_State *L) {
   lua_pushnumber(L, sqrt(luaL_checknumber(L, 1)));
   return 1;
 }

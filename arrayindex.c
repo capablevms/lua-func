@@ -33,7 +33,7 @@
 
 
 
-static unsigned int arrayindex (lua_Integer k) {
+extern unsigned int arrayindex (lua_Integer k) {
   if (((lua_Unsigned)(k)) - 1u < ((((size_t)((1u << ((int)((sizeof(int) * 8 - 1)))))) <= ((size_t)(~(size_t)0))/sizeof(TValue)) ? (1u << ((int)((sizeof(int) * 8 - 1)))) : ((unsigned int)(((((size_t)(~(size_t)0))/sizeof(TValue)))))))
     return ((unsigned int)((k)));
   else

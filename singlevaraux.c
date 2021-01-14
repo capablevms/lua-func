@@ -48,7 +48,7 @@ extern void markupval(FuncState *, int);
 extern int searchvar(FuncState *, TString *, expdesc *);
 extern void init_exp(expdesc *, expkind, int);
 
-static void singlevaraux (FuncState *fs, TString *n, expdesc *var, int base) {
+extern void singlevaraux (FuncState *fs, TString *n, expdesc *var, int base) {
   if (fs == ((void*)0))
     init_exp(var, VVOID, 0);
   else {

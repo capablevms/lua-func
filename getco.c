@@ -35,7 +35,7 @@
 extern int luaL_typeerror(lua_State *, int, const char *);
 extern lua_State * lua_tothread(lua_State *, int);
 
-static lua_State *getco (lua_State *L) {
+extern lua_State *getco (lua_State *L) {
   lua_State *co = lua_tothread(L, 1);
   ((void)((co) || luaL_typeerror(L, (1), ("thread"))));
   return co;

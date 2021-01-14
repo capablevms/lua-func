@@ -38,7 +38,7 @@ extern int docall(lua_State *, int, int);
 extern const char * lua_pushstring(lua_State *, const char *);
 extern int lua_getglobal(lua_State *, const char *);
 
-static int dolibrary (lua_State *L, const char *name) {
+extern int dolibrary (lua_State *L, const char *name) {
   int status;
   lua_getglobal(L, "require");
   lua_pushstring(L, name);

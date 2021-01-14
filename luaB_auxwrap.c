@@ -43,7 +43,7 @@ extern int auxresume(lua_State *, lua_State *, int);
 extern int lua_gettop(lua_State *);
 extern lua_State * lua_tothread(lua_State *, int);
 
-static int luaB_auxwrap (lua_State *L) {
+extern int luaB_auxwrap (lua_State *L) {
   lua_State *co = lua_tothread(L, ((-1000000 - 1000) - (1)));
   int r = auxresume(L, co, lua_gettop(L));
   if (r < 0) {

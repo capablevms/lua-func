@@ -33,7 +33,7 @@
 
 
 
-static unsigned int numusearray (const Table *t, unsigned int *nums) {
+extern unsigned int numusearray (const Table *t, unsigned int *nums) {
   int lg;
   unsigned int ttlg;
   unsigned int ause = 0;

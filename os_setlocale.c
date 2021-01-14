@@ -37,7 +37,7 @@ extern char * setlocale(int, const char *);
 extern int luaL_checkoption(lua_State *, int, const char *, const char *const *);
 extern const char * luaL_optlstring(lua_State *, int, const char *, size_t *);
 
-static int os_setlocale (lua_State *L) {
+extern int os_setlocale (lua_State *L) {
   static const int cat[] = {6, 3, 0, 4,
                       1, 2};
   static const char *const catnames[] = {"all", "collate", "ctype", "monetary",

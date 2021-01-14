@@ -37,7 +37,7 @@ extern const char * luaO_pushfstring(lua_State *, const char *, ...);
 extern const char * txtToken(LexState *, int);
 extern const char * luaG_addinfo(lua_State *, const char *, TString *, int);
 
-static void __attribute__((noreturn)) lexerror (LexState *ls, const char *msg, int token) {
+extern void __attribute__((noreturn)) lexerror (LexState *ls, const char *msg, int token) {
   msg = luaG_addinfo(ls->L, msg, ls->source, ls->linenumber);
   if (token)
     luaO_pushfstring(ls->L, "%s near %s", msg, txtToken(ls, token));

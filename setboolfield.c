@@ -35,7 +35,7 @@
 extern void lua_setfield(lua_State *, int, const char *);
 extern void lua_pushboolean(lua_State *, int);
 
-static void setboolfield (lua_State *L, const char *key, int value) {
+extern void setboolfield (lua_State *L, const char *key, int value) {
   if (value < 0)
     return;
   lua_pushboolean(L, value);

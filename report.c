@@ -36,7 +36,7 @@ extern void lua_settop(lua_State *, int);
 extern void l_message(const char *, const char *);
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 
-static int report (lua_State *L, int status) {
+extern int report (lua_State *L, int status) {
   if (status != 0) {
     const char *msg = lua_tolstring(L, (-1), ((void*)0));
     l_message(progname, msg);

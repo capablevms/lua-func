@@ -37,7 +37,7 @@ extern unsigned long fread(void *restrict, size_t, size_t, FILE *restrict);
 extern char * luaL_prepbuffsize(luaL_Buffer *, size_t);
 extern void luaL_buffinit(lua_State *, luaL_Buffer *);
 
-static void read_all (lua_State *L, FILE *f) {
+extern void read_all (lua_State *L, FILE *f) {
   size_t nr;
   luaL_Buffer b;
   luaL_buffinit(L, &b);

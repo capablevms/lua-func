@@ -52,7 +52,7 @@ extern void dumpInt(DumpState *, int);
 extern void dumpString(DumpState *, const TString *);
 extern void dumpString(DumpState *, const TString *);
 
-static void dumpFunction (DumpState *D, const Proto *f, TString *psource) {
+extern void dumpFunction (DumpState *D, const Proto *f, TString *psource) {
   if (D->strip || f->source == psource)
     dumpString(D, ((void*)0));
   else

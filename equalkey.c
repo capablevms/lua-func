@@ -34,7 +34,7 @@
 
 extern int luaS_eqlngstr(TString *, TString *);
 
-static int equalkey (const TValue *k1, const Node *n2, int deadok) {
+extern int equalkey (const TValue *k1, const Node *n2, int deadok) {
   if ((((k1)->tt_) != ((n2)->u.key_tt)) &&
        !(deadok && (((n2)->u.key_tt) == (9 +2)) && (((k1)->tt_) & (1 << 6))))
    return 0;

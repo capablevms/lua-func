@@ -56,7 +56,7 @@ extern void enterblock(FuncState *, BlockCnt *, lu_byte);
 extern int luaK_codeABx(FuncState *, OpCode, int, unsigned int);
 extern void checknext(LexState *, int);
 
-static void forbody (LexState *ls, int base, int line, int nvars, int isgen) {
+extern void forbody (LexState *ls, int base, int line, int nvars, int isgen) {
 
   static const OpCode forprep[2] = {OP_FORPREP, OP_TFORPREP};
   static const OpCode forloop[2] = {OP_FORLOOP, OP_TFORLOOP};

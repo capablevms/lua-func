@@ -35,7 +35,7 @@
 extern int digit(int);
 extern int digit(int);
 
-static int getnum (const char **fmt, int df) {
+extern int getnum (const char **fmt, int df) {
   if (!digit(**fmt))
     return df;
   else {

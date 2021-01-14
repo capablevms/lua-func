@@ -55,7 +55,7 @@ extern void * luaM_malloc_(lua_State *, size_t, int);
 extern void luaM_toobig(lua_State *);
 extern int loadInt(LoadState *);
 
-static void loadDebug (LoadState *S, Proto *f) {
+extern void loadDebug (LoadState *S, Proto *f) {
   int i, n;
   n = loadInt(S);
   f->lineinfo = (((sizeof(n) >= sizeof(size_t) && ((size_t)(((n)))) + 1 > ((size_t)(~(size_t)0))/(sizeof(ls_byte))) ? luaM_toobig(S->L) : ((void)((0)))), ((ls_byte*)(luaM_malloc_(S->L, (n)*sizeof(ls_byte), 0))));

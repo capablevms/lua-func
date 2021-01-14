@@ -39,7 +39,7 @@ extern int luaL_error(lua_State *, const char *, ...);
 extern lua_Integer lua_tointegerx(lua_State *, int, int *);
 extern int lua_getfield(lua_State *, int, const char *);
 
-static int getfield (lua_State *L, const char *key, int d, int delta) {
+extern int getfield (lua_State *L, const char *key, int d, int delta) {
   int isnum;
   int t = lua_getfield(L, -1, key);
   lua_Integer res = lua_tointegerx(L, -1, &isnum);

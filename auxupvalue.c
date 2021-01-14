@@ -39,7 +39,7 @@ extern const char * lua_getupvalue(lua_State *, int, int);
 extern void luaL_checktype(lua_State *, int, int);
 extern lua_Integer luaL_checkinteger(lua_State *, int);
 
-static int auxupvalue (lua_State *L, int get) {
+extern int auxupvalue (lua_State *L, int get) {
   const char *name;
   int n = (int)luaL_checkinteger(L, 2);
   luaL_checktype(L, 1, 6);

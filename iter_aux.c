@@ -40,7 +40,7 @@ extern const char * utf8_decode(const char *, utfint *, int);
 extern lua_Integer lua_tointegerx(lua_State *, int, int *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int iter_aux (lua_State *L, int strict) {
+extern int iter_aux (lua_State *L, int strict) {
   size_t len;
   const char *s = luaL_checklstring(L, 1, &len);
   lua_Integer n = lua_tointegerx(L,(2),((void*)0)) - 1;

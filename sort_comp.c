@@ -41,7 +41,7 @@ extern void lua_pushvalue(lua_State *, int);
 extern int lua_compare(lua_State *, int, int, int);
 extern int lua_type(lua_State *, int);
 
-static int sort_comp (lua_State *L, int a, int b) {
+extern int sort_comp (lua_State *L, int a, int b) {
   if ((lua_type(L, (2)) == 0))
     return lua_compare(L, a, b, 1);
   else {

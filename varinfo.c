@@ -38,7 +38,7 @@ extern int currentpc(CallInfo *);
 extern int isinstack(CallInfo *, const TValue *);
 extern const char * getupvalname(CallInfo *, const TValue *, const char **);
 
-static const char *varinfo (lua_State *L, const TValue *o) {
+extern const char *varinfo (lua_State *L, const TValue *o) {
   const char *name = ((void*)0);
   CallInfo *ci = L->ci;
   const char *kind = ((void*)0);

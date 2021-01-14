@@ -33,7 +33,7 @@
 
 
 
-static TValue *const2val (FuncState *fs, const expdesc *e) {
+extern TValue *const2val (FuncState *fs, const expdesc *e) {
   ((void)0);
   return &fs->ls->dyd->actvar.arr[e->u.info].k;
 }

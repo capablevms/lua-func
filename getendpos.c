@@ -34,7 +34,7 @@
 
 extern lua_Integer luaL_optinteger(lua_State *, int, lua_Integer);
 
-static size_t getendpos (lua_State *L, int arg, lua_Integer def,
+extern size_t getendpos (lua_State *L, int arg, lua_Integer def,
                          size_t len) {
   lua_Integer pos = luaL_optinteger(L, arg, def);
   if (pos > (lua_Integer)len)

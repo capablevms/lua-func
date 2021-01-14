@@ -33,7 +33,7 @@
 
 
 
-static Node *getfreepos (Table *t) {
+extern Node *getfreepos (Table *t) {
   if (!((t)->lastfree == ((void*)0))) {
     while (t->lastfree > t->node) {
       t->lastfree--;

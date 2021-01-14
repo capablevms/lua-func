@@ -66,7 +66,7 @@ extern int getnumlimit(Header *, const char **, int);
 extern int getnumlimit(Header *, const char **, int);
 extern int getnumlimit(Header *, const char **, int);
 
-static KOption getoption (Header *h, const char **fmt, int *size) {
+extern KOption getoption (Header *h, const char **fmt, int *size) {
   int opt = *((*fmt)++);
   *size = 0;
   switch (opt) {

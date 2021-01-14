@@ -42,7 +42,7 @@ extern void clearkey(Node *);
 extern void reallymarkobject(global_State *, GCObject *);
 extern unsigned int luaH_realasize(const Table *);
 
-static int traverseephemeron (global_State *g, Table *h, int inv) {
+extern int traverseephemeron (global_State *g, Table *h, int inv) {
   int marked = 0;
   int hasclears = 0;
   int hasww = 0;

@@ -33,7 +33,7 @@
 
 
 
-static int stackinuse (lua_State *L) {
+extern int stackinuse (lua_State *L) {
   CallInfo *ci;
   int res;
   StkId lim = L->top;

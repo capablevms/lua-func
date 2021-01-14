@@ -39,7 +39,7 @@ extern void lua_createtable(lua_State *, int, int);
 extern int luaL_getsubtable(lua_State *, int, const char *);
 extern int gctm (lua_State *L);
 
-static void createclibstable (lua_State *L) {
+extern void createclibstable (lua_State *L) {
   luaL_getsubtable(L, (-1000000 - 1000), CLIBS);
   lua_createtable(L, 0, 1);
   lua_pushcclosure(L, (gctm), 0);

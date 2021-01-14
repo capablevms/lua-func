@@ -37,7 +37,7 @@ extern void lua_pushnil(lua_State *);
 extern int lua_getmetatable(lua_State *, int);
 extern void luaL_checkany(lua_State *, int);
 
-static int luaB_getmetatable (lua_State *L) {
+extern int luaB_getmetatable (lua_State *L) {
   luaL_checkany(L, 1);
   if (!lua_getmetatable(L, 1)) {
     lua_pushnil(L);

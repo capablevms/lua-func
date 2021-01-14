@@ -40,7 +40,7 @@ extern int lua_resetthread(lua_State *);
 extern int auxstatus(lua_State *, lua_State *);
 extern lua_State * getco(lua_State *);
 
-static int luaB_close (lua_State *L) {
+extern int luaB_close (lua_State *L) {
   lua_State *co = getco(L);
   int status = auxstatus(L, co);
   switch (status) {

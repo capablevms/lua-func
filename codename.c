@@ -35,6 +35,6 @@
 extern void codestring(expdesc *, TString *);
 extern TString * str_checkname(LexState *);
 
-static void codename (LexState *ls, expdesc *e) {
+extern void codename (LexState *ls, expdesc *e) {
   codestring(e, str_checkname(ls));
 }

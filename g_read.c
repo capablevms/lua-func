@@ -57,7 +57,7 @@ extern int read_line(lua_State *, FILE *, int);
 extern void clearerr(FILE *);
 extern int lua_gettop(lua_State *);
 
-static int g_read (lua_State *L, FILE *f, int first) {
+extern int g_read (lua_State *L, FILE *f, int first) {
   int nargs = lua_gettop(L) - 1;
   int n, success;
   clearerr(f);

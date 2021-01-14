@@ -35,6 +35,6 @@ typedef unsigned int utfint;
 
 extern int iter_aux(lua_State *, int);
 
-static int iter_auxlax (lua_State *L) {
+extern int iter_auxlax (lua_State *L) {
   return iter_aux(L, 0);
 }

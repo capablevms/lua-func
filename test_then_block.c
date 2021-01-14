@@ -61,7 +61,7 @@ extern void checknext(LexState *, int);
 extern void expr(LexState *, expdesc *);
 extern void luaX_next(LexState *);
 
-static void test_then_block (LexState *ls, int *escapelist) {
+extern void test_then_block (LexState *ls, int *escapelist) {
 
   BlockCnt bl;
   int line;

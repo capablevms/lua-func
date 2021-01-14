@@ -33,7 +33,7 @@
 
 
 
-static void removelastlineinfo (FuncState *fs) {
+extern void removelastlineinfo (FuncState *fs) {
   Proto *f = fs->f;
   int pc = fs->pc - 1;
   if (f->lineinfo[pc] != (-0x80)) {

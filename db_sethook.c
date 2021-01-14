@@ -53,7 +53,7 @@ extern lua_State * getthread(lua_State *, int *);
 
 extern void hookf (lua_State *L, lua_Debug *ar);
 
-static int db_sethook (lua_State *L) {
+extern int db_sethook (lua_State *L) {
   int arg, mask, count;
   lua_Hook func;
   lua_State *L1 = getthread(L, &arg);

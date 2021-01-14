@@ -37,7 +37,7 @@ extern int lua_isyieldable(lua_State *);
 extern lua_State * getco(lua_State *);
 extern int lua_type(lua_State *, int);
 
-static int luaB_yieldable (lua_State *L) {
+extern int luaB_yieldable (lua_State *L) {
   lua_State *co = (lua_type(L, (1)) == (-1)) ? L : getco(L);
   lua_pushboolean(L, lua_isyieldable(co));
   return 1;

@@ -37,7 +37,7 @@ extern int dofile(lua_State *, const char *);
 extern char * getenv(const char *);
 extern char * getenv(const char *);
 
-static int handle_luainit (lua_State *L) {
+extern int handle_luainit (lua_State *L) {
   const char *name = "=" "LUA_INIT" "_" "5" "_" "4";
   const char *init = getenv(name + 1);
   if (init == ((void*)0)) {

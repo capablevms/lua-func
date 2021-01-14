@@ -49,7 +49,7 @@ extern int testnext(LexState *, int);
 extern void check_readonly(LexState *, expdesc *);
 extern void luaX_syntaxerror(LexState *, const char *);
 
-static void restassign (LexState *ls, struct LHS_assign *lh, int nvars) {
+extern void restassign (LexState *ls, struct LHS_assign *lh, int nvars) {
   expdesc e;
   { if (!((VLOCAL <= (lh->v.k) && (lh->v.k) <= VINDEXSTR))) luaX_syntaxerror(ls, "syntax error"); };
   check_readonly(ls, &lh->v);

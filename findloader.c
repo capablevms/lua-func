@@ -49,7 +49,7 @@ extern void luaL_buffinit(lua_State *, luaL_Buffer *);
 extern int luaL_error(lua_State *, const char *, ...);
 extern int lua_getfield(lua_State *, int, const char *);
 
-static void findloader (lua_State *L, const char *name) {
+extern void findloader (lua_State *L, const char *name) {
   int i;
   luaL_Buffer msg;
 

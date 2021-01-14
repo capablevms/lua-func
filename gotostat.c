@@ -42,7 +42,7 @@ extern int luaK_jump(FuncState *);
 extern Labeldesc * findlabel(LexState *, TString *);
 extern TString * str_checkname(LexState *);
 
-static void gotostat (LexState *ls) {
+extern void gotostat (LexState *ls) {
   FuncState *fs = ls->fs;
   int line = ls->linenumber;
   TString *name = str_checkname(ls);

@@ -39,7 +39,7 @@ extern lua_Integer luaL_optinteger(lua_State *, int, lua_Integer);
 extern int lua_toboolean(lua_State *, int);
 extern int lua_type(lua_State *, int);
 
-static int os_exit (lua_State *L) {
+extern int os_exit (lua_State *L) {
   int status;
   if ((lua_type(L, (1)) == 1))
     status = (lua_toboolean(L, 1) ? 0 : 1);

@@ -47,7 +47,7 @@ typedef struct MatchState {
 extern int luaL_error(lua_State *, const char *, ...);
 extern int luaL_error(lua_State *, const char *, ...);
 
-static const char *classend (MatchState *ms, const char *p) {
+extern const char *classend (MatchState *ms, const char *p) {
   switch (*p++) {
     case '%': {
       if (p == ms->p_end)

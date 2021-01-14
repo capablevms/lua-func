@@ -34,7 +34,7 @@
 
 extern void reallymarkobject(global_State *, GCObject *);
 
-static void markmt (global_State *g) {
+extern void markmt (global_State *g) {
   int i;
   for (i=0; i < 9; i++)
     { if (g->mt[i]) { if ((((g->mt[i])->marked) & (((1<<(3)) | (1<<(4)))))) reallymarkobject(g, (&(((union GCUnion *)((g->mt[i])))->gc))); }; };

@@ -35,7 +35,7 @@
 extern int memcmp(const void *, const void *, size_t);
 extern void * memchr(const void *, int, size_t);
 
-static const char *lmemfind (const char *s1, size_t l1,
+extern const char *lmemfind (const char *s1, size_t l1,
                                const char *s2, size_t l2) {
   if (l2 == 0) return s1;
   else if (l2 > l1) return ((void*)0);

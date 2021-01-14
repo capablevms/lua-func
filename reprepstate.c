@@ -45,7 +45,7 @@ typedef struct MatchState {
 
 
 
-static void reprepstate (MatchState *ms) {
+extern void reprepstate (MatchState *ms) {
   ms->level = 0;
   ((void)0);
 }

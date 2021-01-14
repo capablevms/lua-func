@@ -40,7 +40,7 @@ extern int lua_iscfunction(lua_State *, int);
 extern void * checkupval(lua_State *, int, int, int *);
 extern void * checkupval(lua_State *, int, int, int *);
 
-static int db_upvaluejoin (lua_State *L) {
+extern int db_upvaluejoin (lua_State *L) {
   int n1, n2;
   checkupval(L, 1, 2, &n1);
   checkupval(L, 3, 4, &n2);

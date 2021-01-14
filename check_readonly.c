@@ -36,7 +36,7 @@ extern void luaK_semerror(LexState *, const char *);
 extern const char * luaO_pushfstring(lua_State *, const char *, ...);
 extern Vardesc * getlocalvardesc(FuncState *, int);
 
-static void check_readonly (LexState *ls, expdesc *e) {
+extern void check_readonly (LexState *ls, expdesc *e) {
   FuncState *fs = ls->fs;
   TString *varname = ((void*)0);
   switch (e->k) {

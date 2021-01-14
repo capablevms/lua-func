@@ -35,7 +35,7 @@
 extern void linkgclist_(GCObject *, GCObject **, GCObject **);
 extern GCObject ** getgclist(GCObject *);
 
-static void genlink (global_State *g, GCObject *o) {
+extern void genlink (global_State *g, GCObject *o) {
   ((void)0);
   if (((o)->marked & 7) == 5) {
     linkgclist_((&(((union GCUnion *)((o)))->gc)), getgclist(o), &(g->grayagain));

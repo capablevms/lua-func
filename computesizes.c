@@ -33,7 +33,7 @@
 
 
 
-static unsigned int computesizes (unsigned int nums[], unsigned int *pna) {
+extern unsigned int computesizes (unsigned int nums[], unsigned int *pna) {
   int i;
   unsigned int twotoi;
   unsigned int a = 0;

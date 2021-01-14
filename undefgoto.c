@@ -37,7 +37,7 @@ extern const char * luaO_pushfstring(lua_State *, const char *, ...);
 extern const char * luaO_pushfstring(lua_State *, const char *, ...);
 extern TString * luaS_newlstr(lua_State *, const char *, size_t);
 
-static void __attribute__((noreturn)) undefgoto (LexState *ls, Labeldesc *gt) {
+extern void __attribute__((noreturn)) undefgoto (LexState *ls, Labeldesc *gt) {
   const char *msg;
   if (((gt->name) == ((luaS_newlstr(ls->L, "" "break", (sizeof("break")/sizeof(char))-1))))) {
     msg = "break outside loop at line %d";

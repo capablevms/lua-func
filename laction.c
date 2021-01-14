@@ -36,7 +36,7 @@ extern void lstop (lua_State *L, lua_Debug *ar);
 extern void lua_sethook(lua_State *, lua_Hook, int, int);
 extern __sighandler_t signal(int, __sighandler_t);
 
-static void laction (int i) {
+extern void laction (int i) {
   int flag = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3);
   signal(i, ((__sighandler_t) 0));
   lua_sethook(globalL, lstop, flag, 1);

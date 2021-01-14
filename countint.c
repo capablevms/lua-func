@@ -35,7 +35,7 @@
 extern int luaO_ceillog2(unsigned int);
 extern unsigned int arrayindex(lua_Integer);
 
-static int countint (lua_Integer key, unsigned int *nums) {
+extern int countint (lua_Integer key, unsigned int *nums) {
   unsigned int k = arrayindex(key);
   if (k != 0) {
     nums[luaO_ceillog2(k)]++;

@@ -36,7 +36,7 @@ extern int strcmp(const char *, const char *);
 extern const char * getobjname(const Proto *, int, int, const char **);
 extern const char * upvalname(const Proto *, int);
 
-static const char *gxf (const Proto *p, int pc, Instruction i, int isup) {
+extern const char *gxf (const Proto *p, int pc, Instruction i, int isup) {
   int t = ((((int)((((i)>>((((0 + 7) + 8) + 1))) & ((~((~(Instruction)0)<<(8)))<<(0)))))));
   const char *name;
   if (isup)

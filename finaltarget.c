@@ -33,7 +33,7 @@
 
 
 
-static int finaltarget (Instruction *code, int i) {
+extern int finaltarget (Instruction *code, int i) {
   int count;
   for (count = 0; count < 100; count++) {
     Instruction pc = code[i];

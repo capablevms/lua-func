@@ -40,7 +40,7 @@ extern int lua_type(lua_State *, int);
 extern void lua_settop(lua_State *, int);
 extern lua_Integer luaL_optinteger(lua_State *, int, lua_Integer);
 
-static int luaB_error (lua_State *L) {
+extern int luaB_error (lua_State *L) {
   int level = (int)luaL_optinteger(L, 2, 1);
   lua_settop(L, 1);
   if (lua_type(L, 1) == 4 && level > 0) {

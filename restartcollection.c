@@ -38,7 +38,7 @@ extern void reallymarkobject(global_State *, GCObject *);
 extern void reallymarkobject(global_State *, GCObject *);
 extern void cleargraylists(global_State *);
 
-static void restartcollection (global_State *g) {
+extern void restartcollection (global_State *g) {
   cleargraylists(g);
   { if ((((g->mainthread)->marked) & (((1<<(3)) | (1<<(4)))))) reallymarkobject(g, (&(((union GCUnion *)((g->mainthread)))->gc))); };
   { ((void)g->mainthread, ((void)0)); if (((((&g->l_registry)->tt_) & (1 << 6)) && ((((((&g->l_registry)->value_).gc))->marked) & (((1<<(3)) | (1<<(4))))))) reallymarkobject(g,(((&g->l_registry)->value_).gc)); };

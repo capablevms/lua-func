@@ -38,7 +38,7 @@ extern int iscleared(global_State *, const GCObject *);
 extern void reallymarkobject(global_State *, GCObject *);
 extern void clearkey(Node *);
 
-static void traverseweakvalue (global_State *g, Table *h) {
+extern void traverseweakvalue (global_State *g, Table *h) {
   Node *n, *limit = (&(h)->node[((size_t)((((1<<((h)->lsizenode))))))]);
 
 

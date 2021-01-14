@@ -33,7 +33,7 @@
 
 
 
-static unsigned int binsearch (const TValue *array, unsigned int i,
+extern unsigned int binsearch (const TValue *array, unsigned int i,
                                                     unsigned int j) {
   while (j - i > 1u) {
     unsigned int m = (i + j) / 2;

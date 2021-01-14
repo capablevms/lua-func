@@ -59,7 +59,7 @@ extern void lua_callk(lua_State *, int, int, lua_KContext, lua_KFunction);
 extern int push_captures(MatchState *, const char *, const char *);
 extern void lua_pushvalue(lua_State *, int);
 
-static int add_value (MatchState *ms, luaL_Buffer *b, const char *s,
+extern int add_value (MatchState *ms, luaL_Buffer *b, const char *s,
                                       const char *e, int tr) {
   lua_State *L = ms->L;
   switch (tr) {

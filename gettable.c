@@ -34,7 +34,7 @@
 
 extern TValue * index2value(lua_State *, int);
 
-static Table *gettable (lua_State *L, int idx) {
+extern Table *gettable (lua_State *L, int idx) {
   TValue *t = index2value(L, idx);
   ((void)L, ((void)0));
   return ((&((((union GCUnion *)((((t)->value_).gc))))->h)));

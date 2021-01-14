@@ -34,7 +34,7 @@
 
 extern void luaM_free_(lua_State *, void *, size_t);
 
-static void freehash (lua_State *L, Table *t) {
+extern void freehash (lua_State *L, Table *t) {
   if (!((t)->lastfree == ((void*)0)))
     luaM_free_(L, (t->node), (((size_t)((((1<<((t)->lsizenode)))))))*sizeof(*(t->node)));
 }

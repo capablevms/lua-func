@@ -37,7 +37,7 @@ extern void freereg(FuncState *, int);
 extern void freereg(FuncState *, int);
 extern void freereg(FuncState *, int);
 
-static void freeregs (FuncState *fs, int r1, int r2) {
+extern void freeregs (FuncState *fs, int r1, int r2) {
   if (r1 > r2) {
     freereg(fs, r1);
     freereg(fs, r2);

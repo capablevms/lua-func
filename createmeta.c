@@ -68,7 +68,7 @@ extern void lua_createtable(lua_State *, int, int);
 extern void luaL_setfuncs(lua_State *, const luaL_Reg *, int);
 extern int luaL_newmetatable(lua_State *, const char *);
 
-static void createmeta (lua_State *L) {
+extern void createmeta (lua_State *L) {
   luaL_newmetatable(L, "FILE*");
   luaL_setfuncs(L, metameth, 0);
   lua_createtable(L, 0, sizeof(meth)/sizeof((meth)[0]) - 1);

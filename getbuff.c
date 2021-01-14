@@ -40,7 +40,7 @@ typedef struct BuffFS {
 
 extern void clearbuff(BuffFS *);
 
-static char *getbuff (BuffFS *buff, int sz) {
+extern char *getbuff (BuffFS *buff, int sz) {
   ((void)0); ((void)0);
   if (sz > 200 - buff->blen)
     clearbuff(buff);

@@ -34,7 +34,7 @@
 
 extern void luaS_resize(lua_State *, int);
 
-static void checkSizes (lua_State *L, global_State *g) {
+extern void checkSizes (lua_State *L, global_State *g) {
   if (!g->gcemergency) {
     if (g->strt.nuse < g->strt.size / 4) {
       l_mem olddebt = g->GCdebt;

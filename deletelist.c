@@ -34,7 +34,7 @@
 
 extern void freeobj(lua_State *, GCObject *);
 
-static void deletelist (lua_State *L, GCObject *p, GCObject *limit) {
+extern void deletelist (lua_State *L, GCObject *p, GCObject *limit) {
   while (p != limit) {
     GCObject *next = p->next;
     freeobj(L, p);

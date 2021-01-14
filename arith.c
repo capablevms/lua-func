@@ -37,7 +37,7 @@ extern void lua_arith(lua_State *, int);
 extern int tonum(lua_State *, int);
 extern int tonum(lua_State *, int);
 
-static int arith (lua_State *L, int op, const char *mtname) {
+extern int arith (lua_State *L, int op, const char *mtname) {
   if (tonum(L, 1) && tonum(L, 2))
     lua_arith(L, op);
   else

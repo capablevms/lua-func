@@ -35,7 +35,7 @@
 extern int fclose(FILE *);
 extern FILE * fopen(const char *restrict, const char *restrict);
 
-static int readable (const char *filename) {
+extern int readable (const char *filename) {
   FILE *f = fopen(filename, "r");
   if (f == ((void*)0)) return 0;
   fclose(f);

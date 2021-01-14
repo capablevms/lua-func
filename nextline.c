@@ -34,7 +34,7 @@
 
 extern int luaG_getfuncline(const Proto *, int);
 
-static int nextline (const Proto *p, int currentline, int pc) {
+extern int nextline (const Proto *p, int currentline, int pc) {
   if (p->lineinfo[pc] != (-0x80))
     return currentline + p->lineinfo[pc];
   else

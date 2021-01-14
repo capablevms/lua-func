@@ -36,7 +36,7 @@ typedef luaL_Stream LStream;
 extern int aux_close(lua_State *);
 extern FILE * tofile(lua_State *);
 
-static int f_close (lua_State *L) {
+extern int f_close (lua_State *L) {
   tofile(L);
   return aux_close(L);
 }

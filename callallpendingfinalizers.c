@@ -34,7 +34,7 @@
 
 extern void GCTM(lua_State *);
 
-static void callallpendingfinalizers (lua_State *L) {
+extern void callallpendingfinalizers (lua_State *L) {
   global_State *g = (L->l_G);
   while (g->tobefnz)
     GCTM(L);

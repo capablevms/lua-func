@@ -35,7 +35,7 @@
 extern const char * luaL_tolstring(lua_State *, int, size_t *);
 extern void luaL_checkany(lua_State *, int);
 
-static int luaB_tostring (lua_State *L) {
+extern int luaB_tostring (lua_State *L) {
   luaL_checkany(L, 1);
   luaL_tolstring(L, 1, ((void*)0));
   return 1;

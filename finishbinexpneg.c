@@ -37,7 +37,7 @@ extern int fitsC(lua_Integer);
 extern int fitsC(lua_Integer);
 extern int luaK_isKint(expdesc *);
 
-static int finishbinexpneg (FuncState *fs, expdesc *e1, expdesc *e2,
+extern int finishbinexpneg (FuncState *fs, expdesc *e1, expdesc *e2,
                              OpCode op, int line, TMS event) {
   if (!luaK_isKint(e2))
     return 0;

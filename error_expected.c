@@ -36,7 +36,7 @@ extern void luaX_syntaxerror(LexState *, const char *);
 extern const char * luaO_pushfstring(lua_State *, const char *, ...);
 extern const char * luaX_token2str(LexState *, int);
 
-static void __attribute__((noreturn)) error_expected (LexState *ls, int token) {
+extern void __attribute__((noreturn)) error_expected (LexState *ls, int token) {
   luaX_syntaxerror(ls,
       luaO_pushfstring(ls->L, "%s expected", luaX_token2str(ls, token)));
 }

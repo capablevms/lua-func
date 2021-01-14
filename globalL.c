@@ -30,4 +30,4 @@
 #include "lvm.h"
 #include "lzio.h"
 
-static lua_State *globalL = ((void*)0);
+lua_State *globalL = ((void*)0);

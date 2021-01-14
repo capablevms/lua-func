@@ -36,7 +36,7 @@ extern void lua_pushinteger(lua_State *, lua_Integer);
 extern int lua_setcstacklimit(lua_State *, unsigned int);
 extern lua_Integer luaL_checkinteger(lua_State *, int);
 
-static int db_setcstacklimit (lua_State *L) {
+extern int db_setcstacklimit (lua_State *L) {
   int limit = (int)luaL_checkinteger(L, 1);
   int res = lua_setcstacklimit(L, limit);
   lua_pushinteger(L, res);

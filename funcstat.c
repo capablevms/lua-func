@@ -47,7 +47,7 @@ extern void body(LexState *, expdesc *, int, int);
 extern int funcname(LexState *, expdesc *);
 extern void luaX_next(LexState *);
 
-static void funcstat (LexState *ls, int line) {
+extern void funcstat (LexState *ls, int line) {
 
   int ismethod;
   expdesc v, b;

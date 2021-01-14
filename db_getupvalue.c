@@ -34,6 +34,6 @@
 
 extern int auxupvalue(lua_State *, int);
 
-static int db_getupvalue (lua_State *L) {
+extern int db_getupvalue (lua_State *L) {
   return auxupvalue(L, 1);
 }

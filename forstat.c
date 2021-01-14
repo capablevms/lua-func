@@ -50,7 +50,7 @@ extern TString * str_checkname(LexState *);
 extern void luaX_next(LexState *);
 extern void enterblock(FuncState *, BlockCnt *, lu_byte);
 
-static void forstat (LexState *ls, int line) {
+extern void forstat (LexState *ls, int line) {
 
   FuncState *fs = ls->fs;
   TString *varname;

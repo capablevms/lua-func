@@ -33,7 +33,7 @@
 
 
 
-static int collectargs (char **argv, int *first) {
+extern int collectargs (char **argv, int *first) {
   int args = 0;
   int i;
   for (i = 1; argv[i] != ((void*)0); i++) {

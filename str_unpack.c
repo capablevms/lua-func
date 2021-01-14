@@ -75,7 +75,7 @@ extern lua_Integer luaL_optinteger(lua_State *, int, lua_Integer);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int str_unpack (lua_State *L) {
+extern int str_unpack (lua_State *L) {
   Header h;
   const char *fmt = (luaL_checklstring(L, (1), ((void*)0)));
   size_t ld;

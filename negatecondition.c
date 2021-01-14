@@ -34,7 +34,7 @@
 
 extern Instruction * getjumpcontrol(FuncState *, int);
 
-static void negatecondition (FuncState *fs, expdesc *e) {
+extern void negatecondition (FuncState *fs, expdesc *e) {
   Instruction *pc = getjumpcontrol(fs, e->u.info);
   ((void)0);
 

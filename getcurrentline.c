@@ -35,6 +35,6 @@
 extern int luaG_getfuncline(const Proto *, int);
 extern int currentpc(CallInfo *);
 
-static int getcurrentline (CallInfo *ci) {
+extern int getcurrentline (CallInfo *ci) {
   return luaG_getfuncline((((&((((union GCUnion *)(((((&((ci)->func)->val))->value_).gc))))->cl.l))))->p, currentpc(ci));
 }

@@ -41,7 +41,7 @@ extern int getc(FILE *);
 extern int getc(FILE *);
 extern int skipBOM(LoadF *);
 
-static int skipcomment (LoadF *lf, int *cp) {
+extern int skipcomment (LoadF *lf, int *cp) {
   int c = *cp = skipBOM(lf);
   if (c == '#') {
     do {

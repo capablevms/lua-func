@@ -41,7 +41,7 @@ typedef struct BuffFS {
 extern void luaV_concat(lua_State *, int);
 extern TString * luaS_newlstr(lua_State *, const char *, size_t);
 
-static void pushstr (BuffFS *buff, const char *str, size_t l) {
+extern void pushstr (BuffFS *buff, const char *str, size_t l) {
   lua_State *L = buff->L;
   { TValue *io = ((&(L->top)->val)); TString *x_ = (luaS_newlstr(L, str, l)); ((io)->value_).gc = (&(((union GCUnion *)((x_)))->gc)); ((io)->tt_=(((x_->tt) | (1 << 6)))); ((void)L, ((void)0)); };
   L->top++;

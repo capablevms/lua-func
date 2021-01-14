@@ -40,7 +40,7 @@ extern size_t posrelatI(lua_Integer, size_t);
 extern lua_Integer luaL_optinteger(lua_State *, int, lua_Integer);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int str_byte (lua_State *L) {
+extern int str_byte (lua_State *L) {
   size_t l;
   const char *s = luaL_checklstring(L, 1, &l);
   lua_Integer pi = luaL_optinteger(L, 2, 1);

@@ -36,7 +36,7 @@ extern void luaH_setint(lua_State *, Table *, lua_Integer, TValue *);
 extern int nextline(const Proto *, int, int);
 extern Table * luaH_new(lua_State *);
 
-static void collectvalidlines (lua_State *L, Closure *f) {
+extern void collectvalidlines (lua_State *L, Closure *f) {
   if (((f) == ((void*)0) || (f)->c.tt == ((6) | ((2) << 4)))) {
     (((&(L->top)->val))->tt_=(((0) | ((0) << 4))));
     {L->top++; ((void)L, ((void)0));};

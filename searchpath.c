@@ -44,7 +44,7 @@ extern void luaL_buffinit(lua_State *, luaL_Buffer *);
 extern const char * luaL_gsub(lua_State *, const char *, const char *, const char *);
 extern char * strchr(const char *, int);
 
-static const char *searchpath (lua_State *L, const char *name,
+extern const char *searchpath (lua_State *L, const char *name,
                                              const char *path,
                                              const char *sep,
                                              const char *dirsep) {

@@ -35,6 +35,6 @@
 extern int dochunk(lua_State *, int);
 extern int luaL_loadfilex(lua_State *, const char *, const char *);
 
-static int dofile (lua_State *L, const char *name) {
+extern int dofile (lua_State *L, const char *name) {
   return dochunk(L, luaL_loadfilex(L,name,((void*)0)));
 }

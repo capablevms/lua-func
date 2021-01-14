@@ -34,7 +34,7 @@
 
 extern TString * luaS_new(lua_State *, const char *);
 
-static int resume_error (lua_State *L, const char *msg, int narg) {
+extern int resume_error (lua_State *L, const char *msg, int narg) {
   L->top -= narg;
   { TValue *io = ((&(L->top)->val)); TString *x_ = (luaS_new(L, msg)); ((io)->value_).gc = (&(((union GCUnion *)((x_)))->gc)); ((io)->tt_=(((x_->tt) | (1 << 6)))); ((void)L, ((void)0)); };
   {L->top++; ((void)L, ((void)0));};

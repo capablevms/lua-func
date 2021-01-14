@@ -34,7 +34,7 @@
 
 extern Vardesc * getlocalvardesc(FuncState *, int);
 
-static void init_var (FuncState *fs, expdesc *e, int vidx) {
+extern void init_var (FuncState *fs, expdesc *e, int vidx) {
   e->f = e->t = (-1);
   e->k = VLOCAL;
   e->u.var.vidx = vidx;

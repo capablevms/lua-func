@@ -47,7 +47,7 @@ extern void inclinenumber(LexState *);
 extern int luaZ_fill(ZIO *);
 extern void save(LexState *, int);
 
-static void read_long_string (LexState *ls, SemInfo *seminfo, size_t sep) {
+extern void read_long_string (LexState *ls, SemInfo *seminfo, size_t sep) {
   int line = ls->linenumber;
   (save(ls, ls->current), (ls->current = (((ls->z)->n--)>0 ? ((unsigned char)((*(ls->z)->p++))) : luaZ_fill(ls->z))));
   if ((ls->current == '\n' || ls->current == '\r'))

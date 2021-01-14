@@ -36,7 +36,7 @@ extern int lua_gettop(lua_State *);
 extern int lua_getstack(lua_State *, int, lua_Debug *);
 extern int lua_status(lua_State *);
 
-static int auxstatus (lua_State *L, lua_State *co) {
+extern int auxstatus (lua_State *L, lua_State *co) {
   if (L == co) return 0;
   else {
     switch (lua_status(co)) {

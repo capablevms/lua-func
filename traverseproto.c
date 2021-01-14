@@ -38,7 +38,7 @@ extern void reallymarkobject(global_State *, GCObject *);
 extern void reallymarkobject(global_State *, GCObject *);
 extern void reallymarkobject(global_State *, GCObject *);
 
-static int traverseproto (global_State *g, Proto *f) {
+extern int traverseproto (global_State *g, Proto *f) {
   int i;
   { if (f->source) { if ((((f->source)->marked) & (((1<<(3)) | (1<<(4)))))) reallymarkobject(g, (&(((union GCUnion *)((f->source)))->gc))); }; };
   for (i = 0; i < f->sizek; i++)

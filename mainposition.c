@@ -35,7 +35,7 @@
 extern unsigned int luaS_hashlongstr(TString *);
 extern int l_hashfloat(lua_Number);
 
-static Node *mainposition (const Table *t, int ktt, const Value *kvl) {
+extern Node *mainposition (const Table *t, int ktt, const Value *kvl) {
   switch (((ktt) & 0x3F)) {
     case ((3) | ((0) << 4)):
       return ((&(t)->node[(((((int)((((((*kvl).i))) & ((((1<<((t)->lsizenode))))-1)))))))]));

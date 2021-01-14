@@ -34,6 +34,6 @@
 
 extern BinOpr subexpr(LexState *, expdesc *, int);
 
-static void expr (LexState *ls, expdesc *v) {
+extern void expr (LexState *ls, expdesc *v) {
   subexpr(ls, v, 0);
 }

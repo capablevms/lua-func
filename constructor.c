@@ -53,7 +53,7 @@ extern void init_exp(expdesc *, expkind, int);
 extern int luaK_code(FuncState *, Instruction);
 extern int luaK_codeABCk(FuncState *, OpCode, int, int, int, int);
 
-static void constructor (LexState *ls, expdesc *t) {
+extern void constructor (LexState *ls, expdesc *t) {
 
 
   FuncState *fs = ls->fs;

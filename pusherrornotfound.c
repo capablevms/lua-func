@@ -38,7 +38,7 @@ extern void luaL_addgsub(luaL_Buffer *, const char *, const char *, const char *
 extern void luaL_addstring(luaL_Buffer *, const char *);
 extern void luaL_buffinit(lua_State *, luaL_Buffer *);
 
-static void pusherrornotfound (lua_State *L, const char *path) {
+extern void pusherrornotfound (lua_State *L, const char *path) {
   luaL_Buffer b;
   luaL_buffinit(L, &b);
   luaL_addstring(&b, "no file '");

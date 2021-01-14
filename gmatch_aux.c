@@ -55,7 +55,7 @@ extern const char * match(MatchState *, const char *, const char *);
 extern void reprepstate(MatchState *);
 extern void * lua_touserdata(lua_State *, int);
 
-static int gmatch_aux (lua_State *L) {
+extern int gmatch_aux (lua_State *L) {
   GMatchState *gm = (GMatchState *)lua_touserdata(L, ((-1000000 - 1000) - (3)));
   const char *src;
   gm->ms.L = L;

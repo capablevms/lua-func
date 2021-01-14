@@ -37,7 +37,7 @@ static const union {
 
 extern void * memcpy(void *restrict, const void *restrict, size_t);
 
-static void copywithendian (char *dest, const char *src,
+extern void copywithendian (char *dest, const char *src,
                             int size, int islittle) {
   if (islittle == nativeendian.little)
     memcpy(dest, src, size);

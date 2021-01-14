@@ -40,7 +40,7 @@ typedef struct LoadF {
 extern int getc(FILE *);
 extern int getc(FILE *);
 
-static int skipBOM (LoadF *lf) {
+extern int skipBOM (LoadF *lf) {
   const char *p = "\xEF\xBB\xBF";
   int c;
   lf->n = 0;

@@ -35,7 +35,7 @@
 extern int fitsC(lua_Integer);
 extern int luaV_flttointeger(lua_Number, lua_Integer *, F2Imod);
 
-static int isSCnumber (expdesc *e, int *pi, int *isfloat) {
+extern int isSCnumber (expdesc *e, int *pi, int *isfloat) {
   lua_Integer i;
   if (e->k == VKINT)
     i = e->u.ival;

@@ -35,7 +35,7 @@
 extern void lua_pushnumber(lua_State *, lua_Number);
 extern clock_t clock();
 
-static int os_clock (lua_State *L) {
+extern int os_clock (lua_State *L) {
   lua_pushnumber(L, ((lua_Number)clock())/(lua_Number)((__clock_t) 1000000));
   return 1;
 }

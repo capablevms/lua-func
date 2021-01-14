@@ -37,7 +37,7 @@ extern void luaC_barrierback_(lua_State *, GCObject *);
 extern const TValue * luaH_getstr(Table *, TString *);
 extern TString * luaS_new(lua_State *, const char *);
 
-static void auxsetstr (lua_State *L, const TValue *t, const char *k) {
+extern void auxsetstr (lua_State *L, const TValue *t, const char *k) {
   const TValue *slot;
   TString *str = luaS_new(L, k);
   ((void)L, ((void)0));

@@ -38,7 +38,7 @@ extern int lua_type(lua_State *, int);
 extern const char * luaL_optlstring(lua_State *, int, const char *, size_t *);
 extern const char * luaL_optlstring(lua_State *, int, const char *, size_t *);
 
-static int luaB_loadfile (lua_State *L) {
+extern int luaB_loadfile (lua_State *L) {
   const char *fname = (luaL_optlstring(L, (1), (((void*)0)), ((void*)0)));
   const char *mode = (luaL_optlstring(L, (2), (((void*)0)), ((void*)0)));
   int env = (!(lua_type(L, (3)) == (-1)) ? 3 : 0);

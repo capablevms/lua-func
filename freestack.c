@@ -35,7 +35,7 @@
 extern void luaM_free_(lua_State *, void *, size_t);
 extern void luaE_freeCI(lua_State *);
 
-static void freestack (lua_State *L) {
+extern void freestack (lua_State *L) {
   if (L->stack == ((void*)0))
     return;
   L->ci = &L->base_ci;

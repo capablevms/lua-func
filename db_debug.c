@@ -44,7 +44,7 @@ extern char * fgets(char *restrict, int, FILE *restrict);
 extern int fflush(FILE *);
 extern int fprintf(FILE *restrict, const char *restrict, ...);
 
-static int db_debug (lua_State *L) {
+extern int db_debug (lua_State *L) {
   for (;;) {
     char buffer[250];
     (fprintf(stderr, ("%s"), ("lua_debug> ")), fflush(stderr));

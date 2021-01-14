@@ -36,7 +36,7 @@ extern lua_Number luaV_modf(lua_State *, lua_Number, lua_Number);
 extern double floor(double);
 extern double pow(double, double);
 
-static lua_Number numarith (lua_State *L, int op, lua_Number v1,
+extern lua_Number numarith (lua_State *L, int op, lua_Number v1,
                                                   lua_Number v2) {
   switch (op) {
     case 0: return ((v1)+(v2));

@@ -54,7 +54,7 @@ extern void leaveblock(FuncState *);
 extern void luaK_ret(FuncState *, int, int);
 extern int luaY_nvarstack(FuncState *);
 
-static void close_func (LexState *ls) {
+extern void close_func (LexState *ls) {
   lua_State *L = ls->L;
   FuncState *fs = ls->fs;
   Proto *f = fs->f;

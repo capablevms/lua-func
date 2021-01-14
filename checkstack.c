@@ -35,7 +35,7 @@
 extern int luaL_error(lua_State *, const char *, ...);
 extern int lua_checkstack(lua_State *, int);
 
-static void checkstack (lua_State *L, lua_State *L1, int n) {
+extern void checkstack (lua_State *L, lua_State *L1, int n) {
   if (L != L1 && !lua_checkstack(L1, n))
     luaL_error(L, "stack overflow");
 }

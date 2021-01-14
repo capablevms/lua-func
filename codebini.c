@@ -34,7 +34,7 @@
 
 extern void finishbinexpval(FuncState *, expdesc *, expdesc *, OpCode, int, int, int, OpCode, TMS);
 
-static void codebini (FuncState *fs, OpCode op,
+extern void codebini (FuncState *fs, OpCode op,
                        expdesc *e1, expdesc *e2, int flip, int line,
                        TMS event) {
   int v2 = ((((int)((e2->u.ival)))) + (((1<<8)-1) >> 1));

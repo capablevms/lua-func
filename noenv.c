@@ -36,7 +36,7 @@ extern void lua_settop(lua_State *, int);
 extern int lua_toboolean(lua_State *, int);
 extern int lua_getfield(lua_State *, int, const char *);
 
-static int noenv (lua_State *L) {
+extern int noenv (lua_State *L) {
   int b;
   lua_getfield(L, (-1000000 - 1000), "LUA_NOENV");
   b = lua_toboolean(L, -1);

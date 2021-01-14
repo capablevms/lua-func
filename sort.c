@@ -40,7 +40,7 @@ extern int luaL_argerror(lua_State *, int, const char *);
 extern lua_Integer luaL_len(lua_State *, int);
 extern void checktab(lua_State *, int, int);
 
-static int sort (lua_State *L) {
+extern int sort (lua_State *L) {
   lua_Integer n = (checktab(L, 1, ((1 | 2)) | 4), luaL_len(L, 1));
   if (n > 1) {
     ((void)((n < 2147483647) || luaL_argerror(L, (1), ("array too big"))));

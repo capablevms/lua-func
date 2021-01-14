@@ -38,7 +38,7 @@ extern int luaK_exp2RK(FuncState *, expdesc *);
 extern void swapexps(expdesc *, expdesc *);
 extern int luaK_exp2RK(FuncState *, expdesc *);
 
-static void codebitwise (FuncState *fs, BinOpr opr,
+extern void codebitwise (FuncState *fs, BinOpr opr,
                          expdesc *e1, expdesc *e2, int line) {
   int flip = 0;
   int v2;

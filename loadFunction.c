@@ -49,7 +49,7 @@ extern int loadInt(LoadState *);
 extern int loadInt(LoadState *);
 extern TString * loadStringN(LoadState *, Proto *);
 
-static void loadFunction (LoadState *S, Proto *f, TString *psource) {
+extern void loadFunction (LoadState *S, Proto *f, TString *psource) {
   f->source = loadStringN(S, f);
   if (f->source == ((void*)0))
     f->source = psource;

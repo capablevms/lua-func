@@ -38,7 +38,7 @@ extern lua_Integer luaL_checkinteger(lua_State *, int);
 extern char * luaL_buffinitsize(lua_State *, luaL_Buffer *, size_t);
 extern int lua_gettop(lua_State *);
 
-static int str_char (lua_State *L) {
+extern int str_char (lua_State *L) {
   int n = lua_gettop(L);
   int i;
   luaL_Buffer b;

@@ -37,7 +37,7 @@ extern void * lua_upvalueid(lua_State *, int, int);
 extern void luaL_checktype(lua_State *, int, int);
 extern lua_Integer luaL_checkinteger(lua_State *, int);
 
-static void *checkupval (lua_State *L, int argf, int argnup, int *pnup) {
+extern void *checkupval (lua_State *L, int argf, int argnup, int *pnup) {
   void *id;
   int nup = (int)luaL_checkinteger(L, argnup);
   luaL_checktype(L, argf, 6);

@@ -36,7 +36,7 @@ extern void whitelist(global_State *, GCObject *);
 extern void whitelist(global_State *, GCObject *);
 extern void whitelist(global_State *, GCObject *);
 
-static void enterinc (global_State *g) {
+extern void enterinc (global_State *g) {
   whitelist(g, g->allgc);
   g->reallyold = g->old1 = g->survival = ((void*)0);
   whitelist(g, g->finobj);

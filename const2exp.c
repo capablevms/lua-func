@@ -33,7 +33,7 @@
 
 
 
-static void const2exp (TValue *v, expdesc *e) {
+extern void const2exp (TValue *v, expdesc *e) {
   switch (((((v)->tt_)) & 0x3F)) {
     case ((3) | ((0) << 4)):
       e->k = VKINT; e->u.ival = (((v)->value_).i);

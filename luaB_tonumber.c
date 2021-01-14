@@ -46,7 +46,7 @@ extern void lua_settop(lua_State *, int);
 extern int lua_type(lua_State *, int);
 extern int lua_type(lua_State *, int);
 
-static int luaB_tonumber (lua_State *L) {
+extern int luaB_tonumber (lua_State *L) {
   if ((lua_type(L, (2)) <= 0)) {
     if (lua_type(L, 1) == 3) {
       lua_settop(L, 1);

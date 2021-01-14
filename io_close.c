@@ -36,7 +36,7 @@ extern int f_close(lua_State *);
 extern int lua_getfield(lua_State *, int, const char *);
 extern int lua_type(lua_State *, int);
 
-static int io_close (lua_State *L) {
+extern int io_close (lua_State *L) {
   if ((lua_type(L, (1)) == (-1)))
     lua_getfield(L, (-1000000 - 1000), ("_IO_" "output"));
   return f_close(L);

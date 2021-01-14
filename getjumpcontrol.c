@@ -33,7 +33,7 @@
 
 
 
-static Instruction *getjumpcontrol (FuncState *fs, int pc) {
+extern Instruction *getjumpcontrol (FuncState *fs, int pc) {
   Instruction *pi = &fs->f->code[pc];
   if (pc >= 1 && (luaP_opmodes[(((OpCode)(((*(pi-1))>>0) & ((~((~(Instruction)0)<<(7)))<<(0)))))] & (1 << 4)))
     return pi-1;

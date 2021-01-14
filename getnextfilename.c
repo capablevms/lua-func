@@ -34,7 +34,7 @@
 
 extern char * strchr(const char *, int);
 
-static const char *getnextfilename (char **path, char *end) {
+extern const char *getnextfilename (char **path, char *end) {
   char *sep;
   char *name = *path;
   if (name == end)

@@ -40,7 +40,7 @@ extern GCObject * udata2finalize(global_State *);
 
 extern void dothecall (lua_State *L, void *ud);
 
-static void GCTM (lua_State *L) {
+extern void GCTM (lua_State *L) {
   global_State *g = (L->l_G);
   const TValue *tm;
   TValue v;

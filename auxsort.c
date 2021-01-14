@@ -43,7 +43,7 @@ extern int sort_comp(lua_State *, int, int);
 extern void lua_settop(lua_State *, int);
 extern IdxT choosePivot(IdxT, IdxT, unsigned int);
 
-static void auxsort (lua_State *L, IdxT lo, IdxT up,
+extern void auxsort (lua_State *L, IdxT lo, IdxT up,
                                    unsigned int rnd) {
   while (lo < up) {
     IdxT p;

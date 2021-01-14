@@ -37,7 +37,7 @@ extern void * lua_touserdata(lua_State *, int);
 extern int lua_getfield(lua_State *, int, const char *);
 extern int lua_getfield(lua_State *, int, const char *);
 
-static void *checkclib (lua_State *L, const char *path) {
+extern void *checkclib (lua_State *L, const char *path) {
   void *plib;
   lua_getfield(L, (-1000000 - 1000), CLIBS);
   lua_getfield(L, -1, path);

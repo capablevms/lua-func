@@ -37,7 +37,7 @@ extern int luaL_error(lua_State *, const char *, ...);
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 extern int lua_getfield(lua_State *, int, const char *);
 
-static const char *findfile (lua_State *L, const char *name,
+extern const char *findfile (lua_State *L, const char *name,
                                            const char *pname,
                                            const char *dirsep) {
   const char *path;

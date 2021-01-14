@@ -44,7 +44,7 @@ extern int need_value(FuncState *, int);
 extern void luaK_concat(FuncState *, int *, int);
 extern void discharge2reg(FuncState *, expdesc *, int);
 
-static void exp2reg (FuncState *fs, expdesc *e, int reg) {
+extern void exp2reg (FuncState *fs, expdesc *e, int reg) {
   discharge2reg(fs, e, reg);
   if (e->k == VJMP)
     luaK_concat(fs, &e->t, e->u.info);

@@ -51,7 +51,7 @@ extern lua_State * getthread(lua_State *, int *);
 
 extern void hookf (lua_State *L, lua_Debug *ar);
 
-static int db_gethook (lua_State *L) {
+extern int db_gethook (lua_State *L) {
   int arg;
   lua_State *L1 = getthread(L, &arg);
   char buff[5];

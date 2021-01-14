@@ -34,6 +34,6 @@
 
 extern Node * mainposition(const Table *, int, const Value *);
 
-static Node *mainpositionTV (const Table *t, const TValue *key) {
+extern Node *mainpositionTV (const Table *t, const TValue *key) {
   return mainposition(t, ((key)->tt_), (&((key)->value_)));
 }

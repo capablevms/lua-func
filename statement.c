@@ -66,7 +66,7 @@ extern void ifstat(LexState *, int);
 extern void luaX_next(LexState *);
 extern void luaE_incCstack(lua_State *);
 
-static void statement (LexState *ls) {
+extern void statement (LexState *ls) {
   int line = ls->linenumber;
   luaE_incCstack(ls->L);
   switch (ls->t.token) {

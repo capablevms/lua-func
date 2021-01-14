@@ -34,7 +34,7 @@
 
 extern LocVar * localdebuginfo(FuncState *, int);
 
-static void removevars (FuncState *fs, int tolevel) {
+extern void removevars (FuncState *fs, int tolevel) {
   fs->ls->dyd->actvar.n -= (fs->nactvar - tolevel);
   while (fs->nactvar > tolevel) {
     LocVar *var = localdebuginfo(fs, --fs->nactvar);

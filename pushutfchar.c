@@ -36,7 +36,7 @@ extern const char * lua_pushfstring(lua_State *, const char *, ...);
 extern int luaL_argerror(lua_State *, int, const char *);
 extern lua_Integer luaL_checkinteger(lua_State *, int);
 
-static void pushutfchar (lua_State *L, int arg) {
+extern void pushutfchar (lua_State *L, int arg) {
   lua_Unsigned code = (lua_Unsigned)luaL_checkinteger(L, arg);
   ((void)((code <= 0x7FFFFFFFu) || luaL_argerror(L, (arg), ("value out of range"))));
   lua_pushfstring(L, "%U", (long)code);

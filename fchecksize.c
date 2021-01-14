@@ -41,7 +41,7 @@ extern void error(LoadState *, const char *);
 extern const char * luaO_pushfstring(lua_State *, const char *, ...);
 extern lu_byte loadByte(LoadState *);
 
-static void fchecksize (LoadState *S, size_t size, const char *tname) {
+extern void fchecksize (LoadState *S, size_t size, const char *tname) {
   if (loadByte(S) != size)
     error(S, luaO_pushfstring(S->L, "%s size mismatch", tname));
 }

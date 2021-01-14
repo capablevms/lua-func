@@ -34,7 +34,7 @@
 
 extern void luaE_setdebt(global_State *, l_mem);
 
-static void setpause (global_State *g) {
+extern void setpause (global_State *g) {
   l_mem threshold, debt;
   int pause = ((g->gcpause) * 4);
   l_mem estimate = g->GCestimate / 100;

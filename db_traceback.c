@@ -39,7 +39,7 @@ extern int lua_type(lua_State *, int);
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 extern lua_State * getthread(lua_State *, int *);
 
-static int db_traceback (lua_State *L) {
+extern int db_traceback (lua_State *L) {
   int arg;
   lua_State *L1 = getthread(L, &arg);
   const char *msg = lua_tolstring(L, (arg + 1), ((void*)0));

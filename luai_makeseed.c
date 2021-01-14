@@ -38,7 +38,7 @@ extern void * memcpy(void *restrict, const void *restrict, size_t);
 extern void * memcpy(void *restrict, const void *restrict, size_t);
 extern time_t time(time_t *);
 
-static unsigned int luai_makeseed (lua_State *L) {
+extern unsigned int luai_makeseed (lua_State *L) {
   char buff[3 * sizeof(size_t)];
   unsigned int h = ((unsigned int)((time(((void*)0)))));
   int p = 0;

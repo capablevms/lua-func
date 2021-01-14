@@ -39,7 +39,7 @@ extern int * __errno_location();
 extern FILE * fopen(const char *restrict, const char *restrict);
 extern LStream * newfile(lua_State *);
 
-static void opencheck (lua_State *L, const char *fname, const char *mode) {
+extern void opencheck (lua_State *L, const char *fname, const char *mode) {
   LStream *p = newfile(L);
   p->f = fopen(fname, mode);
   if (p->f == ((void*)0))

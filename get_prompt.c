@@ -35,7 +35,7 @@
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 extern int lua_getglobal(lua_State *, const char *);
 
-static const char *get_prompt (lua_State *L, int firstline) {
+extern const char *get_prompt (lua_State *L, int firstline) {
   const char *p;
   lua_getglobal(L, firstline ? "_PROMPT" : "_PROMPT2");
   p = lua_tolstring(L, (-1), ((void*)0));

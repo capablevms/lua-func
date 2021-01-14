@@ -61,7 +61,7 @@ extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
 extern int gmatch_aux (lua_State *);
 
-static int gmatch (lua_State *L) {
+extern int gmatch (lua_State *L) {
   size_t ls, lp;
   const char *s = luaL_checklstring(L, 1, &ls);
   const char *p = luaL_checklstring(L, 2, &lp);

@@ -33,7 +33,7 @@
 
 
 
-static int getbaseline (const Proto *f, int pc, int *basepc) {
+extern int getbaseline (const Proto *f, int pc, int *basepc) {
   if (f->sizeabslineinfo == 0 || pc < f->abslineinfo[0].pc) {
     *basepc = -1;
     return f->linedefined;

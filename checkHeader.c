@@ -51,7 +51,7 @@ extern void error(LoadState *, const char *);
 extern lu_byte loadByte(LoadState *);
 extern void checkliteral(LoadState *, const char *, const char *);
 
-static void checkHeader (LoadState *S) {
+extern void checkHeader (LoadState *S) {
 
   checkliteral(S, &"\x1bLua"[1], "not a binary chunk");
   if (loadByte(S) != (("5"[0]-'0')*16+("4"[0]-'0')))

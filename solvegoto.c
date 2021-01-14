@@ -36,7 +36,7 @@ extern void luaK_patchlist(FuncState *, int, int);
 extern void jumpscopeerror(LexState *, Labeldesc *);
 extern long __builtin_expect(long, long);
 
-static void solvegoto (LexState *ls, int g, Labeldesc *label) {
+extern void solvegoto (LexState *ls, int g, Labeldesc *label) {
   int i;
   Labellist *gl = &ls->dyd->gt;
   Labeldesc *gt = &gl->arr[g];

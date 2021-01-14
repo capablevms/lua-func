@@ -33,7 +33,7 @@
 
 
 
-static const char *aux_upvalue (TValue *fi, int n, TValue **val,
+extern const char *aux_upvalue (TValue *fi, int n, TValue **val,
                                 GCObject **owner) {
   switch (((((fi)->tt_)) & 0x3F)) {
     case ((6) | ((2) << 4)): {

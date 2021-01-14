@@ -41,7 +41,7 @@ extern int luaL_argerror(lua_State *, int, const char *);
 extern int lua_gettop(lua_State *);
 extern int io_readline (lua_State *L);
 
-static void aux_lines (lua_State *L, int toclose) {
+extern void aux_lines (lua_State *L, int toclose) {
   int n = lua_gettop(L) - 1;
   ((void)((n <= 250) || luaL_argerror(L, (250 + 2), ("too many arguments"))));
   lua_pushvalue(L, 1);

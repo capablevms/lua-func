@@ -41,7 +41,7 @@ typedef struct {
 
 extern void dumpBlock(DumpState *, const void *, size_t);
 
-static void dumpByte (DumpState *D, int y) {
+extern void dumpByte (DumpState *D, int y) {
   lu_byte x = (lu_byte)y;
   dumpBlock(D,&x,(1)*sizeof((&x)[0]));
 }

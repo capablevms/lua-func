@@ -31,7 +31,7 @@
 #include "lzio.h"
 
 
-static const char *const luaX_tokens [] = {
+const char *const luaX_tokens [] = {
     "and", "break", "do", "else", "elseif",
     "end", "false", "for", "function", "goto", "if",
     "in", "local", "nil", "not", "or", "repeat",

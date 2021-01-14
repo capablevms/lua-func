@@ -33,7 +33,7 @@
 
 
 
-static int searchupvalue (FuncState *fs, TString *name) {
+extern int searchupvalue (FuncState *fs, TString *name) {
   int i;
   Upvaldesc *up = fs->f->upvalues;
   for (i = 0; i < fs->nups; i++) {

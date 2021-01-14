@@ -40,7 +40,7 @@ extern void l_print(lua_State *);
 extern int docall(lua_State *, int, int);
 extern int loadline(lua_State *);
 
-static void doREPL (lua_State *L) {
+extern void doREPL (lua_State *L) {
   int status;
   const char *oldprogname = progname;
   progname = ((void*)0);

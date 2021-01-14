@@ -34,6 +34,6 @@
 
 extern int luaK_isKint(expdesc *);
 
-static int isCint (expdesc *e) {
+extern int isCint (expdesc *e) {
   return luaK_isKint(e) && (((lua_Unsigned)(e->u.ival)) <= ((lua_Unsigned)(((1<<8)-1))));
 }

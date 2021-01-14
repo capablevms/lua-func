@@ -35,7 +35,7 @@ extern const TValue absentkey;
 extern int equalkey(const TValue *, const Node *, int);
 extern Node * mainpositionTV(const Table *, const TValue *);
 
-static const TValue *getgeneric (Table *t, const TValue *key, int deadok) {
+extern const TValue *getgeneric (Table *t, const TValue *key, int deadok) {
   Node *n = mainpositionTV(t, key);
   for (;;) {
     if (equalkey(key, n, deadok))

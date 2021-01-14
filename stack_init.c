@@ -34,7 +34,7 @@
 
 extern void * luaM_malloc_(lua_State *, size_t, int);
 
-static void stack_init (lua_State *L1, lua_State *L) {
+extern void stack_init (lua_State *L1, lua_State *L) {
   int i; CallInfo *ci;
 
   L1->stack = ((StackValue*)(luaM_malloc_(L, ((2*20) + 5)*sizeof(StackValue), 0)));

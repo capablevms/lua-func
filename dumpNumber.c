@@ -41,6 +41,6 @@ typedef struct {
 
 extern void dumpBlock(DumpState *, const void *, size_t);
 
-static void dumpNumber (DumpState *D, lua_Number x) {
+extern void dumpNumber (DumpState *D, lua_Number x) {
   dumpBlock(D,&x,(1)*sizeof((&x)[0]));
 }

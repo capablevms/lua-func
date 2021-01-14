@@ -34,7 +34,7 @@ typedef unsigned int utfint;
 
 
 
-static const char *utf8_decode (const char *s, utfint *val, int strict) {
+extern const char *utf8_decode (const char *s, utfint *val, int strict) {
   static const utfint limits[] =
         {~(utfint)0, 0x80, 0x800, 0x10000u, 0x200000u, 0x4000000u};
   unsigned int c = (unsigned char)s[0];

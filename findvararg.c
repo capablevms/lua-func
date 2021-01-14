@@ -33,7 +33,7 @@
 
 
 
-static const char *findvararg (CallInfo *ci, int n, StkId *pos) {
+extern const char *findvararg (CallInfo *ci, int n, StkId *pos) {
   if (((&((((union GCUnion *)(((((&(ci->func)->val))->value_).gc))))->cl.l)))->p->is_vararg) {
     int nextra = ci->u.l.nextraargs;
     if (n >= -nextra) {

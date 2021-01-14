@@ -33,7 +33,7 @@
 
 
 
-static int currentpc (CallInfo *ci) {
+extern int currentpc (CallInfo *ci) {
   ((void)0);
   return (((int)(((ci->u.l.savedpc) - ((((&((((union GCUnion *)(((((&((ci)->func)->val))->value_).gc))))->cl.l))))->p)->code))) - 1);
 }

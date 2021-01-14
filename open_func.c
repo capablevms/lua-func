@@ -44,7 +44,7 @@ typedef struct BlockCnt {
 extern void enterblock(FuncState *, BlockCnt *, lu_byte);
 extern void luaC_barrier_(lua_State *, GCObject *, GCObject *);
 
-static void open_func (LexState *ls, FuncState *fs, BlockCnt *bl) {
+extern void open_func (LexState *ls, FuncState *fs, BlockCnt *bl) {
   Proto *f = fs->f;
   fs->prev = ls->fs;
   fs->ls = ls;

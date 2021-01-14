@@ -33,7 +33,7 @@
 
 
 
-static size_t posrelatI (lua_Integer pos, size_t len) {
+extern size_t posrelatI (lua_Integer pos, size_t len) {
   if (pos > 0)
     return (size_t)pos;
   else if (pos == 0)

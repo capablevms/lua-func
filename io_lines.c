@@ -49,7 +49,7 @@ extern int lua_type(lua_State *, int);
 extern void lua_pushnil(lua_State *);
 extern int lua_type(lua_State *, int);
 
-static int io_lines (lua_State *L) {
+extern int io_lines (lua_State *L) {
   int toclose;
   if ((lua_type(L, (1)) == (-1))) lua_pushnil(L);
   if ((lua_type(L, (1)) == 0)) {

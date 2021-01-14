@@ -38,7 +38,7 @@ extern int system(const char *);
 extern int * __errno_location();
 extern const char * luaL_optlstring(lua_State *, int, const char *, size_t *);
 
-static int os_execute (lua_State *L) {
+extern int os_execute (lua_State *L) {
   const char *cmd = (luaL_optlstring(L, (1), (((void*)0)), ((void*)0)));
   int stat;
   (*__errno_location ()) = 0;

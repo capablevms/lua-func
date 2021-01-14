@@ -35,7 +35,7 @@
 extern void lua_setfield(lua_State *, int, const char *);
 extern void lua_pushinteger(lua_State *, lua_Integer);
 
-static void settabsi (lua_State *L, const char *k, int v) {
+extern void settabsi (lua_State *L, const char *k, int v) {
   lua_pushinteger(L, v);
   lua_setfield(L, -2, k);
 }

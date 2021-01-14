@@ -34,7 +34,7 @@
 
 extern GCObject * luaC_newobj(lua_State *, int, size_t);
 
-static TString *createstrobj (lua_State *L, size_t l, int tag, unsigned int h) {
+extern TString *createstrobj (lua_State *L, size_t l, int tag, unsigned int h) {
   TString *ts;
   GCObject *o;
   size_t totalsize;

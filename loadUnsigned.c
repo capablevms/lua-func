@@ -40,7 +40,7 @@ typedef struct {
 extern void error(LoadState *, const char *);
 extern lu_byte loadByte(LoadState *);
 
-static size_t loadUnsigned (LoadState *S, size_t limit) {
+extern size_t loadUnsigned (LoadState *S, size_t limit) {
   size_t x = 0;
   int b;
   limit >>= 7;

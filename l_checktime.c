@@ -35,7 +35,7 @@
 extern int luaL_argerror(lua_State *, int, const char *);
 extern lua_Integer luaL_checkinteger(lua_State *, int);
 
-static time_t l_checktime (lua_State *L, int arg) {
+extern time_t l_checktime (lua_State *L, int arg) {
   lua_Integer t = luaL_checkinteger(L, arg);
   ((void)(((time_t)t == t) || luaL_argerror(L, (arg), ("time out-of-bounds"))));
   return (time_t)t;

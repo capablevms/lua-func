@@ -37,7 +37,7 @@ extern int rename(const char *, const char *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int os_rename (lua_State *L) {
+extern int os_rename (lua_State *L) {
   const char *fromname = (luaL_checklstring(L, (1), ((void*)0)));
   const char *toname = (luaL_checklstring(L, (2), ((void*)0)));
   return luaL_fileresult(L, rename(fromname, toname) == 0, ((void*)0));

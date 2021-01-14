@@ -34,7 +34,7 @@
 
 extern void removelastlineinfo(FuncState *);
 
-static void removelastinstruction (FuncState *fs) {
+extern void removelastinstruction (FuncState *fs) {
   removelastlineinfo(fs);
   fs->pc--;
 }

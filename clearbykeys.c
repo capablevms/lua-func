@@ -35,7 +35,7 @@
 extern void clearkey(Node *);
 extern int iscleared(global_State *, const GCObject *);
 
-static void clearbykeys (global_State *g, GCObject *l) {
+extern void clearbykeys (global_State *g, GCObject *l) {
   for (; l; l = (&((((union GCUnion *)((l))))->h))->gclist) {
     Table *h = (&((((union GCUnion *)((l))))->h));
     Node *limit = (&(h)->node[((size_t)((((1<<((h)->lsizenode))))))]);

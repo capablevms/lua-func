@@ -39,7 +39,7 @@ extern void lua_pushnil(lua_State *);
 extern void * luaL_testudata(lua_State *, int, const char *);
 extern void luaL_checkany(lua_State *, int);
 
-static int io_type (lua_State *L) {
+extern int io_type (lua_State *L) {
   LStream *p;
   luaL_checkany(L, 1);
   p = (LStream *)luaL_testudata(L, 1, "FILE*");

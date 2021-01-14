@@ -37,7 +37,7 @@ extern void codename(LexState *, expdesc *);
 extern void luaX_next(LexState *);
 extern void luaK_exp2anyregup(FuncState *, expdesc *);
 
-static void fieldsel (LexState *ls, expdesc *v) {
+extern void fieldsel (LexState *ls, expdesc *v) {
 
   FuncState *fs = ls->fs;
   expdesc key;

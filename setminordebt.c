@@ -34,6 +34,6 @@
 
 extern void luaE_setdebt(global_State *, l_mem);
 
-static void setminordebt (global_State *g) {
+extern void setminordebt (global_State *g) {
   luaE_setdebt(g, -(((l_mem)((((lu_mem)((g)->totalbytes + (g)->GCdebt)) / 100))) * g->genminormul));
 }

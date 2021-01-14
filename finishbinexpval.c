@@ -39,7 +39,7 @@ extern void freeexps(FuncState *, expdesc *, expdesc *);
 extern int luaK_codeABCk(FuncState *, OpCode, int, int, int, int);
 extern int luaK_exp2anyreg(FuncState *, expdesc *);
 
-static void finishbinexpval (FuncState *fs, expdesc *e1, expdesc *e2,
+extern void finishbinexpval (FuncState *fs, expdesc *e1, expdesc *e2,
                              OpCode op, int v2, int flip, int line,
                              OpCode mmop, TMS event) {
   int v1 = luaK_exp2anyreg(fs, e1);

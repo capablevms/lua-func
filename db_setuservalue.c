@@ -39,7 +39,7 @@ extern void luaL_checkany(lua_State *, int);
 extern void luaL_checktype(lua_State *, int, int);
 extern lua_Integer luaL_optinteger(lua_State *, int, lua_Integer);
 
-static int db_setuservalue (lua_State *L) {
+extern int db_setuservalue (lua_State *L) {
   int n = (int)luaL_optinteger(L, 3, 1);
   luaL_checktype(L, 1, 7);
   luaL_checkany(L, 2);

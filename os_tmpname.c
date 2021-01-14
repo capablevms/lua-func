@@ -36,7 +36,7 @@ extern const char * lua_pushstring(lua_State *, const char *);
 extern int luaL_error(lua_State *, const char *, ...);
 extern char * tmpnam(char *);
 
-static int os_tmpname (lua_State *L) {
+extern int os_tmpname (lua_State *L) {
   char buff[20];
   int err;
   { err = (tmpnam(buff) == ((void*)0)); };

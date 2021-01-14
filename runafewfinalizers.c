@@ -34,7 +34,7 @@
 
 extern void GCTM(lua_State *);
 
-static int runafewfinalizers (lua_State *L, int n) {
+extern int runafewfinalizers (lua_State *L, int n) {
   global_State *g = (L->l_G);
   int i;
   for (i = 0; i < n && g->tobefnz; i++)

@@ -42,7 +42,7 @@ typedef struct {
 extern void dumpBlock(DumpState *, const void *, size_t);
 extern void dumpInt(DumpState *, int);
 
-static void dumpCode (DumpState *D, const Proto *f) {
+extern void dumpCode (DumpState *D, const Proto *f) {
   dumpInt(D, f->sizecode);
   dumpBlock(D,f->code,(f->sizecode)*sizeof((f->code)[0]));
 }

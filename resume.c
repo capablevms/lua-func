@@ -38,7 +38,7 @@ extern void luaV_execute(lua_State *, CallInfo *);
 extern void luaE_incCstack(lua_State *);
 extern void docall(lua_State *, StkId, int, int);
 
-static void resume (lua_State *L, void *ud) {
+extern void resume (lua_State *L, void *ud) {
   int n = *(((int*)(ud)));
   StkId firstArg = L->top - n;
   CallInfo *ci = L->ci;

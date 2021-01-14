@@ -41,7 +41,7 @@ typedef struct {
 
 extern void dumpBlock(DumpState *, const void *, size_t);
 
-static void dumpSize (DumpState *D, size_t x) {
+extern void dumpSize (DumpState *D, size_t x) {
   lu_byte buff[((sizeof(size_t) * 8 / 7) + 1)];
   int n = 0;
   do {

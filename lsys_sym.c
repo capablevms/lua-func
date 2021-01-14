@@ -34,7 +34,7 @@
 
 extern const char * lua_pushstring(lua_State *, const char *);
 
-static lua_CFunction lsys_sym (lua_State *L, void *lib, const char *sym) {
+extern lua_CFunction lsys_sym (lua_State *L, void *lib, const char *sym) {
   (void)(lib); (void)(sym);
   lua_pushstring(L, "" "dynamic libraries not enabled; check your Lua installation");
   return ((void*)0);

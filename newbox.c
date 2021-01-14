@@ -42,7 +42,7 @@ extern void luaL_setfuncs(lua_State *, const luaL_Reg *, int);
 extern int luaL_newmetatable(lua_State *, const char *);
 extern void * lua_newuserdatauv(lua_State *, size_t, int);
 
-static void newbox (lua_State *L) {
+extern void newbox (lua_State *L) {
   UBox *box = (UBox *)lua_newuserdatauv(L, sizeof(UBox), 0);
   box->box = ((void*)0);
   box->bsize = 0;

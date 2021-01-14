@@ -37,7 +37,7 @@ extern int toupper(int);
 extern char * luaL_buffinitsize(lua_State *, luaL_Buffer *, size_t);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int str_upper (lua_State *L) {
+extern int str_upper (lua_State *L) {
   size_t l;
   size_t i;
   luaL_Buffer b;

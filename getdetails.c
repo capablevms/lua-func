@@ -53,7 +53,7 @@ extern int luaL_argerror(lua_State *, int, const char *);
 extern KOption getoption(Header *, const char **, int *);
 extern KOption getoption(Header *, const char **, int *);
 
-static KOption getdetails (Header *h, size_t totalsize,
+extern KOption getdetails (Header *h, size_t totalsize,
                            const char **fmt, int *psize, int *ntoalign) {
   KOption opt = getoption(h, fmt, psize);
   int align = *psize;

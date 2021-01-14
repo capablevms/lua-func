@@ -37,7 +37,7 @@ extern void luaD_throw(lua_State *, int);
 extern void luaC_fullgc(lua_State *, int);
 extern long __builtin_expect(long, long);
 
-static void growstrtab (lua_State *L, stringtable *tb) {
+extern void growstrtab (lua_State *L, stringtable *tb) {
   if ((__builtin_expect(((tb->nuse == 2147483647) != 0), 0))) {
     luaC_fullgc(L, 1);
     if (tb->nuse == 2147483647)

@@ -40,7 +40,7 @@ extern unsigned long strlen(const char *);
 extern const char * lua_pushfstring(lua_State *, const char *, ...);
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 
-static int addreturn (lua_State *L) {
+extern int addreturn (lua_State *L) {
   const char *line = lua_tolstring(L, (-1), ((void*)0));
   const char *retline = lua_pushfstring(L, "return %s;", line);
   int status = luaL_loadbufferx(L,retline,strlen(retline),"=stdin",((void*)0));

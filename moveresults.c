@@ -34,7 +34,7 @@
 
 extern int luaF_close(lua_State *, StkId, int);
 
-static void moveresults (lua_State *L, StkId res, int nres, int wanted) {
+extern void moveresults (lua_State *L, StkId res, int nres, int wanted) {
   StkId firstresult;
   int i;
   switch (wanted) {

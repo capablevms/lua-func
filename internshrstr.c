@@ -38,7 +38,7 @@ extern void growstrtab(lua_State *, stringtable *);
 extern int memcmp(const void *, const void *, size_t);
 extern unsigned int luaS_hash(const char *, size_t, unsigned int);
 
-static TString *internshrstr (lua_State *L, const char *str, size_t l) {
+extern TString *internshrstr (lua_State *L, const char *str, size_t l) {
   TString *ts;
   global_State *g = (L->l_G);
   stringtable *tb = &g->strt;

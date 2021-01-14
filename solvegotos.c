@@ -42,7 +42,7 @@ typedef struct BlockCnt {
 
 extern void solvegoto(LexState *, int, Labeldesc *);
 
-static int solvegotos (LexState *ls, Labeldesc *lb) {
+extern int solvegotos (LexState *ls, Labeldesc *lb) {
   Labellist *gl = &ls->dyd->gt;
   int i = ls->fs->bl->firstgoto;
   int needsclose = 0;

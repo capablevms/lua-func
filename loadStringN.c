@@ -45,7 +45,7 @@ extern TString * luaS_newlstr(lua_State *, const char *, size_t);
 extern void loadBlock(LoadState *, void *, size_t);
 extern size_t loadSize(LoadState *);
 
-static TString *loadStringN (LoadState *S, Proto *p) {
+extern TString *loadStringN (LoadState *S, Proto *p) {
   lua_State *L = S->L;
   TString *ts;
   size_t size = loadSize(S);

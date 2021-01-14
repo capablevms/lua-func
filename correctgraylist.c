@@ -34,7 +34,7 @@
 
 extern GCObject ** getgclist(GCObject *);
 
-static GCObject **correctgraylist (GCObject **p) {
+extern GCObject **correctgraylist (GCObject **p) {
   GCObject *curr;
   while ((curr = *p) != ((void*)0)) {
     GCObject **next = getgclist(curr);

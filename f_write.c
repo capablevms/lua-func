@@ -37,7 +37,7 @@ extern int g_write(lua_State *, FILE *, int);
 extern void lua_pushvalue(lua_State *, int);
 extern FILE * tofile(lua_State *);
 
-static int f_write (lua_State *L) {
+extern int f_write (lua_State *L) {
   FILE *f = tofile(L);
   lua_pushvalue(L, 1);
   return g_write(L, f, 2);

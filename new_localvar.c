@@ -35,7 +35,7 @@
 extern void * luaM_growaux_(lua_State *, void *, int, int *, int, int, const char *);
 extern void checklimit(FuncState *, int, int, const char *);
 
-static int new_localvar (LexState *ls, TString *name) {
+extern int new_localvar (LexState *ls, TString *name) {
   lua_State *L = ls->L;
   FuncState *fs = ls->fs;
   Dyndata *dyd = ls->dyd;

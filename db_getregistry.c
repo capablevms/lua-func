@@ -34,7 +34,7 @@
 
 extern void lua_pushvalue(lua_State *, int);
 
-static int db_getregistry (lua_State *L) {
+extern int db_getregistry (lua_State *L) {
   lua_pushvalue(L, (-1000000 - 1000));
   return 1;
 }

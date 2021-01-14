@@ -33,7 +33,7 @@
 
 
 
-static void linkgclist_ (GCObject *o, GCObject **pnext, GCObject **list) {
+extern void linkgclist_ (GCObject *o, GCObject **pnext, GCObject **list) {
   ((void)0);
   *pnext = *list;
   *list = o;

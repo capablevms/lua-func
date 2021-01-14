@@ -38,7 +38,7 @@ extern void lua_settop(lua_State *, int);
 extern const char * lua_setupvalue(lua_State *, int, int);
 extern void lua_pushvalue(lua_State *, int);
 
-static int load_aux (lua_State *L, int status, int envidx) {
+extern int load_aux (lua_State *L, int status, int envidx) {
   if (status == 0) {
     if (envidx != 0) {
       lua_pushvalue(L, envidx);

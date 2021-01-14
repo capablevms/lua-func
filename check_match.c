@@ -40,7 +40,7 @@ extern void error_expected(LexState *, int);
 extern long __builtin_expect(long, long);
 extern int testnext(LexState *, int);
 
-static void check_match (LexState *ls, int what, int who, int where) {
+extern void check_match (LexState *ls, int what, int who, int where) {
   if ((__builtin_expect(((!testnext(ls, what)) != 0), 0))) {
     if (where == ls->linenumber)
       error_expected(ls, what);

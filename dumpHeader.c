@@ -49,7 +49,7 @@ extern void dumpByte(DumpState *, int);
 extern void dumpByte(DumpState *, int);
 extern void dumpBlock(DumpState *, const void *, size_t);
 
-static void dumpHeader (DumpState *D) {
+extern void dumpHeader (DumpState *D) {
   dumpBlock(D,"\x1bLua",sizeof("\x1bLua") - sizeof(char));
   dumpByte(D, (("5"[0]-'0')*16+("4"[0]-'0')));
   dumpByte(D, 0);

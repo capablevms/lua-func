@@ -68,7 +68,7 @@ extern int luaZ_fill(ZIO *);
 extern int luaZ_fill(ZIO *);
 extern void inclinenumber(LexState *);
 
-static int llex (LexState *ls, SemInfo *seminfo) {
+extern int llex (LexState *ls, SemInfo *seminfo) {
   ((ls->buff)->n = 0);
   for (;;) {
     switch (ls->current) {

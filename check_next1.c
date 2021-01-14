@@ -34,7 +34,7 @@
 
 extern int luaZ_fill(ZIO *);
 
-static int check_next1 (LexState *ls, int c) {
+extern int check_next1 (LexState *ls, int c) {
   if (ls->current == c) {
     (ls->current = (((ls->z)->n--)>0 ? ((unsigned char)((*(ls->z)->p++))) : luaZ_fill(ls->z)));
     return 1;

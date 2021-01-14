@@ -36,7 +36,7 @@ extern void luaC_barrier_(lua_State *, GCObject *, GCObject *);
 extern Vardesc * getlocalvardesc(FuncState *, int);
 extern Upvaldesc * allocupvalue(FuncState *);
 
-static int newupvalue (FuncState *fs, TString *name, expdesc *v) {
+extern int newupvalue (FuncState *fs, TString *name, expdesc *v) {
   Upvaldesc *up = allocupvalue(fs);
   FuncState *prev = fs->prev;
   if (v->k == VLOCAL) {

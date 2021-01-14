@@ -43,7 +43,7 @@ extern int luaL_getmetafield(lua_State *, int, const char *);
 extern int lua_type(lua_State *, int);
 extern void lua_settop(lua_State *, int);
 
-static void trymt (lua_State *L, const char *mtname) {
+extern void trymt (lua_State *L, const char *mtname) {
   lua_settop(L, 2);
   if (lua_type(L, 2) == 4 || !luaL_getmetafield(L, 2, mtname))
     luaL_error(L, "attempt to %s a '%s' with a '%s'", mtname + 2,

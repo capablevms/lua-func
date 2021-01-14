@@ -36,7 +36,7 @@ extern void * luaM_growaux_(lua_State *, void *, int, int *, int, int, const cha
 extern void * luaM_growaux_(lua_State *, void *, int, int *, int, int, const char *);
 extern int abs(int);
 
-static void savelineinfo (FuncState *fs, Proto *f, int line) {
+extern void savelineinfo (FuncState *fs, Proto *f, int line) {
   int linedif = line - fs->previousline;
   int pc = fs->pc - 1;
   if (abs(linedif) >= 0x80 || fs->iwthabs++ > 120) {

@@ -37,7 +37,7 @@ extern lua_Unsigned lua_rawlen(lua_State *, int);
 extern int luaL_typeerror(lua_State *, int, const char *);
 extern int lua_type(lua_State *, int);
 
-static int luaB_rawlen (lua_State *L) {
+extern int luaB_rawlen (lua_State *L) {
   int t = lua_type(L, 1);
   ((void)((t == 5 || t == 4) || luaL_typeerror(L, (1), ("table or string"))));
 

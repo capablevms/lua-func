@@ -36,7 +36,7 @@ extern void lexerror(LexState *, const char *, int);
 extern int luaZ_fill(ZIO *);
 extern int luaZ_fill(ZIO *);
 
-static void inclinenumber (LexState *ls) {
+extern void inclinenumber (LexState *ls) {
   int old = ls->current;
   ((void)0);
   (ls->current = (((ls->z)->n--)>0 ? ((unsigned char)((*(ls->z)->p++))) : luaZ_fill(ls->z)));

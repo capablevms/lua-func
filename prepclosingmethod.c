@@ -34,7 +34,7 @@
 
 extern const TValue * luaT_gettmbyobj(lua_State *, const TValue *, TMS);
 
-static int prepclosingmethod (lua_State *L, TValue *obj, TValue *err) {
+extern int prepclosingmethod (lua_State *L, TValue *obj, TValue *err) {
   StkId top = L->top;
   const TValue *tm = luaT_gettmbyobj(L, obj, TM_CLOSE);
   if ((((((((tm))->tt_)) & 0x0F)) == (0)))

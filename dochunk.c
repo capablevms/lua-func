@@ -35,7 +35,7 @@
 extern int report(lua_State *, int);
 extern int docall(lua_State *, int, int);
 
-static int dochunk (lua_State *L, int status) {
+extern int dochunk (lua_State *L, int status) {
   if (status == 0) status = docall(L, 0, 0);
   return report(L, status);
 }

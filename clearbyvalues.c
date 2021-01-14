@@ -37,7 +37,7 @@ extern int iscleared(global_State *, const GCObject *);
 extern int iscleared(global_State *, const GCObject *);
 extern unsigned int luaH_realasize(const Table *);
 
-static void clearbyvalues (global_State *g, GCObject *l, GCObject *f) {
+extern void clearbyvalues (global_State *g, GCObject *l, GCObject *f) {
   for (; l != f; l = (&((((union GCUnion *)((l))))->h))->gclist) {
     Table *h = (&((((union GCUnion *)((l))))->h));
     Node *n, *limit = (&(h)->node[((size_t)((((1<<((h)->lsizenode))))))]);

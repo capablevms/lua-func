@@ -61,7 +61,7 @@ extern TString * luaX_newstring(LexState *, const char *, size_t);
 extern int new_localvar(LexState *, TString *);
 extern TString * luaX_newstring(LexState *, const char *, size_t);
 
-static void forlist (LexState *ls, TString *indexname) {
+extern void forlist (LexState *ls, TString *indexname) {
 
   FuncState *fs = ls->fs;
   expdesc e;

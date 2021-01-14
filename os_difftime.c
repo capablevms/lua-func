@@ -37,7 +37,7 @@ extern double difftime(time_t, time_t);
 extern time_t l_checktime(lua_State *, int);
 extern time_t l_checktime(lua_State *, int);
 
-static int os_difftime (lua_State *L) {
+extern int os_difftime (lua_State *L) {
   time_t t1 = l_checktime(L, 1);
   time_t t2 = l_checktime(L, 2);
   lua_pushnumber(L, (lua_Number)difftime(t1, t2));

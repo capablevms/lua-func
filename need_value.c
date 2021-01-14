@@ -35,7 +35,7 @@
 extern Instruction * getjumpcontrol(FuncState *, int);
 extern int getjump(FuncState *, int);
 
-static int need_value (FuncState *fs, int list) {
+extern int need_value (FuncState *fs, int list) {
   for (; list != (-1); list = getjump(fs, list)) {
     Instruction i = *getjumpcontrol(fs, list);
     if ((((OpCode)(((i)>>0) & ((~((~(Instruction)0)<<(7)))<<(0))))) != OP_TESTSET) return 1;

@@ -36,7 +36,7 @@ extern void lua_pushnil(lua_State *);
 extern void lua_pushlightuserdata(lua_State *, void *);
 extern void * checkupval(lua_State *, int, int, int *);
 
-static int db_upvalueid (lua_State *L) {
+extern int db_upvalueid (lua_State *L) {
   void *id = checkupval(L, 1, 2, ((void*)0));
   if (id != ((void*)0))
     lua_pushlightuserdata(L, id);

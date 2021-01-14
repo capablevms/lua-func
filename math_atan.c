@@ -37,7 +37,7 @@ extern double atan2(double, double);
 extern lua_Number luaL_optnumber(lua_State *, int, lua_Number);
 extern lua_Number luaL_checknumber(lua_State *, int);
 
-static int math_atan (lua_State *L) {
+extern int math_atan (lua_State *L) {
   lua_Number y = luaL_checknumber(L, 1);
   lua_Number x = luaL_optnumber(L, 2, 1);
   lua_pushnumber(L, atan2(y, x));

@@ -35,7 +35,7 @@
 extern int auxupvalue(lua_State *, int);
 extern void luaL_checkany(lua_State *, int);
 
-static int db_setupvalue (lua_State *L) {
+extern int db_setupvalue (lua_State *L) {
   luaL_checkany(L, 3);
   return auxupvalue(L, 0);
 }

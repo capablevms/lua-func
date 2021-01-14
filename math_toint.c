@@ -37,7 +37,7 @@ extern void luaL_checkany(lua_State *, int);
 extern void lua_pushinteger(lua_State *, lua_Integer);
 extern lua_Integer lua_tointegerx(lua_State *, int, int *);
 
-static int math_toint (lua_State *L) {
+extern int math_toint (lua_State *L) {
   int valid;
   lua_Integer n = lua_tointegerx(L, 1, &valid);
   if (valid)

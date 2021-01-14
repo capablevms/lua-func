@@ -41,7 +41,7 @@ extern const char * lua_pushstring(lua_State *, const char *);
 extern void * lua_touserdata(lua_State *, int);
 extern lua_Alloc lua_getallocf(lua_State *, void **);
 
-static void *resizebox (lua_State *L, int idx, size_t newsize) {
+extern void *resizebox (lua_State *L, int idx, size_t newsize) {
   void *ud;
   lua_Alloc allocf = lua_getallocf(L, &ud);
   UBox *box = (UBox *)lua_touserdata(L, idx);

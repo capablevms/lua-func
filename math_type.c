@@ -38,7 +38,7 @@ extern const char * lua_pushstring(lua_State *, const char *);
 extern int lua_isinteger(lua_State *, int);
 extern int lua_type(lua_State *, int);
 
-static int math_type (lua_State *L) {
+extern int math_type (lua_State *L) {
   if (lua_type(L, 1) == 3)
     lua_pushstring(L, (lua_isinteger(L, 1)) ? "integer" : "float");
   else {

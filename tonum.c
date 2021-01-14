@@ -37,7 +37,7 @@ extern const char * lua_tolstring(lua_State *, int, size_t *);
 extern void lua_pushvalue(lua_State *, int);
 extern int lua_type(lua_State *, int);
 
-static int tonum (lua_State *L, int arg) {
+extern int tonum (lua_State *L, int arg) {
   if (lua_type(L, arg) == 3) {
     lua_pushvalue(L, arg);
     return 1;

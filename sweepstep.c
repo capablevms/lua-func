@@ -34,7 +34,7 @@
 
 extern GCObject ** sweeplist(lua_State *, GCObject **, int, int *);
 
-static int sweepstep (lua_State *L, global_State *g,
+extern int sweepstep (lua_State *L, global_State *g,
                       int nextstate, GCObject **nextlist) {
   if (g->sweepgc) {
     l_mem olddebt = g->GCdebt;

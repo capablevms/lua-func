@@ -34,6 +34,6 @@
 
 extern int arith(lua_State *, int, const char *);
 
-static int arith_div (lua_State *L) {
+extern int arith_div (lua_State *L) {
   return arith(L, 5, "__div");
 }

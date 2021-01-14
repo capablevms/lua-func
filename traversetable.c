@@ -41,7 +41,7 @@ extern char * strchr(const char *, int);
 extern void reallymarkobject(global_State *, GCObject *);
 extern const TValue * luaT_gettm(Table *, TMS, TString *);
 
-static lu_mem traversetable (global_State *g, Table *h) {
+extern lu_mem traversetable (global_State *g, Table *h) {
   const char *weakkey, *weakvalue;
   const TValue *mode = ((h->metatable) == ((void*)0) ? ((void*)0) : ((h->metatable)->flags & (1u<<(TM_MODE))) ? ((void*)0) : luaT_gettm(h->metatable, TM_MODE, (g)->tmname[TM_MODE]));
   { if (h->metatable) { if ((((h->metatable)->marked) & (((1<<(3)) | (1<<(4)))))) reallymarkobject(g, (&(((union GCUnion *)((h->metatable)))->gc))); }; };

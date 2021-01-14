@@ -36,7 +36,7 @@ extern const char * lua_pushstring(lua_State *, const char *);
 extern char * getenv(const char *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int os_getenv (lua_State *L) {
+extern int os_getenv (lua_State *L) {
   lua_pushstring(L, getenv((luaL_checklstring(L, (1), ((void*)0)))));
   return 1;
 }

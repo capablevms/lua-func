@@ -37,7 +37,7 @@ extern const char * luaO_pushfstring(lua_State *, const char *, ...);
 extern long __builtin_expect(long, long);
 extern Labeldesc * findlabel(LexState *, TString *);
 
-static void checkrepeated (LexState *ls, TString *name) {
+extern void checkrepeated (LexState *ls, TString *name) {
   Labeldesc *lb = findlabel(ls, name);
   if ((__builtin_expect(((lb != ((void*)0)) != 0), 0))) {
     const char *msg = "label '%s' already defined on line %d";

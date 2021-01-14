@@ -38,7 +38,7 @@ extern void luaS_init(lua_State *);
 extern void init_registry(lua_State *, global_State *);
 extern void stack_init(lua_State *, lua_State *);
 
-static void f_luaopen (lua_State *L, void *ud) {
+extern void f_luaopen (lua_State *L, void *ud) {
   global_State *g = (L->l_G);
   ((void)(ud));
   stack_init(L, L);

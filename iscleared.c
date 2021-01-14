@@ -34,7 +34,7 @@
 
 extern void reallymarkobject(global_State *, GCObject *);
 
-static int iscleared (global_State *g, const GCObject *o) {
+extern int iscleared (global_State *g, const GCObject *o) {
   if (o == ((void*)0)) return 0;
   else if (((o->tt) & 0x0F) == 4) {
     { if ((((o)->marked) & (((1<<(3)) | (1<<(4)))))) reallymarkobject(g, (&(((union GCUnion *)((o)))->gc))); };

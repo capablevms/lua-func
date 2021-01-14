@@ -35,15 +35,10 @@
 extern int luaZ_fill(ZIO *);
 extern void esccheck(LexState *, int, const char *);
 extern int luaO_hexavalue(int);
-extern void esccheck(LexState *, int, const char *);
-extern int luaZ_fill(ZIO *);
 extern void save(LexState *, int);
 extern int gethexa(LexState *);
-extern void esccheck(LexState *, int, const char *);
-extern int luaZ_fill(ZIO *);
-extern void save(LexState *, int);
 
-static unsigned long readutf8esc (LexState *ls) {
+extern unsigned long readutf8esc (LexState *ls) {
   unsigned long r;
   int i = 4;
   (save(ls, ls->current), (ls->current = (((ls->z)->n--)>0 ? ((unsigned char)((*(ls->z)->p++))) : luaZ_fill(ls->z))));

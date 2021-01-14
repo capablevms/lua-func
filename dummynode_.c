@@ -31,7 +31,7 @@
 #include "lzio.h"
 
 
-static const Node dummynode_ = {
+const Node dummynode_ = {
   {{((void*)0)}, ((0) | ((1) << 4)),
    ((0) | ((0) << 4)), 0, {((void*)0)}}
 };

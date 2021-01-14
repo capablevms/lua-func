@@ -45,7 +45,7 @@ extern int check_next2(LexState *, const char *);
 extern int luaZ_fill(ZIO *);
 extern void save(LexState *, int);
 
-static int read_numeral (LexState *ls, SemInfo *seminfo) {
+extern int read_numeral (LexState *ls, SemInfo *seminfo) {
   TValue obj;
   const char *expo = "Ee";
   int first = ls->current;

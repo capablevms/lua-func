@@ -36,7 +36,7 @@ extern void luaV_finishget(lua_State *, const TValue *, TValue *, StkId, const T
 extern const TValue * luaH_getstr(Table *, TString *);
 extern TString * luaS_new(lua_State *, const char *);
 
-static int auxgetstr (lua_State *L, const TValue *t, const char *k) {
+extern int auxgetstr (lua_State *L, const TValue *t, const char *k) {
   const TValue *slot;
   TString *str = luaS_new(L, k);
   if ((!((((t))->tt_) == (((((5) | ((0) << 4))) | (1 << 6)))) ? (slot = ((void*)0), 0) : (slot = luaH_getstr(((&((((union GCUnion *)((((t)->value_).gc))))->h))), str), !(((((((slot))->tt_)) & 0x0F)) == (0))))) {

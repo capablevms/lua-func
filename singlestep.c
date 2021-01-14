@@ -42,7 +42,7 @@ extern lu_mem atomic(lua_State *);
 extern lu_mem propagatemark(global_State *);
 extern void restartcollection(global_State *);
 
-static lu_mem singlestep (lua_State *L) {
+extern lu_mem singlestep (lua_State *L) {
   global_State *g = (L->l_G);
   switch (g->gcstate) {
     case 8: {

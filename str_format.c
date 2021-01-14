@@ -68,7 +68,7 @@ extern void luaL_buffinit(lua_State *, luaL_Buffer *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 extern int lua_gettop(lua_State *);
 
-static int str_format (lua_State *L) {
+extern int str_format (lua_State *L) {
   int top = lua_gettop(L);
   int arg = 1;
   size_t sfl;

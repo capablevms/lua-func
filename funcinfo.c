@@ -34,7 +34,7 @@
 
 extern void luaO_chunkid(char *, const char *, size_t);
 
-static void funcinfo (lua_Debug *ar, Closure *cl) {
+extern void funcinfo (lua_Debug *ar, Closure *cl) {
   if (((cl) == ((void*)0) || (cl)->c.tt == ((6) | ((2) << 4)))) {
     ar->source = "=[C]";
     ar->srclen = (sizeof("=[C]")/sizeof(char) - 1);

@@ -44,7 +44,7 @@ typedef struct BlockCnt {
 extern int stacklevel(FuncState *, int);
 extern int stacklevel(FuncState *, int);
 
-static void movegotosout (FuncState *fs, BlockCnt *bl) {
+extern void movegotosout (FuncState *fs, BlockCnt *bl) {
   int i;
   Labellist *gl = &fs->ls->dyd->gt;
 

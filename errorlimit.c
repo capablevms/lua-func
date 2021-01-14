@@ -36,7 +36,7 @@ extern void luaX_syntaxerror(LexState *, const char *);
 extern const char * luaO_pushfstring(lua_State *, const char *, ...);
 extern const char * luaO_pushfstring(lua_State *, const char *, ...);
 
-static void __attribute__((noreturn)) errorlimit (FuncState *fs, int limit, const char *what) {
+extern void __attribute__((noreturn)) errorlimit (FuncState *fs, int limit, const char *what) {
   lua_State *L = fs->ls->L;
   const char *msg;
   int line = fs->f->linedefined;

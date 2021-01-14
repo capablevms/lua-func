@@ -36,7 +36,7 @@ extern void luaC_barrier_(lua_State *, GCObject *, GCObject *);
 extern Proto * luaF_newproto(lua_State *);
 extern void * luaM_growaux_(lua_State *, void *, int, int *, int, int, const char *);
 
-static Proto *addprototype (LexState *ls) {
+extern Proto *addprototype (LexState *ls) {
   Proto *clp;
   lua_State *L = ls->L;
   FuncState *fs = ls->fs;

@@ -32,7 +32,7 @@
 
 extern int ll_require(lua_State *);
 
-static const luaL_Reg ll_funcs[] = {
+const luaL_Reg ll_funcs[] = {
   {"require", ll_require},
   {((void*)0), ((void*)0)}
 };

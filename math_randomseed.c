@@ -42,7 +42,7 @@ extern void randseed(lua_State *, RanState *);
 extern int lua_type(lua_State *, int);
 extern void * lua_touserdata(lua_State *, int);
 
-static int math_randomseed (lua_State *L) {
+extern int math_randomseed (lua_State *L) {
   RanState *state = (RanState *)lua_touserdata(L, ((-1000000 - 1000) - (1)));
   if ((lua_type(L, (1)) == (-1))) {
     randseed(L, state);

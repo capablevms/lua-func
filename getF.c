@@ -40,7 +40,7 @@ typedef struct LoadF {
 extern unsigned long fread(void *restrict, size_t, size_t, FILE *restrict);
 extern int feof(FILE *);
 
-static const char *getF (lua_State *L, void *ud, size_t *size) {
+extern const char *getF (lua_State *L, void *ud, size_t *size) {
   LoadF *lf = (LoadF *)ud;
   (void)L;
   if (lf->n > 0) {

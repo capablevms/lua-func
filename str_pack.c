@@ -84,7 +84,7 @@ extern void lua_pushnil(lua_State *);
 extern void initheader(lua_State *, Header *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int str_pack (lua_State *L) {
+extern int str_pack (lua_State *L) {
   luaL_Buffer b;
   Header h;
   const char *fmt = (luaL_checklstring(L, (1), ((void*)0)));

@@ -37,7 +37,7 @@ extern void luaK_exp2val(FuncState *, expdesc *);
 extern void expr(LexState *, expdesc *);
 extern void luaX_next(LexState *);
 
-static void yindex (LexState *ls, expdesc *v) {
+extern void yindex (LexState *ls, expdesc *v) {
 
   luaX_next(ls);
   expr(ls, v);

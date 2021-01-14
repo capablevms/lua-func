@@ -33,7 +33,7 @@
 
 
 
-static Instruction *previousinstruction (FuncState *fs) {
+extern Instruction *previousinstruction (FuncState *fs) {
   static const Instruction invalidinstruction = ~(Instruction)0;
   if (fs->pc > fs->lasttarget)
     return &fs->f->code[fs->pc - 1];

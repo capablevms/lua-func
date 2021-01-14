@@ -34,7 +34,7 @@
 
 extern GCObject ** sweeplist(lua_State *, GCObject **, int, int *);
 
-static GCObject **sweeptolive (lua_State *L, GCObject **p) {
+extern GCObject **sweeptolive (lua_State *L, GCObject **p) {
   GCObject **old = p;
   do {
     p = sweeplist(L, p, 1, ((void*)0));

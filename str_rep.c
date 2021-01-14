@@ -43,7 +43,7 @@ extern const char * luaL_optlstring(lua_State *, int, const char *, size_t *);
 extern lua_Integer luaL_checkinteger(lua_State *, int);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int str_rep (lua_State *L) {
+extern int str_rep (lua_State *L) {
   size_t l, lsep;
   const char *s = luaL_checklstring(L, 1, &l);
   lua_Integer n = luaL_checkinteger(L, 2);

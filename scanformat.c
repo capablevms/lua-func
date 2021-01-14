@@ -42,7 +42,7 @@ extern const unsigned short ** __ctype_b_loc();
 extern int luaL_error(lua_State *, const char *, ...);
 extern char * strchr(const char *, int);
 
-static const char *scanformat (lua_State *L, const char *strfrmt, char *form) {
+extern const char *scanformat (lua_State *L, const char *strfrmt, char *form) {
   const char *p = strfrmt;
   while (*p != '\0' && strchr("-+ #0", *p) != ((void*)0)) p++;
   if ((size_t)(p - strfrmt) >= sizeof("-+ #0")/sizeof(char))

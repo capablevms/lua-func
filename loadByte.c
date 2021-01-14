@@ -40,7 +40,7 @@ typedef struct {
 extern void error(LoadState *, const char *);
 extern int luaZ_fill(ZIO *);
 
-static lu_byte loadByte (LoadState *S) {
+extern lu_byte loadByte (LoadState *S) {
   int b = (((S->Z)->n--)>0 ? ((unsigned char)((*(S->Z)->p++))) : luaZ_fill(S->Z));
   if (b == (-1))
     error(S, "truncated chunk");

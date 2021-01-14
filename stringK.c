@@ -34,7 +34,7 @@
 
 extern int addk(FuncState *, TValue *, TValue *);
 
-static int stringK (FuncState *fs, TString *s) {
+extern int stringK (FuncState *fs, TString *s) {
   TValue o;
   { TValue *io = (&o); TString *x_ = (s); ((io)->value_).gc = (&(((union GCUnion *)((x_)))->gc)); ((io)->tt_=(((x_->tt) | (1 << 6)))); ((void)fs->ls->L, ((void)0)); };
   return addk(fs, &o, &o);

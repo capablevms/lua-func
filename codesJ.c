@@ -34,7 +34,7 @@
 
 extern int luaK_code(FuncState *, Instruction);
 
-static int codesJ (FuncState *fs, OpCode o, int sj, int k) {
+extern int codesJ (FuncState *fs, OpCode o, int sj, int k) {
   unsigned int j = sj + (((1 << ((8 + 8 + 1) + 8)) - 1) >> 1);
   ((void)0);
   ((void)0);

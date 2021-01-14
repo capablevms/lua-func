@@ -35,6 +35,6 @@
 extern int luaL_typeerror(lua_State *, int, const char *);
 extern const char * lua_typename(lua_State *, int);
 
-static void tag_error (lua_State *L, int arg, int tag) {
+extern void tag_error (lua_State *L, int arg, int tag) {
   luaL_typeerror(L, arg, lua_typename(L, tag));
 }

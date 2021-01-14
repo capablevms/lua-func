@@ -33,7 +33,7 @@
 
 
 
-static const char *upvalname (const Proto *p, int uv) {
+extern const char *upvalname (const Proto *p, int uv) {
   TString *s = (p->upvalues[uv].name);
   if (s == ((void*)0)) return "?";
   else return ((s)->contents);

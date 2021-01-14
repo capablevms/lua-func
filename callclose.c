@@ -34,7 +34,7 @@
 
 extern void luaD_callnoyield(lua_State *, StkId, int);
 
-static void callclose (lua_State *L, void *ud) {
+extern void callclose (lua_State *L, void *ud) {
   ((void)(ud));
   luaD_callnoyield(L, L->top - 3, 0);
 }

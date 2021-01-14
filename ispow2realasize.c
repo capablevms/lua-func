@@ -33,6 +33,6 @@
 
 
 
-static int ispow2realasize (const Table *t) {
+extern int ispow2realasize (const Table *t) {
   return (!(!((t)->flags & (1 << 7))) || (((t->alimit) & ((t->alimit) - 1)) == 0));
 }

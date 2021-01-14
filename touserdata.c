@@ -33,7 +33,7 @@
 
 
 
-static void *touserdata (const TValue *o) {
+extern void *touserdata (const TValue *o) {
   switch ((((((o)->tt_)) & 0x0F))) {
     case 7: return (((char *)((((&((((union GCUnion *)((((o)->value_).gc))))->u)))))) + (((((&((((union GCUnion *)((((o)->value_).gc))))->u))))->nuvalue) == 0 ? __builtin_offsetof(Udata0, bindata) : __builtin_offsetof(Udata, uv) + (sizeof(UValue) * ((((&((((union GCUnion *)((((o)->value_).gc))))->u))))->nuvalue))));
     case 2: return (((o)->value_).p);

@@ -34,7 +34,7 @@
 
 extern Instruction * getjumpcontrol(FuncState *, int);
 
-static int patchtestreg (FuncState *fs, int node, int reg) {
+extern int patchtestreg (FuncState *fs, int node, int reg) {
   Instruction *i = getjumpcontrol(fs, node);
   if ((((OpCode)(((*i)>>0) & ((~((~(Instruction)0)<<(7)))<<(0))))) != OP_TESTSET)
     return 0;

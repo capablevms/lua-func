@@ -36,6 +36,6 @@ typedef luaL_Stream LStream;
 extern int g_read(lua_State *, FILE *, int);
 extern FILE * getiofile(lua_State *, const char *);
 
-static int io_read (lua_State *L) {
+extern int io_read (lua_State *L) {
   return g_read(L, getiofile(L, ("_IO_" "input")), 1);
 }

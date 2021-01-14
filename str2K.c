@@ -34,7 +34,7 @@
 
 extern int stringK(FuncState *, TString *);
 
-static void str2K (FuncState *fs, expdesc *e) {
+extern void str2K (FuncState *fs, expdesc *e) {
   ((void)0);
   e->u.info = stringK(fs, e->u.strval);
   e->k = VK;

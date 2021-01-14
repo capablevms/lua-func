@@ -45,7 +45,7 @@ extern lua_Integer luaL_checkinteger(lua_State *, int);
 extern lua_Integer luaL_checkinteger(lua_State *, int);
 extern lua_State * getthread(lua_State *, int *);
 
-static int db_setlocal (lua_State *L) {
+extern int db_setlocal (lua_State *L) {
   int arg;
   const char *name;
   lua_State *L1 = getthread(L, &arg);

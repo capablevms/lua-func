@@ -39,7 +39,7 @@ extern const char * lua_tolstring(lua_State *, int, size_t *);
 extern int lua_type(lua_State *, int);
 extern int lua_gettop(lua_State *);
 
-static int luaB_select (lua_State *L) {
+extern int luaB_select (lua_State *L) {
   int n = lua_gettop(L);
   if (lua_type(L, 1) == 4 && *lua_tolstring(L, (1), ((void*)0)) == '#') {
     lua_pushinteger(L, n-1);

@@ -38,7 +38,7 @@ extern void luaH_setint(lua_State *, Table *, lua_Integer, TValue *);
 extern void luaH_resize(lua_State *, Table *, unsigned int, unsigned int);
 extern Table * luaH_new(lua_State *);
 
-static void init_registry (lua_State *L, global_State *g) {
+extern void init_registry (lua_State *L, global_State *g) {
   TValue temp;
 
   Table *registry = luaH_new(L);

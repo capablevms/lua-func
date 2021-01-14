@@ -37,7 +37,7 @@ extern void * luaM_growaux_(lua_State *, void *, int, int *, int, int, const cha
 extern int luaV_equalobj(lua_State *, const TValue *, const TValue *);
 extern TValue * luaH_set(lua_State *, Table *, const TValue *);
 
-static int addk (FuncState *fs, TValue *key, TValue *v) {
+extern int addk (FuncState *fs, TValue *key, TValue *v) {
   lua_State *L = fs->ls->L;
   Proto *f = fs->f;
   TValue *idx = luaH_set(L, fs->ls->h, key);

@@ -37,7 +37,7 @@ extern int luaL_fileresult(lua_State *, int, const char *);
 extern int fclose(FILE *);
 extern void * luaL_checkudata(lua_State *, int, const char *);
 
-static int io_fclose (lua_State *L) {
+extern int io_fclose (lua_State *L) {
   LStream *p = ((LStream *)luaL_checkudata(L, 1, "FILE*"));
   int res = fclose(p->f);
   return luaL_fileresult(L, (res == 0), ((void*)0));

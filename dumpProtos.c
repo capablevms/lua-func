@@ -42,7 +42,7 @@ typedef struct {
 extern void dumpFunction(DumpState *, const Proto *, TString *);
 extern void dumpInt(DumpState *, int);
 
-static void dumpProtos (DumpState *D, const Proto *f) {
+extern void dumpProtos (DumpState *D, const Proto *f) {
   int i;
   int n = f->sizep;
   dumpInt(D, n);

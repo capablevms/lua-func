@@ -34,7 +34,7 @@
 
 extern Vardesc * getlocalvardesc(FuncState *, int);
 
-static int stacklevel (FuncState *fs, int nvar) {
+extern int stacklevel (FuncState *fs, int nvar) {
   while (nvar-- > 0) {
     Vardesc *vd = getlocalvardesc(fs, nvar);
     if (vd->vd.kind != 3)

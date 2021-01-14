@@ -50,7 +50,7 @@ extern Upvaldesc * allocupvalue(FuncState *);
 extern void setvararg(FuncState *, int);
 extern void open_func(LexState *, FuncState *, BlockCnt *);
 
-static void mainfunc (LexState *ls, FuncState *fs) {
+extern void mainfunc (LexState *ls, FuncState *fs) {
   BlockCnt bl;
   Upvaldesc *env;
   open_func(ls, fs, &bl);

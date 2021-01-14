@@ -43,7 +43,7 @@ extern void kname(const Proto *, int, const char **);
 extern int findsetreg(const Proto *, int, int);
 extern const char * luaF_getlocalname(const Proto *, int, int);
 
-static const char *getobjname (const Proto *p, int lastpc, int reg,
+extern const char *getobjname (const Proto *p, int lastpc, int reg,
                                const char **name) {
   int pc;
   *name = luaF_getlocalname(p, reg + 1, lastpc);

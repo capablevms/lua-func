@@ -41,7 +41,7 @@ extern void luaX_next(LexState *);
 extern int new_localvar(LexState *, TString *);
 extern TString * str_checkname(LexState *);
 
-static void parlist (LexState *ls) {
+extern void parlist (LexState *ls) {
 
   FuncState *fs = ls->fs;
   Proto *f = fs->f;

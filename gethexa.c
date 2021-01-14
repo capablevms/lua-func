@@ -37,7 +37,7 @@ extern void esccheck(LexState *, int, const char *);
 extern int luaZ_fill(ZIO *);
 extern void save(LexState *, int);
 
-static int gethexa (LexState *ls) {
+extern int gethexa (LexState *ls) {
   (save(ls, ls->current), (ls->current = (((ls->z)->n--)>0 ? ((unsigned char)((*(ls->z)->p++))) : luaZ_fill(ls->z))));
   esccheck (ls, (luai_ctype_[(ls->current)+1] & ((1 << (4)))), "hexadecimal digit expected");
   return luaO_hexavalue(ls->current);

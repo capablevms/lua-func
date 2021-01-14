@@ -37,7 +37,7 @@ struct CallS {  /* data to 'f_call' */
 
 extern void luaD_callnoyield(lua_State *, StkId, int);
 
-static void f_call (lua_State *L, void *ud) {
+extern void f_call (lua_State *L, void *ud) {
   struct CallS *c = ((struct CallS *)(ud));
   luaD_callnoyield(L, c->func, c->nresults);
 }

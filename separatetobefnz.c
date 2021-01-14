@@ -34,7 +34,7 @@
 
 extern GCObject ** findlast(GCObject **);
 
-static void separatetobefnz (global_State *g, int all) {
+extern void separatetobefnz (global_State *g, int all) {
   GCObject *curr;
   GCObject **p = &g->finobj;
   GCObject **lastnext = findlast(&g->tobefnz);

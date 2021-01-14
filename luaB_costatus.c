@@ -36,7 +36,7 @@ extern const char * lua_pushstring(lua_State *, const char *);
 extern int auxstatus(lua_State *, lua_State *);
 extern lua_State * getco(lua_State *);
 
-static int luaB_costatus (lua_State *L) {
+extern int luaB_costatus (lua_State *L) {
   lua_State *co = getco(L);
   lua_pushstring(L, statname[auxstatus(L, co)]);
   return 1;

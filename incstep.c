@@ -36,7 +36,7 @@ extern void luaE_setdebt(global_State *, l_mem);
 extern void setpause(global_State *);
 extern lu_mem singlestep(lua_State *);
 
-static void incstep (lua_State *L, global_State *g) {
+extern void incstep (lua_State *L, global_State *g) {
   int stepmul = (((g->gcstepmul) * 4) | 1);
   l_mem debt = (g->GCdebt / sizeof(TValue)) * stepmul;
   l_mem stepsize = (g->gcstepsize <= (sizeof(l_mem) * 8 - 2))

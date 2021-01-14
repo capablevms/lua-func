@@ -35,7 +35,7 @@
 extern int luaG_getfuncline(const Proto *, int);
 extern int luaG_getfuncline(const Proto *, int);
 
-static int changedline (const Proto *p, int oldpc, int newpc) {
+extern int changedline (const Proto *p, int oldpc, int newpc) {
   if (p->lineinfo == ((void*)0))
     return 0;
   while (oldpc++ < newpc) {

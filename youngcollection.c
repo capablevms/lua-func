@@ -43,7 +43,7 @@ extern void markold(global_State *, GCObject *, GCObject *);
 extern void markold(global_State *, GCObject *, GCObject *);
 extern void markold(global_State *, GCObject *, GCObject *);
 
-static void youngcollection (lua_State *L, global_State *g) {
+extern void youngcollection (lua_State *L, global_State *g) {
   GCObject **psurvival;
   GCObject *dummy;
   ((void)0);

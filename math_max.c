@@ -37,7 +37,7 @@ extern int lua_compare(lua_State *, int, int, int);
 extern int luaL_argerror(lua_State *, int, const char *);
 extern int lua_gettop(lua_State *);
 
-static int math_max (lua_State *L) {
+extern int math_max (lua_State *L) {
   int n = lua_gettop(L);
   int imax = 1;
   int i;

@@ -42,7 +42,7 @@ typedef struct BlockCnt {
 
 
 
-static void markupval (FuncState *fs, int level) {
+extern void markupval (FuncState *fs, int level) {
   BlockCnt *bl = fs->bl;
   while (bl->nactvar > level)
     bl = bl->previous;

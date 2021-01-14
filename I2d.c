@@ -33,6 +33,6 @@
 
 
 
-static lua_Number I2d (unsigned long x) {
+extern lua_Number I2d (unsigned long x) {
   return (lua_Number)(((x) & 0xffffffffffffffffu) >> (64 - (53))) * (0.5 / ((unsigned long)1 << ((53) - 1)));
 }

@@ -36,7 +36,7 @@ extern void init_var(FuncState *, expdesc *, int);
 extern void init_exp(expdesc *, expkind, int);
 extern Vardesc * getlocalvardesc(FuncState *, int);
 
-static int searchvar (FuncState *fs, TString *n, expdesc *var) {
+extern int searchvar (FuncState *fs, TString *n, expdesc *var) {
   int i;
   for (i = ((int)((fs->nactvar))) - 1; i >= 0; i--) {
     Vardesc *vd = getlocalvardesc(fs, i);

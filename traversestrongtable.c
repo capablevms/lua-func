@@ -39,7 +39,7 @@ extern void clearkey(Node *);
 extern void reallymarkobject(global_State *, GCObject *);
 extern unsigned int luaH_realasize(const Table *);
 
-static void traversestrongtable (global_State *g, Table *h) {
+extern void traversestrongtable (global_State *g, Table *h) {
   Node *n, *limit = (&(h)->node[((size_t)((((1<<((h)->lsizenode))))))]);
   unsigned int i;
   unsigned int asize = luaH_realasize(h);

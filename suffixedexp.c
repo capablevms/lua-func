@@ -44,7 +44,7 @@ extern void luaK_exp2anyregup(FuncState *, expdesc *);
 extern void fieldsel(LexState *, expdesc *);
 extern void primaryexp(LexState *, expdesc *);
 
-static void suffixedexp (LexState *ls, expdesc *v) {
+extern void suffixedexp (LexState *ls, expdesc *v) {
 
 
   FuncState *fs = ls->fs;

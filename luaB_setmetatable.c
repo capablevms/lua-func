@@ -40,7 +40,7 @@ extern int luaL_typeerror(lua_State *, int, const char *);
 extern void luaL_checktype(lua_State *, int, int);
 extern int lua_type(lua_State *, int);
 
-static int luaB_setmetatable (lua_State *L) {
+extern int luaB_setmetatable (lua_State *L) {
   int t = lua_type(L, 2);
   luaL_checktype(L, 1, 5);
   ((void)((t == 0 || t == 5) || luaL_typeerror(L, (2), ("nil or table"))));

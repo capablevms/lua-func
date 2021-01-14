@@ -39,7 +39,7 @@ extern void freeexp(FuncState *, expdesc *);
 extern void discharge2anyreg(FuncState *, expdesc *);
 extern void negatecondition(FuncState *, expdesc *);
 
-static void codenot (FuncState *fs, expdesc *e) {
+extern void codenot (FuncState *fs, expdesc *e) {
   switch (e->k) {
     case VNIL: case VFALSE: {
       e->k = VTRUE;

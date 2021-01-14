@@ -56,7 +56,7 @@ extern void luaL_addlstring(luaL_Buffer *, const char *, size_t);
 extern void * memchr(const void *, int, size_t);
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 
-static void add_s (MatchState *ms, luaL_Buffer *b, const char *s,
+extern void add_s (MatchState *ms, luaL_Buffer *b, const char *s,
                                                    const char *e) {
   size_t l;
   lua_State *L = ms->L;

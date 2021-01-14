@@ -34,7 +34,7 @@
 
 extern double frexp(double, int *);
 
-static int l_hashfloat (lua_Number n) {
+extern int l_hashfloat (lua_Number n) {
   int i;
   lua_Integer ni;
   n = frexp(n, &i) * -((lua_Number)(((-2147483647 -1))));

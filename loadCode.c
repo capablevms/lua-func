@@ -42,7 +42,7 @@ extern void * luaM_malloc_(lua_State *, size_t, int);
 extern void luaM_toobig(lua_State *);
 extern int loadInt(LoadState *);
 
-static void loadCode (LoadState *S, Proto *f) {
+extern void loadCode (LoadState *S, Proto *f) {
   int n = loadInt(S);
   f->code = (((sizeof(n) >= sizeof(size_t) && ((size_t)(((n)))) + 1 > ((size_t)(~(size_t)0))/(sizeof(Instruction))) ? luaM_toobig(S->L) : ((void)((0)))), ((Instruction*)(luaM_malloc_(S->L, (n)*sizeof(Instruction), 0))));
   f->sizecode = n;

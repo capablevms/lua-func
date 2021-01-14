@@ -49,7 +49,7 @@ extern int explist(LexState *, expdesc *);
 extern int block_follow(LexState *, int);
 extern int luaY_nvarstack(FuncState *);
 
-static void retstat (LexState *ls) {
+extern void retstat (LexState *ls) {
 
   FuncState *fs = ls->fs;
   expdesc e;

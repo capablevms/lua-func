@@ -36,6 +36,6 @@ typedef luaL_Stream LStream;
 extern int g_read(lua_State *, FILE *, int);
 extern FILE * tofile(lua_State *);
 
-static int f_read (lua_State *L) {
+extern int f_read (lua_State *L) {
   return g_read(L, tofile(L), 2);
 }

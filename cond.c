@@ -35,7 +35,7 @@
 extern void luaK_goiftrue(FuncState *, expdesc *);
 extern void expr(LexState *, expdesc *);
 
-static int cond (LexState *ls) {
+extern int cond (LexState *ls) {
 
   expdesc v;
   expr(ls, &v);

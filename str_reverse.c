@@ -36,7 +36,7 @@ extern void luaL_pushresultsize(luaL_Buffer *, size_t);
 extern char * luaL_buffinitsize(lua_State *, luaL_Buffer *, size_t);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int str_reverse (lua_State *L) {
+extern int str_reverse (lua_State *L) {
   size_t l, i;
   luaL_Buffer b;
   const char *s = luaL_checklstring(L, 1, &l);

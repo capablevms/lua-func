@@ -36,7 +36,7 @@ typedef luaL_Stream LStream;
 extern int luaL_error(lua_State *, const char *, ...);
 extern void * luaL_checkudata(lua_State *, int, const char *);
 
-static FILE *tofile (lua_State *L) {
+extern FILE *tofile (lua_State *L) {
   LStream *p = ((LStream *)luaL_checkudata(L, 1, "FILE*"));
   if (((p)->closef == ((void*)0)))
     luaL_error(L, "attempt to use a closed file");

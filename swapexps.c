@@ -33,6 +33,6 @@
 
 
 
-static void swapexps (expdesc *e1, expdesc *e2) {
+extern void swapexps (expdesc *e1, expdesc *e2) {
   expdesc temp = *e1; *e1 = *e2; *e2 = temp;
 }

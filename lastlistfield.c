@@ -44,7 +44,7 @@ extern void luaK_exp2nextreg(FuncState *, expdesc *);
 extern void luaK_setlist(FuncState *, int, int, int);
 extern void luaK_setreturns(FuncState *, expdesc *, int);
 
-static void lastlistfield (FuncState *fs, ConsControl *cc) {
+extern void lastlistfield (FuncState *fs, ConsControl *cc) {
   if (cc->tostore == 0) return;
   if (((cc->v.k) == VCALL || (cc->v.k) == VVARARG)) {
     luaK_setreturns(fs, &cc->v, (-1));

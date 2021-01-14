@@ -41,7 +41,7 @@ extern int isSCnumber(expdesc *, int *, int *);
 extern int luaK_exp2anyreg(FuncState *, expdesc *);
 extern int isSCnumber(expdesc *, int *, int *);
 
-static void codeorder (FuncState *fs, OpCode op, expdesc *e1, expdesc *e2) {
+extern void codeorder (FuncState *fs, OpCode op, expdesc *e1, expdesc *e2) {
   int r1, r2;
   int im;
   int isfloat = 0;

@@ -55,7 +55,7 @@ extern const unsigned short ** __ctype_b_loc();
 extern int getc(FILE *);
 extern struct lconv * localeconv();
 
-static int read_number (lua_State *L, FILE *f) {
+extern int read_number (lua_State *L, FILE *f) {
   RN rn;
   int count = 0;
   int hex = 0;

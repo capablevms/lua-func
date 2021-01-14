@@ -35,7 +35,7 @@
 extern void linkgclist_(GCObject *, GCObject **, GCObject **);
 extern GCObject ** getgclist(GCObject *);
 
-static void reallymarkobject (global_State *g, GCObject *o) {
+extern void reallymarkobject (global_State *g, GCObject *o) {
   switch (o->tt) {
     case ((4) | ((0) << 4)):
     case ((4) | ((1) << 4)): {

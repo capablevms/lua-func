@@ -35,7 +35,7 @@
 extern void luaC_barrier_(lua_State *, GCObject *, GCObject *);
 extern void * luaM_growaux_(lua_State *, void *, int, int *, int, int, const char *);
 
-static int registerlocalvar (LexState *ls, FuncState *fs, TString *varname) {
+extern int registerlocalvar (LexState *ls, FuncState *fs, TString *varname) {
   Proto *f = fs->f;
   int oldsize = f->sizelocvars;
   ((f->locvars)=((LocVar *)(luaM_growaux_(ls->L,f->locvars,fs->ndebugvars,&(f->sizelocvars),sizeof(LocVar), ((((size_t)((32767))) <= ((size_t)(~(size_t)0))/sizeof(LocVar)) ? (32767) : ((unsigned int)(((((size_t)(~(size_t)0))/sizeof(LocVar)))))),"local variables"))));

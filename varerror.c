@@ -35,7 +35,7 @@
 extern void luaG_runerror(lua_State *, const char *, ...);
 extern const char * luaG_findlocal(lua_State *, CallInfo *, int, StkId *);
 
-static void varerror (lua_State *L, StkId level, const char *msg) {
+extern void varerror (lua_State *L, StkId level, const char *msg) {
   int idx = ((int)((level - L->ci->func)));
   const char *vname = luaG_findlocal(L, L->ci, idx, ((void*)0));
   if (vname == ((void*)0)) vname = "?";

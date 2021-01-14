@@ -36,7 +36,7 @@ extern char * strchr(const char *, int);
 extern char * strchr(const char *, int);
 extern char * strchr(const char *, int);
 
-static int makemask (const char *smask, int count) {
+extern int makemask (const char *smask, int count) {
   int mask = 0;
   if (strchr(smask, 'c')) mask |= (1 << 0);
   if (strchr(smask, 'r')) mask |= (1 << 1);

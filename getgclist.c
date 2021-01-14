@@ -33,7 +33,7 @@
 
 
 
-static GCObject **getgclist (GCObject *o) {
+extern GCObject **getgclist (GCObject *o) {
   switch (o->tt) {
     case ((5) | ((0) << 4)): return &(&((((union GCUnion *)((o))))->h))->gclist;
     case ((6) | ((0) << 4)): return &(&((((union GCUnion *)((o))))->cl.l))->gclist;

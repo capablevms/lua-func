@@ -41,7 +41,7 @@ extern void luaL_checkany(lua_State *, int);
 extern int lua_gettop(lua_State *);
 extern int lua_toboolean(lua_State *, int);
 
-static int luaB_assert (lua_State *L) {
+extern int luaB_assert (lua_State *L) {
   if (lua_toboolean(L, 1))
     return lua_gettop(L);
   else {

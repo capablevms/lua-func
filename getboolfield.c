@@ -36,7 +36,7 @@ extern void lua_settop(lua_State *, int);
 extern int lua_toboolean(lua_State *, int);
 extern int lua_getfield(lua_State *, int, const char *);
 
-static int getboolfield (lua_State *L, const char *key) {
+extern int getboolfield (lua_State *L, const char *key) {
   int res;
   res = (lua_getfield(L, -1, key) == 0) ? -1 : lua_toboolean(L, -1);
   lua_settop(L, -(1)-1);

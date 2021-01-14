@@ -36,7 +36,7 @@ extern char * strcpy(char *restrict, const char *restrict);
 extern unsigned long strlen(const char *);
 extern unsigned long strlen(const char *);
 
-static void addlenmod (char *form, const char *lenmod) {
+extern void addlenmod (char *form, const char *lenmod) {
   size_t l = strlen(form);
   size_t lm = strlen(lenmod);
   char spec = form[l - 1];

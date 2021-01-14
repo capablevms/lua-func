@@ -52,7 +52,7 @@ extern int lua_getfield(lua_State *, int, const char *);
 extern void lua_settop(lua_State *, int);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int ll_require (lua_State *L) {
+extern int ll_require (lua_State *L) {
   const char *name = (luaL_checklstring(L, (1), ((void*)0)));
   lua_settop(L, 1);
   lua_getfield(L, (-1000000 - 1000), "_LOADED");

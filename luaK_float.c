@@ -38,7 +38,7 @@ extern int luaK_codeAsBx(FuncState *, OpCode, int, int);
 extern int fitsBx(lua_Integer);
 extern int luaV_flttointeger(lua_Number, lua_Integer *, F2Imod);
 
-static void luaK_float (FuncState *fs, int reg, lua_Number f) {
+extern void luaK_float (FuncState *fs, int reg, lua_Number f) {
   lua_Integer fi;
   if (luaV_flttointeger(f, &fi, F2Ieq) && fitsBx(fi))
     luaK_codeAsBx(fs, OP_LOADF, reg, ((int)((fi))));

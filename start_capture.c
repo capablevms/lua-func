@@ -47,7 +47,7 @@ typedef struct MatchState {
 extern const char * match(MatchState *, const char *, const char *);
 extern int luaL_error(lua_State *, const char *, ...);
 
-static const char *start_capture (MatchState *ms, const char *s,
+extern const char *start_capture (MatchState *ms, const char *s,
                                     const char *p, int what) {
   const char *res;
   int level = ms->level;

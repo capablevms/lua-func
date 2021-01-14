@@ -63,7 +63,7 @@ extern lua_Integer luaL_optinteger(lua_State *, int, lua_Integer);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int str_find_aux (lua_State *L, int find) {
+extern int str_find_aux (lua_State *L, int find) {
   size_t ls, lp;
   const char *s = luaL_checklstring(L, 1, &ls);
   const char *p = luaL_checklstring(L, 2, &lp);

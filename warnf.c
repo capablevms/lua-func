@@ -41,7 +41,7 @@ extern int fprintf(FILE *restrict, const char *restrict, ...);
 extern int strcmp(const char *, const char *);
 extern int strcmp(const char *, const char *);
 
-static void warnf (void *ud, const char *message, int tocont) {
+extern void warnf (void *ud, const char *message, int tocont) {
   int *warnstate = (int *)ud;
   if (*warnstate != 2 && !tocont && *message == '@') {
     if (strcmp(message, "@off") == 0)

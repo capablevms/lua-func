@@ -45,7 +45,7 @@ typedef struct MatchState {
 
 
 extern const char * max_expand(MatchState *, const char *, const char *, const char *);
-static const char * min_expand (MatchState *, const char *, const char *, const char *);
+extern const char * min_expand (MatchState *, const char *, const char *, const char *);
 extern int singlematch(MatchState *, const char *, const char *, const char *);
 extern const char * classend(MatchState *, const char *);
 extern const char * match_capture(MatchState *, const char *, int);
@@ -56,7 +56,7 @@ extern const char * end_capture(MatchState *, const char *, const char *);
 extern const char * start_capture(MatchState *, const char *, const char *, int);
 extern int luaL_error(lua_State *, const char *, ...);
 
-static const char *match (MatchState *ms, const char *s, const char *p) {
+extern const char *match (MatchState *ms, const char *s, const char *p) {
   if (ms->matchdepth-- == 0)
     luaL_error(ms->L, "pattern too complex");
   init:

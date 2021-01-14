@@ -42,7 +42,7 @@ extern void lua_xmove(lua_State *, lua_State *, int);
 extern const char * lua_pushstring(lua_State *, const char *);
 extern int lua_checkstack(lua_State *, int);
 
-static int auxresume (lua_State *L, lua_State *co, int narg) {
+extern int auxresume (lua_State *L, lua_State *co, int narg) {
   int status, nres;
   if (!lua_checkstack(co, narg)) {
     lua_pushstring(L, "" "too many arguments to resume");

@@ -37,7 +37,7 @@ extern void fixjump(FuncState *, int, int);
 extern int patchtestreg(FuncState *, int, int);
 extern int getjump(FuncState *, int);
 
-static void patchlistaux (FuncState *fs, int list, int vtarget, int reg,
+extern void patchlistaux (FuncState *fs, int list, int vtarget, int reg,
                           int dtarget) {
   while (list != (-1)) {
     int next = getjump(fs, list);

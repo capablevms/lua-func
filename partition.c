@@ -44,7 +44,7 @@ extern int luaL_error(lua_State *, const char *, ...);
 extern int sort_comp(lua_State *, int, int);
 extern int lua_geti(lua_State *, int, lua_Integer);
 
-static IdxT partition (lua_State *L, IdxT lo, IdxT up) {
+extern IdxT partition (lua_State *L, IdxT lo, IdxT up) {
   IdxT i = lo;
   IdxT j = up - 1;
 

@@ -33,7 +33,7 @@
 
 
 
-static void tablerehash (TString **vect, int osize, int nsize) {
+extern void tablerehash (TString **vect, int osize, int nsize) {
   int i;
   for (i = osize; i < nsize; i++)
     vect[i] = ((void*)0);

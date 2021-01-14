@@ -31,4 +31,4 @@
 #include "lzio.h"
 
 
-static const char *const HOOKKEY = "_HOOKKEY";
+const char *const HOOKKEY = "_HOOKKEY";

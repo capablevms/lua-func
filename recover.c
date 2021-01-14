@@ -37,7 +37,7 @@ extern void luaD_seterrorobj(lua_State *, int, StkId);
 extern int luaF_close(lua_State *, StkId, int);
 extern CallInfo * findpcall(lua_State *);
 
-static int recover (lua_State *L, int status) {
+extern int recover (lua_State *L, int status) {
   StkId oldtop;
   CallInfo *ci = findpcall(L);
   if (ci == ((void*)0)) return 0;

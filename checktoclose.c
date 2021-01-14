@@ -45,7 +45,7 @@ extern int luaK_codeABCk(FuncState *, OpCode, int, int, int, int);
 extern int stacklevel(FuncState *, int);
 extern void markupval(FuncState *, int);
 
-static void checktoclose (LexState *ls, int level) {
+extern void checktoclose (LexState *ls, int level) {
   if (level != -1) {
     FuncState *fs = ls->fs;
     markupval(fs, level + 1);

@@ -48,7 +48,7 @@ extern int luaL_error(lua_State *, const char *, ...);
 extern lua_Integer lua_tointegerx(lua_State *, int, int *);
 extern void * lua_touserdata(lua_State *, int);
 
-static int io_readline (lua_State *L) {
+extern int io_readline (lua_State *L) {
   LStream *p = (LStream *)lua_touserdata(L, ((-1000000 - 1000) - (1)));
   int i;
   int n = (int)lua_tointegerx(L,(((-1000000 - 1000) - (2))),((void*)0));

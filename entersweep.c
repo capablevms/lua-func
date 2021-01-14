@@ -34,7 +34,7 @@
 
 extern GCObject ** sweeptolive(lua_State *, GCObject **);
 
-static void entersweep (lua_State *L) {
+extern void entersweep (lua_State *L) {
   global_State *g = (L->l_G);
   g->gcstate = 3;
   ((void)0);

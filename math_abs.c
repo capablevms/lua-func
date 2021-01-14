@@ -39,7 +39,7 @@ extern void lua_pushinteger(lua_State *, lua_Integer);
 extern lua_Integer lua_tointegerx(lua_State *, int, int *);
 extern int lua_isinteger(lua_State *, int);
 
-static int math_abs (lua_State *L) {
+extern int math_abs (lua_State *L) {
   if (lua_isinteger(L, 1)) {
     lua_Integer n = lua_tointegerx(L,(1),((void*)0));
     if (n < 0) n = (lua_Integer)(0u - (lua_Unsigned)n);

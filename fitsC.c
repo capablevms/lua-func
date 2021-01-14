@@ -33,6 +33,6 @@
 
 
 
-static int fitsC (lua_Integer i) {
+extern int fitsC (lua_Integer i) {
   return (((lua_Unsigned)(i)) + (((1<<8)-1) >> 1) <= ((unsigned int)((((1<<8)-1)))));
 }

@@ -33,6 +33,6 @@
 
 
 
-static unsigned long rotl (unsigned long x, int n) {
+extern unsigned long rotl (unsigned long x, int n) {
   return (x << n) | (((x) & 0xffffffffffffffffu) >> (64 - n));
 }

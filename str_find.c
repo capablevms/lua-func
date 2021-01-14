@@ -46,6 +46,6 @@ typedef struct MatchState {
 
 extern int str_find_aux(lua_State *, int);
 
-static int str_find (lua_State *L) {
+extern int str_find (lua_State *L) {
   return str_find_aux(L, 1);
 }

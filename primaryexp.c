@@ -39,7 +39,7 @@ extern void check_match(LexState *, int, int, int);
 extern void expr(LexState *, expdesc *);
 extern void luaX_next(LexState *);
 
-static void primaryexp (LexState *ls, expdesc *v) {
+extern void primaryexp (LexState *ls, expdesc *v) {
 
   switch (ls->t.token) {
     case '(': {

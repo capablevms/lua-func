@@ -34,7 +34,7 @@
 
 extern int addk(FuncState *, TValue *, TValue *);
 
-static int nilK (FuncState *fs) {
+extern int nilK (FuncState *fs) {
   TValue k, v;
   ((&v)->tt_=(((0) | ((0) << 4))));
 

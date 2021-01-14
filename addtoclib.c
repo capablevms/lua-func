@@ -40,7 +40,7 @@ extern void lua_pushvalue(lua_State *, int);
 extern void lua_pushlightuserdata(lua_State *, void *);
 extern int lua_getfield(lua_State *, int, const char *);
 
-static void addtoclib (lua_State *L, const char *path, void *plib) {
+extern void addtoclib (lua_State *L, const char *path, void *plib) {
   lua_getfield(L, (-1000000 - 1000), CLIBS);
   lua_pushlightuserdata(L, plib);
   lua_pushvalue(L, -1);

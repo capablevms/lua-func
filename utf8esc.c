@@ -36,7 +36,7 @@ extern void save(LexState *, int);
 extern int luaO_utf8esc(char *, unsigned long);
 extern unsigned long readutf8esc(LexState *);
 
-static void utf8esc (LexState *ls) {
+extern void utf8esc (LexState *ls) {
   char buff[8];
   int n = luaO_utf8esc(buff, readutf8esc(ls));
   for (; n > 0; n--)

@@ -41,7 +41,7 @@ extern int luaD_rawrunprotected(lua_State *, Pfunc, void *);
 extern void varerror(lua_State *, StkId, const char *);
 extern const TValue * luaT_gettmbyobj(lua_State *, const TValue *, TMS);
 
-static void trynewtbcupval (lua_State *, void *);
+extern void trynewtbcupval (lua_State *, void *);
 
 void luaF_newtbcupval (lua_State *L, StkId level) {
   TValue *obj = (&(level)->val);

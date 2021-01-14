@@ -42,7 +42,7 @@ extern const char * lua_pushfstring(lua_State *, const char *, ...);
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 extern int pushglobalfuncname(lua_State *, lua_Debug *);
 
-static void pushfuncname (lua_State *L, lua_Debug *ar) {
+extern void pushfuncname (lua_State *L, lua_Debug *ar) {
   if (pushglobalfuncname(L, ar)) {
     lua_pushfstring(L, "function '%s'", lua_tolstring(L, (-1), ((void*)0)));
     (lua_rotate(L, (-2), -1), lua_settop(L, -(1)-1));

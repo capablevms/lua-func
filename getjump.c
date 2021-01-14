@@ -33,7 +33,7 @@
 
 
 
-static int getjump (FuncState *fs, int pc) {
+extern int getjump (FuncState *fs, int pc) {
   int offset = ((((int)((((fs->f->code[pc])>>((0 + 7))) & ((~((~(Instruction)0)<<(((8 + 8 + 1) + 8))))<<(0)))))) - (((1 << ((8 + 8 + 1) + 8)) - 1) >> 1));
   if (offset == (-1))
     return (-1);

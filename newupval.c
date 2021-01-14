@@ -34,7 +34,7 @@
 
 extern GCObject * luaC_newobj(lua_State *, int, size_t);
 
-static UpVal *newupval (lua_State *L, int tbc, StkId level, UpVal **prev) {
+extern UpVal *newupval (lua_State *L, int tbc, StkId level, UpVal **prev) {
   GCObject *o = luaC_newobj(L, ((9) | ((0) << 4)), sizeof(UpVal));
   UpVal *uv = (&((((union GCUnion *)((o))))->upv));
   UpVal *next = *prev;

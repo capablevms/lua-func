@@ -55,7 +55,7 @@ extern KOption getdetails(Header *, size_t, const char **, int *, int *);
 extern void initheader(lua_State *, Header *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int str_packsize (lua_State *L) {
+extern int str_packsize (lua_State *L) {
   Header h;
   const char *fmt = (luaL_checklstring(L, (1), ((void*)0)));
   size_t totalsize = 0;

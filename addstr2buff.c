@@ -43,7 +43,7 @@ extern void clearbuff(BuffFS *);
 extern void * memcpy(void *restrict, const void *restrict, size_t);
 extern char * getbuff(BuffFS *, int);
 
-static void addstr2buff (BuffFS *buff, const char *str, size_t slen) {
+extern void addstr2buff (BuffFS *buff, const char *str, size_t slen) {
   if (slen <= 200) {
     char *bf = getbuff(buff, ((int)((slen))));
     memcpy(bf, str, slen);

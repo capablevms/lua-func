@@ -41,7 +41,7 @@ extern LStream * newfile(lua_State *);
 extern const char * luaL_optlstring(lua_State *, int, const char *, size_t *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int io_open (lua_State *L) {
+extern int io_open (lua_State *L) {
   const char *filename = (luaL_checklstring(L, (1), ((void*)0)));
   const char *mode = (luaL_optlstring(L, (2), ("r"), ((void*)0)));
   LStream *p = newfile(L);

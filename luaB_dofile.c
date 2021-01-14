@@ -39,7 +39,7 @@ extern int luaL_loadfilex(lua_State *, const char *, const char *);
 extern void lua_settop(lua_State *, int);
 extern const char * luaL_optlstring(lua_State *, int, const char *, size_t *);
 
-static int luaB_dofile (lua_State *L) {
+extern int luaB_dofile (lua_State *L) {
   const char *fname = (luaL_optlstring(L, (1), (((void*)0)), ((void*)0)));
   lua_settop(L, 1);
   if (luaL_loadfilex(L,fname,((void*)0)) != 0)

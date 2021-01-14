@@ -36,7 +36,7 @@ extern int lua_geti(lua_State *, int, lua_Integer);
 extern void lua_pushinteger(lua_State *, lua_Integer);
 extern lua_Integer luaL_checkinteger(lua_State *, int);
 
-static int ipairsaux (lua_State *L) {
+extern int ipairsaux (lua_State *L) {
   lua_Integer i = luaL_checkinteger(L, 2) + 1;
   lua_pushinteger(L, i);
   return (lua_geti(L, 1, i) == 0) ? 1 : 2;

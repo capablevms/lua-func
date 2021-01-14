@@ -41,7 +41,7 @@ typedef struct BuffFS {
 extern int tostringbuff(TValue *, char *);
 extern char * getbuff(BuffFS *, int);
 
-static void addnum2buff (BuffFS *buff, TValue *num) {
+extern void addnum2buff (BuffFS *buff, TValue *num) {
   char *numbuff = getbuff(buff, 44);
   int len = tostringbuff(num, numbuff);
   ((buff)->blen += (len));

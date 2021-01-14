@@ -33,7 +33,7 @@
 
 
 
-static int isinstack (CallInfo *ci, const TValue *o) {
+extern int isinstack (CallInfo *ci, const TValue *o) {
   StkId base = ci->func + 1;
   ptrdiff_t i = ((StkId)(o)) - base;
   return (0 <= i && i < (ci->top - base) && (&(base + i)->val) == o);

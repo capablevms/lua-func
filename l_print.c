@@ -41,7 +41,7 @@ extern int lua_getglobal(lua_State *, const char *);
 extern void luaL_checkstack(lua_State *, int, const char *);
 extern int lua_gettop(lua_State *);
 
-static void l_print (lua_State *L) {
+extern void l_print (lua_State *L) {
   int n = lua_gettop(L);
   if (n > 0) {
     luaL_checkstack(L, 20, "too many results to print");

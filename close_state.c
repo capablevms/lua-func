@@ -45,7 +45,7 @@ extern void luaM_free_(lua_State *, void *, size_t);
 extern void luaC_freeallobjects(lua_State *);
 extern int luaF_close(lua_State *, StkId, int);
 
-static void close_state (lua_State *L) {
+extern void close_state (lua_State *L) {
   global_State *g = (L->l_G);
   luaF_close(L, L->stack, (-2));
   luaC_freeallobjects(L);

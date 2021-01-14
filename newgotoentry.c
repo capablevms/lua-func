@@ -34,6 +34,6 @@
 
 extern int newlabelentry(LexState *, Labellist *, TString *, int, int);
 
-static int newgotoentry (LexState *ls, TString *name, int line, int pc) {
+extern int newgotoentry (LexState *ls, TString *name, int line, int pc) {
   return newlabelentry(ls, &ls->dyd->gt, name, line, pc);
 }

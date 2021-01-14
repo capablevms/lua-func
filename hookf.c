@@ -40,7 +40,7 @@ extern int lua_rawget(lua_State *, int);
 extern int lua_pushthread(lua_State *);
 extern int lua_getfield(lua_State *, int, const char *);
 
-static void hookf (lua_State *L, lua_Debug *ar) {
+extern void hookf (lua_State *L, lua_Debug *ar) {
   static const char *const hooknames[] =
     {"call", "return", "line", "count", "tail call"};
   lua_getfield(L, (-1000000 - 1000), HOOKKEY);

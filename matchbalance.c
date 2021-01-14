@@ -46,7 +46,7 @@ typedef struct MatchState {
 
 extern int luaL_error(lua_State *, const char *, ...);
 
-static const char *matchbalance (MatchState *ms, const char *s,
+extern const char *matchbalance (MatchState *ms, const char *s,
                                    const char *p) {
   if (p >= ms->p_end - 1)
     luaL_error(ms->L, "malformed pattern (missing arguments to '%%b')");

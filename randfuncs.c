@@ -33,7 +33,7 @@
 extern int math_randomseed(lua_State *);
 extern int math_random(lua_State *);
 
-static const luaL_Reg randfuncs[] = {
+const luaL_Reg randfuncs[] = {
   {"random", math_random},
   {"randomseed", math_randomseed},
   {((void*)0), ((void*)0)}

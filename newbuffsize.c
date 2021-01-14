@@ -34,7 +34,7 @@
 
 extern int luaL_error(lua_State *, const char *, ...);
 
-static size_t newbuffsize (luaL_Buffer *B, size_t sz) {
+extern size_t newbuffsize (luaL_Buffer *B, size_t sz) {
   size_t newsize = B->size * 2;
   if (((size_t)(~(size_t)0)) - sz < B->n)
     return luaL_error(B->L, "buffer too large");

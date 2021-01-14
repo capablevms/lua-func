@@ -37,7 +37,7 @@ extern void lua_settop(lua_State *, int);
 extern int luaL_typeerror(lua_State *, int, const char *);
 extern int lua_type(lua_State *, int);
 
-static int db_setmetatable (lua_State *L) {
+extern int db_setmetatable (lua_State *L) {
   int t = lua_type(L, 2);
   ((void)((t == 0 || t == 5) || luaL_typeerror(L, (2), ("nil or table"))));
   lua_settop(L, 2);

@@ -33,7 +33,7 @@
 
 
 
-static void clearkey (Node *n) {
+extern void clearkey (Node *n) {
   ((void)0);
   if ((((n)->u.key_tt) & (1 << 6)))
     (((n)->u.key_tt) = (9 +2));

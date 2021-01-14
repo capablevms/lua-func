@@ -45,7 +45,7 @@ extern void lua_pushnil(lua_State *);
 extern void * resizebox(lua_State *, int, size_t);
 extern size_t newbuffsize(luaL_Buffer *, size_t);
 
-static char *prepbuffsize (luaL_Buffer *B, size_t sz, int boxidx) {
+extern char *prepbuffsize (luaL_Buffer *B, size_t sz, int boxidx) {
   if (B->size - B->n >= sz)
     return B->b + B->n;
   else {

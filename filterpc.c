@@ -33,7 +33,7 @@
 
 
 
-static int filterpc (int pc, int jmptarget) {
+extern int filterpc (int pc, int jmptarget) {
   if (pc < jmptarget)
     return -1;
   else return pc;

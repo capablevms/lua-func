@@ -34,7 +34,7 @@
 
 extern void error_expected(LexState *, int);
 
-static void check (LexState *ls, int c) {
+extern void check (LexState *ls, int c) {
   if (ls->t.token != c)
     error_expected(ls, c);
 }

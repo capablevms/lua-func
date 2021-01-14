@@ -35,7 +35,7 @@
 extern lua_State * lua_tothread(lua_State *, int);
 extern int lua_type(lua_State *, int);
 
-static lua_State *getthread (lua_State *L, int *arg) {
+extern lua_State *getthread (lua_State *L, int *arg) {
   if ((lua_type(L, (1)) == 8)) {
     *arg = 1;
     return lua_tothread(L, 1);

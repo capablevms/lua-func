@@ -39,7 +39,7 @@ typedef struct {
 
 extern void loadBlock(LoadState *, void *, size_t);
 
-static lua_Number loadNumber (LoadState *S) {
+extern lua_Number loadNumber (LoadState *S) {
   lua_Number x;
   loadBlock(S,&x,(1)*sizeof((&x)[0]));
   return x;

@@ -35,7 +35,7 @@
 extern int gethexa(LexState *);
 extern int gethexa(LexState *);
 
-static int readhexaesc (LexState *ls) {
+extern int readhexaesc (LexState *ls) {
   int r = gethexa(ls);
   r = (r << 4) + gethexa(ls);
   ((ls->buff)->n -= (2));

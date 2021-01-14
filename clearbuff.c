@@ -40,7 +40,7 @@ typedef struct BuffFS {
 
 extern void pushstr(BuffFS *, const char *, size_t);
 
-static void clearbuff (BuffFS *buff) {
+extern void clearbuff (BuffFS *buff) {
   pushstr(buff, buff->space, buff->blen);
   buff->blen = 0;
 }

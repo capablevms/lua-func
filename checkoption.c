@@ -37,7 +37,7 @@ extern const char * lua_pushfstring(lua_State *, const char *, ...);
 extern void * memcpy(void *restrict, const void *restrict, size_t);
 extern int memcmp(const void *, const void *, size_t);
 
-static const char *checkoption (lua_State *L, const char *conv,
+extern const char *checkoption (lua_State *L, const char *conv,
                                 ptrdiff_t convlen, char *buff) {
   const char *option = "aAbBcCdDeFgGhHIjmMnprRStTuUVwWxXyYzZ%" "||" "EcECExEXEyEY" "OdOeOHOIOmOMOSOuOUOVOwOWOy";
   int oplen = 1;

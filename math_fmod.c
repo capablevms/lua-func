@@ -44,7 +44,7 @@ extern lua_Integer lua_tointegerx(lua_State *, int, int *);
 extern int lua_isinteger(lua_State *, int);
 extern int lua_isinteger(lua_State *, int);
 
-static int math_fmod (lua_State *L) {
+extern int math_fmod (lua_State *L) {
   if (lua_isinteger(L, 1) && lua_isinteger(L, 2)) {
     lua_Integer d = lua_tointegerx(L,(2),((void*)0));
     if ((lua_Unsigned)d + 1u <= 1u) {

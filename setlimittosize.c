@@ -34,7 +34,7 @@
 
 extern unsigned int luaH_realasize(const Table *);
 
-static unsigned int setlimittosize (Table *t) {
+extern unsigned int setlimittosize (Table *t) {
   t->alimit = luaH_realasize(t);
   ((t)->flags &= ((lu_byte)((~(1 << 7)))));
   return t->alimit;

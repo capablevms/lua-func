@@ -36,7 +36,7 @@ extern void luaC_barrierback_(lua_State *, GCObject *);
 extern TValue * luaH_set(lua_State *, Table *, const TValue *);
 extern Table * gettable(lua_State *, int);
 
-static void aux_rawset (lua_State *L, int idx, TValue *key, int n) {
+extern void aux_rawset (lua_State *L, int idx, TValue *key, int n) {
   Table *t;
   TValue *slot;
   ((void) 0);

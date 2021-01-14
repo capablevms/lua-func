@@ -41,6 +41,6 @@ typedef struct {
 
 extern void dumpSize(DumpState *, size_t);
 
-static void dumpInt (DumpState *D, int x) {
+extern void dumpInt (DumpState *D, int x) {
   dumpSize(D, x);
 }

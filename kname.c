@@ -33,7 +33,7 @@
 
 
 
-static void kname (const Proto *p, int c, const char **name) {
+extern void kname (const Proto *p, int c, const char **name) {
   TValue *kvalue = &p->k[c];
   *name = ((((((((kvalue))->tt_)) & 0x0F)) == (4))) ? ((((&((((union GCUnion *)((((kvalue)->value_).gc))))->ts))))->contents) : "?";
 }

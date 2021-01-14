@@ -41,7 +41,7 @@ extern int fflush(FILE *);
 extern int fputs(const char *restrict, FILE *restrict);
 extern const char * get_prompt(lua_State *, int);
 
-static int pushline (lua_State *L, int firstline) {
+extern int pushline (lua_State *L, int firstline) {
   char buffer[512];
   char *b = buffer;
   size_t l;

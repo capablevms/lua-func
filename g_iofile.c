@@ -41,7 +41,7 @@ extern void opencheck(lua_State *, const char *, const char *);
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 extern int lua_type(lua_State *, int);
 
-static int g_iofile (lua_State *L, const char *f, const char *mode) {
+extern int g_iofile (lua_State *L, const char *f, const char *mode) {
   if (!(lua_type(L, (1)) <= 0)) {
     const char *filename = lua_tolstring(L, (1), ((void*)0));
     if (filename)

@@ -37,7 +37,7 @@ extern const char * lua_tolstring(lua_State *, int, size_t *);
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 extern const char * lua_pushstring(lua_State *, const char *);
 
-static int checkload (lua_State *L, int stat, const char *filename) {
+extern int checkload (lua_State *L, int stat, const char *filename) {
   if (stat) {
     lua_pushstring(L, filename);
     return 2;

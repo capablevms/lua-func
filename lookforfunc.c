@@ -39,7 +39,7 @@ extern void addtoclib(lua_State *, const char *, void *);
 extern void * lsys_load(lua_State *, const char *, int);
 extern void * checkclib(lua_State *, const char *);
 
-static int lookforfunc (lua_State *L, const char *path, const char *sym) {
+extern int lookforfunc (lua_State *L, const char *path, const char *sym) {
   void *reg = checkclib(L, path);
   if (reg == ((void*)0)) {
     reg = lsys_load(L, path, *sym == '*');

@@ -38,7 +38,7 @@ extern unsigned long strspn(const char *, const char *);
 extern int snprintf(char *restrict, size_t, const char *restrict, ...);
 extern int snprintf(char *restrict, size_t, const char *restrict, ...);
 
-static int tostringbuff (TValue *obj, char *buff) {
+extern int tostringbuff (TValue *obj, char *buff) {
   int len;
   ((void)0);
   if (((((obj))->tt_) == (((3) | ((0) << 4)))))

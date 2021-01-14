@@ -33,7 +33,7 @@
 
 
 
-static void checkpointer (GCObject **p, GCObject *o) {
+extern void checkpointer (GCObject **p, GCObject *o) {
   if (o == *p)
     *p = o->next;
 }

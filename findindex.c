@@ -37,7 +37,7 @@ extern long __builtin_expect(long, long);
 extern const TValue * getgeneric(Table *, const TValue *, int);
 extern unsigned int arrayindex(lua_Integer);
 
-static unsigned int findindex (lua_State *L, Table *t, TValue *key,
+extern unsigned int findindex (lua_State *L, Table *t, TValue *key,
                                unsigned int asize) {
   unsigned int i;
   if ((((((((key))->tt_)) & 0x0F)) == (0))) return 0;

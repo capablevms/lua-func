@@ -36,7 +36,7 @@ extern int luaL_fileresult(lua_State *, int, const char *);
 extern int remove(const char *);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
-static int os_remove (lua_State *L) {
+extern int os_remove (lua_State *L) {
   const char *filename = (luaL_checklstring(L, (1), ((void*)0)));
   return luaL_fileresult(L, remove(filename) == 0, filename);
 }

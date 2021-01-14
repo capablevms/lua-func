@@ -34,7 +34,7 @@
 
 extern TValue * index2value(lua_State *, int);
 
-static UpVal **getupvalref (lua_State *L, int fidx, int n, LClosure **pf) {
+extern UpVal **getupvalref (lua_State *L, int fidx, int n, LClosure **pf) {
   static const UpVal *const nullup = ((void*)0);
   LClosure *f;
   TValue *fi = index2value(L, fidx);

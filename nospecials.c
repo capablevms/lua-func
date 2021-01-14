@@ -35,7 +35,7 @@
 extern unsigned long strlen(const char *);
 extern char * strpbrk(const char *, const char *);
 
-static int nospecials (const char *p, size_t l) {
+extern int nospecials (const char *p, size_t l) {
   size_t upto = 0;
   do {
     if (strpbrk(p + upto, "^$*+?.([%-"))

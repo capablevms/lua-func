@@ -54,7 +54,7 @@ extern int luaB_dofile(lua_State *);
 extern int luaB_collectgarbage(lua_State *);
 extern int luaB_assert(lua_State *);
 
-static const luaL_Reg base_funcs[] = {
+const luaL_Reg base_funcs[] = {
   {"assert", luaB_assert},
   {"collectgarbage", luaB_collectgarbage},
   {"dofile", luaB_dofile},

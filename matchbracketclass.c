@@ -34,7 +34,7 @@
 
 extern int match_class(int, int);
 
-static int matchbracketclass (int c, const char *p, const char *ec) {
+extern int matchbracketclass (int c, const char *p, const char *ec) {
   int sig = 1;
   if (*(p+1) == '^') {
     sig = 0;

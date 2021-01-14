@@ -35,7 +35,7 @@
 extern void luaM_free_(lua_State *, void *, size_t);
 extern void luaF_unlinkupval(UpVal *);
 
-static void freeupval (lua_State *L, UpVal *uv) {
+extern void freeupval (lua_State *L, UpVal *uv) {
   if (((uv)->v != &(uv)->u.value))
     luaF_unlinkupval(uv);
   luaM_free_(L, (uv), sizeof(*(uv)));

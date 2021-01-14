@@ -41,7 +41,7 @@ extern void lua_settop(lua_State *, int);
 extern void randseed(lua_State *, RanState *);
 extern void * lua_newuserdatauv(lua_State *, size_t, int);
 
-static void setrandfunc (lua_State *L) {
+extern void setrandfunc (lua_State *L) {
   RanState *state = (RanState *)lua_newuserdatauv(L, sizeof(RanState), 0);
   randseed(L, state);
   lua_settop(L, -(2)-1);

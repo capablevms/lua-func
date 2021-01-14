@@ -49,7 +49,7 @@ extern int lua_gettop(lua_State *);
 extern unsigned long nextrand(unsigned long *);
 extern void * lua_touserdata(lua_State *, int);
 
-static int math_random (lua_State *L) {
+extern int math_random (lua_State *L) {
   lua_Integer low, up;
   lua_Unsigned p;
   RanState *state = (RanState *)lua_touserdata(L, ((-1000000 - 1000) - (1)));

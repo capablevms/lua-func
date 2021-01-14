@@ -39,7 +39,7 @@ extern void setminordebt(global_State *);
 extern lu_mem fullgen(lua_State *, global_State *);
 extern void stepgenfull(lua_State *, global_State *);
 
-static void genstep (lua_State *L, global_State *g) {
+extern void genstep (lua_State *L, global_State *g) {
   if (g->lastatomic != 0)
     stepgenfull(L, g);
   else {

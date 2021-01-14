@@ -44,7 +44,7 @@ extern int lua_next(lua_State *, int);
 extern void lua_pushnil(lua_State *);
 extern int lua_type(lua_State *, int);
 
-static int findfield (lua_State *L, int objidx, int level) {
+extern int findfield (lua_State *L, int objidx, int level) {
   if (level == 0 || !(lua_type(L, (-1)) == 5))
     return 0;
   lua_pushnil(L);

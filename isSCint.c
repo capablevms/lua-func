@@ -35,6 +35,6 @@
 extern int fitsC(lua_Integer);
 extern int luaK_isKint(expdesc *);
 
-static int isSCint (expdesc *e) {
+extern int isSCint (expdesc *e) {
   return luaK_isKint(e) && fitsC(e->u.ival);
 }

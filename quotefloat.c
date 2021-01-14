@@ -36,7 +36,7 @@
 extern int snprintf(char *restrict, size_t, const char *restrict, ...);
 extern void * memchr(const void *, int, size_t);
 
-static int quotefloat (lua_State *L, char *buff, lua_Number n) {
+extern int quotefloat (lua_State *L, char *buff, lua_Number n) {
   const char *s;
   if (n == (lua_Number)(__builtin_huge_val ()))
     s = "1e9999";

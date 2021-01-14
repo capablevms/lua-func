@@ -38,7 +38,7 @@ extern void luaC_runtilstate(lua_State *, int);
 extern void luaC_runtilstate(lua_State *, int);
 extern void entersweep(lua_State *);
 
-static void fullinc (lua_State *L, global_State *g) {
+extern void fullinc (lua_State *L, global_State *g) {
   if (((g)->gcstate <= 2))
     entersweep(L);
 

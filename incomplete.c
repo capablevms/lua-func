@@ -36,7 +36,7 @@ extern void lua_settop(lua_State *, int);
 extern int strcmp(const char *, const char *);
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 
-static int incomplete (lua_State *L, int status) {
+extern int incomplete (lua_State *L, int status) {
   if (status == 3) {
     size_t lmsg;
     const char *msg = lua_tolstring(L, -1, &lmsg);

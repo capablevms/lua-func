@@ -36,7 +36,7 @@ extern void luaK_semerror(LexState *, const char *);
 extern const char * luaO_pushfstring(lua_State *, const char *, ...);
 extern Vardesc * getlocalvardesc(FuncState *, int);
 
-static void __attribute__((noreturn)) jumpscopeerror (LexState *ls, Labeldesc *gt) {
+extern void __attribute__((noreturn)) jumpscopeerror (LexState *ls, Labeldesc *gt) {
   const char *varname = ((getlocalvardesc(ls->fs, gt->nactvar)->vd.name)->contents);
   const char *msg = "<goto %s> at line %d jumps into the scope of local '%s'";
   msg = luaO_pushfstring(ls->L, msg, ((gt->name)->contents), gt->line, varname);

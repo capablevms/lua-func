@@ -34,7 +34,7 @@
 
 extern void luaC_fullgc(lua_State *, int);
 
-static void *tryagain (lua_State *L, void *block,
+extern void *tryagain (lua_State *L, void *block,
                        size_t osize, size_t nsize) {
   global_State *g = (L->l_G);
   if ((((((((&g->nilvalue))->tt_)) & 0x0F)) == (0))) {

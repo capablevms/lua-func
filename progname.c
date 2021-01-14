@@ -31,4 +31,4 @@
 #include "lzio.h"
 
 
-static const char *progname = "lua";
+const char *progname = "lua";

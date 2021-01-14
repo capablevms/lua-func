@@ -38,7 +38,7 @@ extern void finishbinexpval(FuncState *, expdesc *, expdesc *, OpCode, int, int,
 extern int luaK_exp2K(FuncState *, expdesc *);
 extern int tonumeral(const expdesc *, TValue *);
 
-static void codearith (FuncState *fs, BinOpr opr,
+extern void codearith (FuncState *fs, BinOpr opr,
                        expdesc *e1, expdesc *e2, int flip, int line) {
   TMS event = ((TMS)(opr + TM_ADD));
   if (tonumeral(e2, ((void*)0)) && luaK_exp2K(fs, e2)) {

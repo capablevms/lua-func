@@ -33,6 +33,6 @@
 
 
 
-static void lsys_unloadlib (void *lib) {
+extern void lsys_unloadlib (void *lib) {
   (void)(lib);
 }

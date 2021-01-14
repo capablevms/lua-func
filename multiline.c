@@ -40,7 +40,7 @@ extern int incomplete(lua_State *, int);
 extern int luaL_loadbufferx(lua_State *, const char *, size_t, const char *, const char *);
 extern const char * lua_tolstring(lua_State *, int, size_t *);
 
-static int multiline (lua_State *L) {
+extern int multiline (lua_State *L) {
   for (;;) {
     size_t len;
     const char *line = lua_tolstring(L, 1, &len);

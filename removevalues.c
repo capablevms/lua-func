@@ -35,7 +35,7 @@
 extern int patchtestreg(FuncState *, int, int);
 extern int getjump(FuncState *, int);
 
-static void removevalues (FuncState *fs, int list) {
+extern void removevalues (FuncState *fs, int list) {
   for (; list != (-1); list = getjump(fs, list))
       patchtestreg(fs, list, ((1<<8)-1));
 }

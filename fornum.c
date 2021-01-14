@@ -59,7 +59,7 @@ extern TString * luaX_newstring(LexState *, const char *, size_t);
 extern int new_localvar(LexState *, TString *);
 extern TString * luaX_newstring(LexState *, const char *, size_t);
 
-static void fornum (LexState *ls, TString *varname, int line) {
+extern void fornum (LexState *ls, TString *varname, int line) {
 
   FuncState *fs = ls->fs;
   int base = fs->freereg;

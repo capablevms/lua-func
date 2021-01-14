@@ -58,7 +58,7 @@ extern void enterblock(FuncState *, BlockCnt *, lu_byte);
 extern void enterblock(FuncState *, BlockCnt *, lu_byte);
 extern int luaK_getlabel(FuncState *);
 
-static void repeatstat (LexState *ls, int line) {
+extern void repeatstat (LexState *ls, int line) {
 
   int condexit;
   FuncState *fs = ls->fs;

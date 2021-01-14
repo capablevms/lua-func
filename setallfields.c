@@ -42,7 +42,7 @@ extern void setfield(lua_State *, const char *, int, int);
 extern void setfield(lua_State *, const char *, int, int);
 extern void setfield(lua_State *, const char *, int, int);
 
-static void setallfields (lua_State *L, struct tm *stm) {
+extern void setallfields (lua_State *L, struct tm *stm) {
   setfield(L, "year", stm->tm_year, 1900);
   setfield(L, "month", stm->tm_mon, 1);
   setfield(L, "day", stm->tm_mday, 0);

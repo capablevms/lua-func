@@ -37,7 +37,7 @@ extern lu_mem atomic(lua_State *);
 extern void luaC_runtilstate(lua_State *, int);
 extern void luaC_runtilstate(lua_State *, int);
 
-static lu_mem entergen (lua_State *L, global_State *g) {
+extern lu_mem entergen (lua_State *L, global_State *g) {
   lu_mem numobjs;
   luaC_runtilstate(L, (1<<(8)));
   luaC_runtilstate(L, (1<<(0)));

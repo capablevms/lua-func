@@ -38,7 +38,7 @@ extern void singlevaraux(FuncState *, TString *, expdesc *, int);
 extern void singlevaraux(FuncState *, TString *, expdesc *, int);
 extern TString * str_checkname(LexState *);
 
-static void singlevar (LexState *ls, expdesc *var) {
+extern void singlevar (LexState *ls, expdesc *var) {
   TString *varname = str_checkname(ls);
   FuncState *fs = ls->fs;
   singlevaraux(fs, varname, var, 1);

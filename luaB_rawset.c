@@ -38,7 +38,7 @@ extern void luaL_checkany(lua_State *, int);
 extern void luaL_checkany(lua_State *, int);
 extern void luaL_checktype(lua_State *, int, int);
 
-static int luaB_rawset (lua_State *L) {
+extern int luaB_rawset (lua_State *L) {
   luaL_checktype(L, 1, 5);
   luaL_checkany(L, 2);
   luaL_checkany(L, 3);

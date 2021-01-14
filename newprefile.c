@@ -36,7 +36,7 @@ typedef luaL_Stream LStream;
 extern void luaL_setmetatable(lua_State *, const char *);
 extern void * lua_newuserdatauv(lua_State *, size_t, int);
 
-static LStream *newprefile (lua_State *L) {
+extern LStream *newprefile (lua_State *L) {
   LStream *p = (LStream *)lua_newuserdatauv(L, sizeof(LStream), 0);
   p->closef = ((void*)0);
   luaL_setmetatable(L, "FILE*");

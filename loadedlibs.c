@@ -41,7 +41,7 @@ extern int luaopen_coroutine(lua_State *);
 extern int luaopen_package(lua_State *);
 extern int luaopen_base(lua_State *);
 
-static const luaL_Reg loadedlibs[] = {
+const luaL_Reg loadedlibs[] = {
   {"_G", luaopen_base},
   {"package", luaopen_package},
   {"coroutine", luaopen_coroutine},

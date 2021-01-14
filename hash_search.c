@@ -36,7 +36,7 @@ extern const TValue * luaH_getint(Table *, lua_Integer);
 extern const TValue * luaH_getint(Table *, lua_Integer);
 extern const TValue * luaH_getint(Table *, lua_Integer);
 
-static lua_Unsigned hash_search (Table *t, lua_Unsigned j) {
+extern lua_Unsigned hash_search (Table *t, lua_Unsigned j) {
   lua_Unsigned i;
   if (j == 0) j++;
   do {

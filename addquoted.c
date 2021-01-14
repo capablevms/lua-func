@@ -43,7 +43,7 @@ extern char * luaL_prepbuffsize(luaL_Buffer *, size_t);
 extern char * luaL_prepbuffsize(luaL_Buffer *, size_t);
 extern char * luaL_prepbuffsize(luaL_Buffer *, size_t);
 
-static void addquoted (luaL_Buffer *b, const char *s, size_t len) {
+extern void addquoted (luaL_Buffer *b, const char *s, size_t len) {
   ((void)((b)->n < (b)->size || luaL_prepbuffsize((b), 1)), ((b)->b[(b)->n++] = ('"')));
   while (len--) {
     if (*s == '"' || *s == '\\' || *s == '\n') {
