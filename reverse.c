@@ -31,13 +31,11 @@
 #include "lzio.h"
 
 
-
-
 extern void reverse (lua_State *L, StkId from, StkId to) {
   for (; from < to; from++, to--) {
     TValue temp;
-    { TValue *io1=(&temp); const TValue *io2=((&(from)->val)); io1->value_ = io2->value_; ((io1)->tt_=(io2->tt_)); ((void)L, ((void)0)); ((void)0); };
-    { TValue *io1=((&(from)->val)); const TValue *io2=((&(to)->val)); io1->value_ = io2->value_; ((io1)->tt_=(io2->tt_)); ((void)L, ((void)0)); ((void)0); };
-    { TValue *io1=((&(to)->val)); const TValue *io2=(&temp); io1->value_ = io2->value_; ((io1)->tt_=(io2->tt_)); ((void)L, ((void)0)); ((void)0); };
+    setobj(L, &temp, s2v(from));
+    setobjs2s(L, from, to);
+    setobj2s(L, to, &temp);
   }
 }

@@ -33,19 +33,21 @@
 
 
 extern void reverse(lua_State *, StkId, StkId);
-extern void reverse(lua_State *, StkId, StkId);
-extern void reverse(lua_State *, StkId, StkId);
 extern StkId index2stack(lua_State *, int);
 
-extern void lua_rotate (lua_State *L, int idx, int n) {
+/*
+** Let x = AB, where A is a prefix of length 'n'. Then,
+** rotate x n == BA. But BA == (A^r . B^r)^r.
+*/
+LUA_API void lua_rotate (lua_State *L, int idx, int n) {
   StkId p, t, m;
-  ((void) 0);
-  t = L->top - 1;
-  p = index2stack(L, idx);
-  ((void)L, ((void)0));
-  m = (n >= 0 ? t - n : p - n - 1);
-  reverse(L, p, m);
-  reverse(L, m + 1, t);
-  reverse(L, p, t);
-  ((void) 0);
+  lua_lock(L);
+  t = L->top - 1;  /* end of stack segment being rotated */
+  p = index2stack(L, idx);  /* start of segment */
+  api_check(L, (n >= 0 ? n : -n) <= (t - p + 1), "invalid 'n'");
+  m = (n >= 0 ? t - n : p - n - 1);  /* end of prefix */
+  reverse(L, p, m);  /* reverse the prefix with length 'n' */
+  reverse(L, m + 1, t);  /* reverse the suffix */
+  reverse(L, p, t);  /* reverse the entire segment */
+  lua_unlock(L);
 }
