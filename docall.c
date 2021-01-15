@@ -30,7 +30,7 @@
 #include "lvm.h"
 #include "lzio.h"
 
-static lua_State *globalL = ((void*)0);
+extern lua_State *globalL;
 
 extern void lua_settop(lua_State *, int);
 extern void lua_rotate(lua_State *, int, int);
