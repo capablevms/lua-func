@@ -2,6 +2,7 @@
 #include <time.h>
 #include <setjmp.h>
 #include <ctype.h>
+#include <stdio.h>
 
 #include "lapi.h"
 #include "lauxlib.h"
@@ -42,12 +43,16 @@ extern const char * luaL_checklstring(lua_State *, int, size_t *);
 
 extern int io_pclose (lua_State *);
 
+#define l_checkmodep(m)	((m[0] == 'r' || m[0] == 'w') && m[1] == '\0')
+#define l_popen(L,c,m)		(fflush(NULL), popen(c,m))
+#define l_pclose(L,file)	(pclose(file))
+
 extern int io_popen (lua_State *L) {
-  const char *filename = (luaL_checklstring(L, (1), ((void*)0)));
-  const char *mode = (luaL_optlstring(L, (2), ("r"), ((void*)0)));
+  const char *filename = luaL_checkstring(L, 1);
+  const char *mode = luaL_optstring(L, 2, "r");
   LStream *p = newprefile(L);
-  ((void)((((mode[0] == 'r' || mode[0] == 'w') && mode[1] == '\0')) || luaL_argerror(L, (2), ("invalid mode"))));
-  p->f = ((void)filename, (void)mode, luaL_error(L, "'popen' not supported"), (FILE*)0);
+  luaL_argcheck(L, l_checkmodep(mode), 2, "invalid mode");
+  p->f = l_popen(L, filename, mode);
   p->closef = &io_pclose;
-  return (p->f == ((void*)0)) ? luaL_fileresult(L, 0, filename) : 1;
+  return (p->f == NULL) ? luaL_fileresult(L, 0, filename) : 1;
 }
