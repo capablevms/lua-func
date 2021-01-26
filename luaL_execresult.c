@@ -39,12 +39,18 @@ extern void lua_pushboolean(lua_State *, int);
 extern int luaL_fileresult(lua_State *, int, const char *);
 extern int * __errno_location();
 
+#include <sys/wait.h>
+
+#define l_inspectstat(stat,what)  \
+   if (WIFEXITED(stat)) { stat = WEXITSTATUS(stat); } \
+   else if (WIFSIGNALED(stat)) { stat = WTERMSIG(stat); what = "signal"; }
+
 extern int luaL_execresult (lua_State *L, int stat) {
   const char *what = "exit";
   if (stat != 0 && (*__errno_location ()) != 0)
     return luaL_fileresult(L, 0, ((void*)0));
   else {
-                             ;
+    l_inspectstat(stat, what);
     if (*what == 'e' && stat == 0)
       lua_pushboolean(L, 1);
     else
