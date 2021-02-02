@@ -32,11 +32,6 @@
 
 
 
-extern int fflush(FILE *);
-extern unsigned long fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-extern unsigned long fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-extern unsigned long strlen(const char *);
-
 extern void print_version (void) {
   fwrite(("Lua " "5" "." "4" "." "2" "  Copyright (C) 1994-2020 Lua.org, PUC-Rio"), sizeof(char), (strlen("Lua " "5" "." "4" "." "2" "  Copyright (C) 1994-2020 Lua.org, PUC-Rio")), stdout);
   (fwrite(("\n"), sizeof(char), (1), stdout), fflush(stdout));

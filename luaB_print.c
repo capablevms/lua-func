@@ -32,11 +32,7 @@
 
 
 
-extern int fflush(FILE *);
-extern unsigned long fwrite(const void *restrict, size_t, size_t, FILE *restrict);
 extern void lua_settop(lua_State *, int);
-extern unsigned long fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-extern unsigned long fwrite(const void *restrict, size_t, size_t, FILE *restrict);
 extern const char * luaL_tolstring(lua_State *, int, size_t *);
 extern int lua_gettop(lua_State *);
 

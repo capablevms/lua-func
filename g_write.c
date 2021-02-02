@@ -33,7 +33,6 @@
 
 
 extern int luaL_fileresult(lua_State *, int, const char *);
-extern unsigned long fwrite(const void *restrict, size_t, size_t, FILE *restrict);
 extern const char * luaL_checklstring(lua_State *, int, size_t *);
 extern int fprintf(FILE *restrict, const char *restrict, ...);
 extern lua_Number lua_tonumberx(lua_State *, int, int *);

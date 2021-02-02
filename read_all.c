@@ -33,7 +33,6 @@
 
 
 extern void luaL_pushresult(luaL_Buffer *);
-extern unsigned long fread(void *restrict, size_t, size_t, FILE *restrict);
 extern char * luaL_prepbuffsize(luaL_Buffer *, size_t);
 extern void luaL_buffinit(lua_State *, luaL_Buffer *);
 

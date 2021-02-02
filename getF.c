@@ -36,10 +36,6 @@ typedef struct LoadF {
   char buff[8192];
 } LoadF;
 
-
-extern unsigned long fread(void *restrict, size_t, size_t, FILE *restrict);
-extern int feof(FILE *);
-
 extern const char *getF (lua_State *L, void *ud, size_t *size) {
   LoadF *lf = (LoadF *)ud;
   (void)L;
