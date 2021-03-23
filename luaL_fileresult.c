@@ -2,6 +2,8 @@
 #include <time.h>
 #include <setjmp.h>
 #include <ctype.h>
+#include <errno.h>
+#include <string.h>
 
 #include "lapi.h"
 #include "lauxlib.h"
@@ -34,15 +36,12 @@
 
 extern void lua_pushinteger(lua_State *, lua_Integer);
 extern const char * lua_pushstring(lua_State *, const char *);
-extern char * strerror(int);
 extern const char * lua_pushfstring(lua_State *, const char *, ...);
-extern char * strerror(int);
 extern void lua_pushnil(lua_State *);
 extern void lua_pushboolean(lua_State *, int);
-extern int * __errno_location();
 
 extern int luaL_fileresult (lua_State *L, int stat, const char *fname) {
-  int en = (*__errno_location ());
+  int en = errno;
   if (stat) {
     lua_pushboolean(L, 1);
     return 1;

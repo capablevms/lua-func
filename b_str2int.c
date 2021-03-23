@@ -30,31 +30,27 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
+#define SPACECHARS " \f\n\r\t\v"
 
 extern unsigned long strspn(const char *, const char *);
-extern const unsigned short ** __ctype_b_loc();
 extern int toupper(int);
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern unsigned long strspn(const char *, const char *);
 
 extern const char *b_str2int (const char *s, int base, lua_Integer *pn) {
   lua_Unsigned n = 0;
   int neg = 0;
-  s += strspn(s, " \f\n\r\t\v");
-  if (*s == '-') { s++; neg = 1; }
+  s += strspn(s, SPACECHARS);  /* skip initial spaces */
+  if (*s == '-') { s++; neg = 1; }  /* handle sign */
   else if (*s == '+') s++;
-  if (!((*__ctype_b_loc ())[(int) (((unsigned char)*s))] & (unsigned short int) _ISalnum))
-    return ((void*)0);
+  if (!isalnum((unsigned char)*s))  /* no digit? */
+    return NULL;
   do {
-    int digit = (((*__ctype_b_loc ())[(int) (((unsigned char)*s))] & (unsigned short int) _ISdigit)) ? *s - '0'
+    int digit = (isdigit((unsigned char)*s)) ? *s - '0'
                    : (toupper((unsigned char)*s) - 'A') + 10;
-    if (digit >= base) return ((void*)0);
+    if (digit >= base) return NULL;  /* invalid numeral */
     n = n * base + digit;
     s++;
-  } while (((*__ctype_b_loc ())[(int) (((unsigned char)*s))] & (unsigned short int) _ISalnum));
-  s += strspn(s, " \f\n\r\t\v");
+  } while (isalnum((unsigned char)*s));
+  s += strspn(s, SPACECHARS);  /* skip trailing spaces */
   *pn = (lua_Integer)((neg) ? (0u - n) : n);
   return s;
 }

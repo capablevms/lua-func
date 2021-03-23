@@ -37,8 +37,6 @@ typedef struct LoadF {
 } LoadF;
 
 
-extern int getc(FILE *);
-extern int getc(FILE *);
 extern int skipBOM(LoadF *);
 
 extern int skipcomment (LoadF *lf, int *cp) {

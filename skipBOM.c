@@ -36,10 +36,6 @@ typedef struct LoadF {
   char buff[8192];
 } LoadF;
 
-
-extern int getc(FILE *);
-extern int getc(FILE *);
-
 extern int skipBOM (LoadF *lf) {
   const char *p = "\xEF\xBB\xBF";
   int c;

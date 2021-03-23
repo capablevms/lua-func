@@ -30,6 +30,8 @@
 #include "lvm.h"
 #include "lzio.h"
 
+#define uchar(c)    ((unsigned char)(c))
+
 typedef struct MatchState {
   const char *src_init;
   const char *src_end;
@@ -69,7 +71,7 @@ extern void add_s (MatchState *ms, luaL_Buffer *b, const char *s,
       ((void)((b)->n < (b)->size || luaL_prepbuffsize((b), 1)), ((b)->b[(b)->n++] = (*p)));
     else if (*p == '0')
         luaL_addlstring(b, s, e - s);
-    else if (((*__ctype_b_loc ())[(int) ((((unsigned char)(*p))))] & (unsigned short int) _ISdigit)) {
+    else if (isdigit(uchar(*p))) { 
       const char *cap;
       ptrdiff_t resl = get_onecapture(ms, *p - '1', s, e, &cap);
       if (resl == (-2))

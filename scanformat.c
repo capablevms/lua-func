@@ -30,31 +30,27 @@
 #include "lvm.h"
 #include "lzio.h"
 
+#if !defined(L_FMTFLAGS)
+#define L_FMTFLAGS  "-+ #0"
+#endif
 
+#define uchar(c)    ((unsigned char)(c))
 
-extern void * memcpy(void *restrict, const void *restrict, size_t);
 extern int luaL_error(lua_State *, const char *, ...);
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern int luaL_error(lua_State *, const char *, ...);
-extern char * strchr(const char *, int);
 
 extern const char *scanformat (lua_State *L, const char *strfrmt, char *form) {
   const char *p = strfrmt;
-  while (*p != '\0' && strchr("-+ #0", *p) != ((void*)0)) p++;
-  if ((size_t)(p - strfrmt) >= sizeof("-+ #0")/sizeof(char))
+  while (*p != '\0' && strchr(L_FMTFLAGS, *p) != NULL) p++;  /* skip flags */
+  if ((size_t)(p - strfrmt) >= sizeof(L_FMTFLAGS)/sizeof(char))
     luaL_error(L, "invalid format (repeated flags)");
-  if (((*__ctype_b_loc ())[(int) ((((unsigned char)(*p))))] & (unsigned short int) _ISdigit)) p++;
-  if (((*__ctype_b_loc ())[(int) ((((unsigned char)(*p))))] & (unsigned short int) _ISdigit)) p++;
+  if (isdigit(uchar(*p))) p++;  /* skip width */
+  if (isdigit(uchar(*p))) p++;  /* (2 digits at most) */
   if (*p == '.') {
     p++;
-    if (((*__ctype_b_loc ())[(int) ((((unsigned char)(*p))))] & (unsigned short int) _ISdigit)) p++;
-    if (((*__ctype_b_loc ())[(int) ((((unsigned char)(*p))))] & (unsigned short int) _ISdigit)) p++;
+    if (isdigit(uchar(*p))) p++;  /* skip precision */
+    if (isdigit(uchar(*p))) p++;  /* (2 digits at most) */
   }
-  if (((*__ctype_b_loc ())[(int) ((((unsigned char)(*p))))] & (unsigned short int) _ISdigit))
+  if (isdigit(uchar(*p)))
     luaL_error(L, "invalid format (width or precision too long)");
   *(form++) = '%';
   memcpy(form, strfrmt, ((p - strfrmt) + 1) * sizeof(char));
