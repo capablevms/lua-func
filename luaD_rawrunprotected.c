@@ -36,8 +36,6 @@ struct lua_longjmp {
   volatile int status;  /* error code */
 };
 
-extern int _setjmp(struct __jmp_buf_tag *);
-
 int luaD_rawrunprotected (lua_State *L, Pfunc f, void *ud) {
   l_uint32 oldnCcalls = L->nCcalls;
   struct lua_longjmp lj;

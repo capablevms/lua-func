@@ -2,6 +2,7 @@
 #include <time.h>
 #include <setjmp.h>
 #include <ctype.h>
+#include <errno.h>
 
 #include "lapi.h"
 #include "lauxlib.h"
@@ -37,7 +38,6 @@ extern const char * lua_pushstring(lua_State *, const char *);
 extern void lua_pushnil(lua_State *);
 extern void lua_pushboolean(lua_State *, int);
 extern int luaL_fileresult(lua_State *, int, const char *);
-extern int * __errno_location();
 
 #include <sys/wait.h>
 
@@ -47,7 +47,7 @@ extern int * __errno_location();
 
 extern int luaL_execresult (lua_State *L, int stat) {
   const char *what = "exit";
-  if (stat != 0 && (*__errno_location ()) != 0)
+  if (stat != 0 && errno != 0)
     return luaL_fileresult(L, 0, ((void*)0));
   else {
     l_inspectstat(stat, what);

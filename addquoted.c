@@ -30,37 +30,31 @@
 #include "lvm.h"
 #include "lzio.h"
 
+#define uchar(c)    ((unsigned char)(c))
 
-
-extern char * luaL_prepbuffsize(luaL_Buffer *, size_t);
 extern char * luaL_prepbuffsize(luaL_Buffer *, size_t);
 extern void luaL_addstring(luaL_Buffer *, const char *);
 extern int snprintf(char *restrict, size_t, const char *restrict, ...);
-extern int snprintf(char *restrict, size_t, const char *restrict, ...);
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern char * luaL_prepbuffsize(luaL_Buffer *, size_t);
-extern char * luaL_prepbuffsize(luaL_Buffer *, size_t);
 extern char * luaL_prepbuffsize(luaL_Buffer *, size_t);
 
 extern void addquoted (luaL_Buffer *b, const char *s, size_t len) {
-  ((void)((b)->n < (b)->size || luaL_prepbuffsize((b), 1)), ((b)->b[(b)->n++] = ('"')));
+  luaL_addchar(b, '"');
   while (len--) {
     if (*s == '"' || *s == '\\' || *s == '\n') {
-      ((void)((b)->n < (b)->size || luaL_prepbuffsize((b), 1)), ((b)->b[(b)->n++] = ('\\')));
-      ((void)((b)->n < (b)->size || luaL_prepbuffsize((b), 1)), ((b)->b[(b)->n++] = (*s)));
+      luaL_addchar(b, '\\');
+      luaL_addchar(b, *s);
     }
-    else if (((*__ctype_b_loc ())[(int) ((((unsigned char)(*s))))] & (unsigned short int) _IScntrl)) {
+    else if (iscntrl(uchar(*s))) {
       char buff[10];
-      if (!((*__ctype_b_loc ())[(int) ((((unsigned char)(*(s+1)))))] & (unsigned short int) _ISdigit))
-        snprintf(buff,sizeof(buff),"\\%d",(int)((unsigned char)(*s)));
+      if (!isdigit(uchar(*(s+1))))
+        l_sprintf(buff, sizeof(buff), "\\%d", (int)uchar(*s));
       else
-        snprintf(buff,sizeof(buff),"\\%03d",(int)((unsigned char)(*s)));
+        l_sprintf(buff, sizeof(buff), "\\%03d", (int)uchar(*s));
       luaL_addstring(b, buff);
     }
     else
-      ((void)((b)->n < (b)->size || luaL_prepbuffsize((b), 1)), ((b)->b[(b)->n++] = (*s)));
+      luaL_addchar(b, *s);
     s++;
   }
-  ((void)((b)->n < (b)->size || luaL_prepbuffsize((b), 1)), ((b)->b[(b)->n++] = ('"')));
+  luaL_addchar(b, '"');
 }

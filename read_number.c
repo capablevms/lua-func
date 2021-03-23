@@ -41,7 +41,6 @@ typedef struct {
 
 extern void lua_pushnil(lua_State *);
 extern size_t lua_stringtonumber(lua_State *, const char *);
-extern int ungetc(int, FILE *);
 extern int readdigits(RN *, int);
 extern int test2(RN *, const char *);
 extern int test2(RN *, const char *);
@@ -52,7 +51,6 @@ extern int test2(RN *, const char *);
 extern int test2(RN *, const char *);
 extern int test2(RN *, const char *);
 extern const unsigned short ** __ctype_b_loc();
-extern int getc(FILE *);
 extern struct lconv * localeconv();
 
 extern int read_number (lua_State *L, FILE *f) {
@@ -64,7 +62,7 @@ extern int read_number (lua_State *L, FILE *f) {
   decp[0] = (localeconv()->decimal_point[0]);
   decp[1] = '.';
   ((void)0);
-  do { rn.c = getc(rn.f); } while (((*__ctype_b_loc ())[(int) ((rn.c))] & (unsigned short int) _ISspace));
+  do { rn.c = getc(rn.f); } while (isspace(rn.c));
   test2(&rn, "-+");
   if (test2(&rn, "00")) {
     if (test2(&rn, "xX")) hex = 1;

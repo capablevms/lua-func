@@ -33,8 +33,6 @@
 
 
 extern const char * lua_pushstring(lua_State *, const char *);
-extern int ungetc(int, FILE *);
-extern int getc(FILE *);
 
 extern int test_eof (lua_State *L, FILE *f) {
   int c = getc(f);
