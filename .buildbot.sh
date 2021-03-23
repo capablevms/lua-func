@@ -2,8 +2,8 @@
 
 set -e
 
-CC=${CC:-clang}
-CFLAGS=${CFLAGS:-}
+CC=${CC:-~/cheri/output/sdk/bin/clang}
+CFLAGS=${CFLAGS:--fuse-ld=lld --config cheribsd-riscv64-purecap.cfg}
 
 for source_file in *.c; do
 	echo "lib${source_file%.c}.so"
