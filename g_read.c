@@ -41,7 +41,6 @@ typedef struct {
 extern void lua_pushnil(lua_State *);
 extern void lua_settop(lua_State *, int);
 extern int luaL_fileresult(lua_State *, int, const char *);
-extern int ferror(FILE *);
 extern int luaL_argerror(lua_State *, int, const char *);
 extern void read_all(lua_State *, FILE *);
 extern int read_line(lua_State *, FILE *, int);
@@ -54,7 +53,6 @@ extern lua_Integer luaL_checkinteger(lua_State *, int);
 extern int lua_type(lua_State *, int);
 extern void luaL_checkstack(lua_State *, int, const char *);
 extern int read_line(lua_State *, FILE *, int);
-extern void clearerr(FILE *);
 extern int lua_gettop(lua_State *);
 
 extern int g_read (lua_State *L, FILE *f, int first) {

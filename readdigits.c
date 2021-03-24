@@ -39,12 +39,10 @@ typedef struct {
 
 
 extern int nextc(RN *);
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
 
 extern int readdigits (RN *rn, int hex) {
   int count = 0;
-  while ((hex ? ((*__ctype_b_loc ())[(int) ((rn->c))] & (unsigned short int) _ISxdigit) : ((*__ctype_b_loc ())[(int) ((rn->c))] & (unsigned short int) _ISdigit)) && nextc(rn))
+  while ((hex ? isxdigit(rn->c) : isdigit(rn->c)) && nextc(rn))
     count++;
   return count;
 }

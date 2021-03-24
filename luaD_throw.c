@@ -40,7 +40,6 @@ extern void abort();
 extern void luaD_seterrorobj(lua_State *, int, StkId);
 extern void luaD_throw(lua_State *, int);
 extern int luaF_close(lua_State *, StkId, int);
-extern void longjmp(struct __jmp_buf_tag *, int);
 
 void __attribute__((noreturn)) luaD_throw (lua_State *L, int errcode) {
   if (L->errorJmp) {
@@ -52,7 +51,7 @@ void __attribute__((noreturn)) luaD_throw (lua_State *L, int errcode) {
     errcode = luaF_close(L, L->stack, errcode);
     L->status = ((lu_byte)((errcode)));
     if (g->mainthread->errorJmp) {
-      { TValue *io1=((&(g->mainthread->top++)->val)); const TValue *io2=((&(L->top - 1)->val)); io1->value_ = io2->value_; ((io1)->tt_=(io2->tt_)); ((void)L, ((void)0)); ((void)0); };
+      setobjs2s(L, g->mainthread->top++, L->top - 1);
       luaD_throw(g->mainthread, errcode);
     }
     else {

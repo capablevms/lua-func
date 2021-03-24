@@ -30,36 +30,23 @@
 #include "lvm.h"
 #include "lzio.h"
 
-
-
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
-extern const unsigned short ** __ctype_b_loc();
 extern int tolower(int);
 
 extern int match_class (int c, int cl) {
   int res;
   switch (tolower(cl)) {
-    case 'a' : res = ((*__ctype_b_loc ())[(int) ((c))] & (unsigned short int) _ISalpha); break;
-    case 'c' : res = ((*__ctype_b_loc ())[(int) ((c))] & (unsigned short int) _IScntrl); break;
-    case 'd' : res = ((*__ctype_b_loc ())[(int) ((c))] & (unsigned short int) _ISdigit); break;
-    case 'g' : res = ((*__ctype_b_loc ())[(int) ((c))] & (unsigned short int) _ISgraph); break;
-    case 'l' : res = ((*__ctype_b_loc ())[(int) ((c))] & (unsigned short int) _ISlower); break;
-    case 'p' : res = ((*__ctype_b_loc ())[(int) ((c))] & (unsigned short int) _ISpunct); break;
-    case 's' : res = ((*__ctype_b_loc ())[(int) ((c))] & (unsigned short int) _ISspace); break;
-    case 'u' : res = ((*__ctype_b_loc ())[(int) ((c))] & (unsigned short int) _ISupper); break;
-    case 'w' : res = ((*__ctype_b_loc ())[(int) ((c))] & (unsigned short int) _ISalnum); break;
-    case 'x' : res = ((*__ctype_b_loc ())[(int) ((c))] & (unsigned short int) _ISxdigit); break;
-    case 'z' : res = (c == 0); break;
+    case 'a' : res = isalpha(c); break;
+    case 'c' : res = iscntrl(c); break;
+    case 'd' : res = isdigit(c); break;
+    case 'g' : res = isgraph(c); break;
+    case 'l' : res = islower(c); break;
+    case 'p' : res = ispunct(c); break;
+    case 's' : res = isspace(c); break;
+    case 'u' : res = isupper(c); break;
+    case 'w' : res = isalnum(c); break;
+    case 'x' : res = isxdigit(c); break;
+    case 'z' : res = (c == 0); break;  /* deprecated option */
     default: return (cl == c);
   }
-  return (((*__ctype_b_loc ())[(int) ((cl))] & (unsigned short int) _ISlower) ? res : !res);
+  return (islower(cl) ? res : !res);
 }

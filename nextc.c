@@ -37,9 +37,6 @@ typedef struct {
   char buff[200 + 1];
 } RN;
 
-
-extern int getc(FILE *);
-
 extern int nextc (RN *rn) {
   if (rn->n >= 200) {
     rn->buff[0] = '\0';

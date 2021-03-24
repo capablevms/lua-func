@@ -2,6 +2,8 @@
 #include <time.h>
 #include <setjmp.h>
 #include <ctype.h>
+#include <errno.h>
+#include <string.h>
 
 #include "lapi.h"
 #include "lauxlib.h"
@@ -34,14 +36,11 @@ typedef luaL_Stream LStream;
 
 
 extern int luaL_error(lua_State *, const char *, ...);
-extern char * strerror(int);
-extern int * __errno_location();
-extern FILE * fopen(const char *restrict, const char *restrict);
 extern LStream * newfile(lua_State *);
 
 extern void opencheck (lua_State *L, const char *fname, const char *mode) {
   LStream *p = newfile(L);
   p->f = fopen(fname, mode);
   if (p->f == ((void*)0))
-    luaL_error(L, "cannot open file '%s' (%s)", fname, strerror((*__errno_location ())));
+    luaL_error(L, "cannot open file '%s' (%s)", fname, strerror(errno));
 }

@@ -35,7 +35,6 @@
 extern lua_Unsigned lua_rawlen(lua_State *, int);
 extern void luaL_pushresult(luaL_Buffer *);
 extern char * luaL_prepbuffsize(luaL_Buffer *, size_t);
-extern int getc(FILE *);
 extern char * luaL_prepbuffsize(luaL_Buffer *, size_t);
 extern void luaL_buffinit(lua_State *, luaL_Buffer *);
 
