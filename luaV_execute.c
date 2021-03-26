@@ -44,10 +44,7 @@ void luaV_execute (lua_State *L, CallInfo *ci) {
   int trap;
 
 
-# 1 "./ljumptab.h" 1
-# 19 "./ljumptab.h"
 static const void *const disptab[((int)(OP_EXTRAARG) + 1)] = {
-# 28 "./ljumptab.h"
 &&L_OP_MOVE,
 &&L_OP_LOADI,
 &&L_OP_LOADF,
@@ -133,7 +130,6 @@ static const void *const disptab[((int)(OP_EXTRAARG) + 1)] = {
 &&L_OP_EXTRAARG
 
 };
-# 1134 "lvm.c" 2
 
  execute:
   trap = L->hookmask;
